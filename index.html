@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vet Clinical Master Directory</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" id="css-check">
+</head>
+<body>
+
+<header>
+    <h1>গবাদি পশু পাখির ওষুধপত্র</h1>
+    <p>সৃজনে: ডাঃ মোঃ আসিফ ইকবাল, মহেশপুর, ঝিনাইদহ</p>
+</header>
+
+<div class="container">
+    <div id="loading-status" style="color: red; text-align: center; font-weight: bold; padding: 10px;">
+        সিস্টেম লোড হচ্ছে, দয়া করে অপেক্ষা করুন...
+    </div>
+
+    <div class="controls">
+        <div>
+            <label>প্রাণীর ওজন (kg)</label>
+            <input type="number" id="weight" value="100" min="0.1" step="0.1">
+        </div>
+        <div>
+            <label>ওষুধের নাম বা উপাদান</label>
+            <input type="text" id="search" placeholder="উদাঃ Ceftriaxone...">
+        </div>
+        <div>
+            <label>রোগের নাম (Indications)</label>
+            <input type="text" id="searchInd" placeholder="উদাঃ Mastitis...">
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>SL</th>
+                    <th>Trade Name</th>
+                    <th>Components</th>
+                    <th>Pack Size</th>
+                    <th>Calculated Dose</th>
+                    <th>Pregnancy</th>
+                    <th>Pet Safety</th>
+                    <th>Indications</th>
+                    <th>Company</th>
+                    <th>Strength</th>
+                    <th>Standard Dose</th>
+                </tr>
+            </thead>
+            <tbody id="mainBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+<script>
+    // ফাইলগুলো লোড হয়েছে কি না তা ডিব্যাগ (Debug) করার জন্য স্ক্রিপ্ট
+    window.onload = function() {
+        const loadingDiv = document.getElementById('loading-status');
+        let errorMessages = [];
+
+        // CSS চেক
+        const cssLoaded = document.getElementById('css-check').sheet;
+        if (!cssLoaded) errorMessages.push("CSS ফাইলটি খুঁজে পাওয়া যাচ্ছে না (style.css)");
+
+        // Data চেক
+        if (typeof allDrugs === 'undefined') {
+            errorMessages.push("ওষুধের ডেটা লোড হয়নি (data.js)");
+        }
+
+        // Script চেক
+        if (typeof render !== 'function') {
+            errorMessages.push("লজিক ফাইল লোড হয়নি (script.js)");
+        }
+
+        if (errorMessages.length > 0) {
+            loadingDiv.innerHTML = "ত্রুটি: " + errorMessages.join(" | ");
+        } else {
+            loadingDiv.style.display = "none";
+            render(); // সবকিছু ঠিক থাকলে টেবিল দেখাবে
+        }
+    };
+</script>
+
+</body>
+</html>

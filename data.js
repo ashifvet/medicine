@@ -1595,7 +1595,7 @@ const allDrugs = [
     {sl: 997, name: "Inj. Frusemide-10", comp_val: "Furosemide", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Post-parturient udder edema relief", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
     {sl: 998, name: "Bol. Lax-Vet Plus", comp_val: "Laxative Salts", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Constipation relief and impaction", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
     {sl: 999, name: "Inj. Phenamil", comp_val: "Pheniramine Maleate", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic reaction and shock control", co: "Techno", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
-    {sl: 1000, name: "Inj. Mely-Z", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Acute anti-inflammatory support", co: "Square", type: "c", str: "Combined", mgkg: "0.5mg/kg"}
+    {sl: 1000, name: "Inj. Mely-Z", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Acute anti-inflammatory support", co: "Square", type: "c", str: "Combined", mgkg: "0.5mg/kg"},
 ];
 
 

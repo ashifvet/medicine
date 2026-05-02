@@ -669,9 +669,936 @@ const allDrugs = [
     
     
     
+
+    // --- Cephalosporins (Advanced Generation) ---
+    {sl: 450, name: "Inj. Cefaprin", comp_val: "Ceftriaxone Sodium", pack: "1 gm vial + 10ml DW", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Severe respiratory & urogenital infections", co: "Incepta", type: "c", str: "1g/10ml", mgkg: "10-20mg/kg"},
+    {sl: 451, name: "Inj. Cefquinome-V", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute mastitis, Foot rot, MMA syndrome", co: "Popular", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 452, name: "Inj. Cobactan 2.5%", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Bovine respiratory disease (BRD)", co: "MSD", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+
+    // --- Fluoroquinolones ---
+    {sl: 453, name: "Inj. Moxiflox-V", comp_val: "Moxifloxacin", pack: "20 ml vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Severe Gram-positive & Anaerobic infections", co: "Square", type: "c", str: "100mg/ml", mgkg: "5mg/kg"},
+    {sl: 454, name: "Inj. Levoflox-Vet", comp_val: "Levofloxacin", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Respiratory tract infections, Mycoplasmosis", co: "Acme", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+    {sl: 455, name: "Inj. Enrovet-LA", comp_val: "Enrofloxacin", pack: "100 ml", safe: "Unsafe", pet: "Safe(Caution)", base: 0.1, unit: "ml", ind: "Long acting - Bronchopneumonia, Scours", co: "Renata", type: "c", str: "100mg/ml", mgkg: "7.5-10mg/kg"},
+
+    // --- Macrolides & Lincosamides ---
+    {sl: 456, name: "Inj. Tylosin-V 200", comp_val: "Tylosin Tartrate", pack: "100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Mycoplasmosis, Metritis, Foot rot", co: "ACI", type: "c", str: "200mg/ml", mgkg: "10mg/kg"},
+    {sl: 457, name: "Inj. Tilmicosin-Vet", comp_val: "Tilmicosin Phosphate", pack: "50 ml", safe: "Safe", pet: "Unsafe", base: 0.03, unit: "ml", ind: "Pneumonia, Pasteurellosis", co: "Techno", type: "c", str: "300mg/ml", mgkg: "10mg/kg"},
+    {sl: 458, name: "Inj. Micotil 300", comp_val: "Tilmicosin", pack: "50 ml vial", safe: "Safe", pet: "Unsafe", base: 0.03, unit: "ml", ind: "Severe Bovine respiratory disease", co: "Elanco", type: "c", str: "300mg/ml", mgkg: "10mg/kg"},
+
+    // --- Antiprotozoals ---
+    {sl: 459, name: "Inj. Trypazene", comp_val: "Diminazene Aceturate", pack: "2.36g sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Trypanosomiasis, Babesiosis", co: "Popular", type: "c", str: "Combined", mgkg: "3.5-7mg/kg"},
+    {sl: 460, name: "Inj. Samorin", comp_val: "Isometamidium Chloride", pack: "1 gm sachet", safe: "Safe", pet: "Unsafe", base: 1, unit: "vial", ind: "Long term Trypanosoma prevention", co: "Ceva", type: "c", str: "1g/vial", mgkg: "1mg/kg"},
+
+    // --- Anthelmintics (Modern) ---
+    {sl: 461, name: "Bol. Iver-A", comp_val: "Ivermectin + Albendazole", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum oral parasite control", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 462, name: "Inj. Closantel-V", comp_val: "Closantel", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Liver fluke, Nematodes, Ectoparasites", co: "Renata", type: "c", str: "50mg/ml", mgkg: "5-10mg/kg"},
+
+    // --- Anti-inflammatory & Pain (NSAIDs) ---
+    {sl: 463, name: "Inj. Tolfedine 4%", comp_val: "Tolfenamic Acid", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Acute mastitis, Respiratory disease", co: "Vetoquinol", type: "c", str: "40mg/ml", mgkg: "2mg/kg"},
+    {sl: 464, name: "Inj. Finadyne", comp_val: "Flunixin Meglumine", pack: "50 ml", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Fever in BRD, Endotoxic shock", co: "MSD", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+    {sl: 465, name: "Inj. Flunixin-V", comp_val: "Flunixin Meglumine", pack: "50 ml", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "NSAID for colic and inflammation", co: "Square", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+
+    // --- Vitamins & Metabolic Stimulants ---
+    {sl: 466, name: "Inj. Coforta", comp_val: "Butafosfan", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Stress management, Metabolic stimulant", co: "Bayer", type: "c", str: "100mg/ml", mgkg: "1ml/10-20kg"},
+    {sl: 467, name: "Inj. Neuro-B", comp_val: "Vit B1 + B6 + B12", pack: "Ampoule", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve disorder, Paralysis, Anorexia", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 468, name: "Inj. B12-V", comp_val: "Cyanocobalamin", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Vitamin B12 deficiency, Growth boost", co: "Generic", type: "c", str: "1000mcg/ml", mgkg: "N/A"},
+
+    // --- Digestive & Rumenotorics ---
+    {sl: 469, name: "Bol. Bio-Digestion", comp_val: "Live Yeast + Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Restoring ruminal flora after antibiotic therapy", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 470, name: "Bol. Rumen-Plus", comp_val: "Probiotics + Ginger + Cobalt", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Indigestion, Ruminal atony", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Hormones & Reproductive ---
+    {sl: 471, name: "Inj. Chorulon", comp_val: "hCG (Human Chorionic Gonadotrophin)", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Ovarian cysts, Nymphomania", co: "MSD", type: "c", str: "1500 IU", mgkg: "N/A"},
+    {sl: 472, name: "Inj. Folligon", comp_val: "PMSG (Pregnant Mare Serum Gonadotrophin)", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Superovulation, Oestrus induction", co: "Intervet", type: "c", str: "1000 IU", mgkg: "N/A"},
+
+    // --- Liver Support ---
+    {sl: 473, name: "Liq. Silymarin-V", comp_val: "Silymarin + Choline + B-Vit", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver cirrhosis, Jaundice recovery", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 474, name: "Liq. Hepatocare", comp_val: "Herbal liver tonic", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Natural hepatic stimulant", co: "Renata", type: "c", str: "Herbal", mgkg: "N/A"},
+
+    // --- Miscellaneous ---
+    {sl: 475, name: "Oint. Nitro-Vet", comp_val: "Nitrofurazone", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Wound infection prevention", co: "Square", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 476, name: "Inj. Dexon-S", comp_val: "Dexamethasone Sodium Phosphate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Shock, Acute inflammation", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 477, name: "Inj. Fertilin-V", comp_val: "Buserelin Acetate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Ovarian follicular cysts", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Continue Part 12 (478-500) ---
+    {sl: 478, name: "Inj. Sulfatrim DS", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 0.05, unit: "ml", ind: "Systemic bacterial control", co: "Navana", type: "c", str: "480mg/ml", mgkg: "15-30mg/kg"},
+    {sl: 479, name: "Bol. Sulfatrim DS", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Oral systemic treatment", co: "Navana", type: "c", str: "Combined", mgkg: "15-30mg/kg"},
+    {sl: 480, name: "Inj. Trimesul-V", comp_val: "Sulfadiazine + Trimethoprim", pack: "30 ml", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Pneumonia, Calf scour", co: "ACI", type: "c", str: "240mg/ml", mgkg: "15-30mg/kg"},
+    {sl: 481, name: "Bol. Trimesul-V", comp_val: "Sulfadiazine + Trimethoprim", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Secondary bacterial infections", co: "ACI", type: "c", str: "Combined", mgkg: "15-30mg/kg"},
+    {sl: 482, name: "Inj. Sulfa-Z", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "50 ml", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Respiratory & GI infections", co: "Opsonin", type: "c", str: "240mg/ml", mgkg: "15-30mg/kg"},
+    {sl: 483, name: "Bol. Sulfa-Z", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Metritis, Bronchitis", co: "Opsonin", type: "c", str: "Combined", mgkg: "15-30mg/kg"},
+    {sl: 484, name: "Inj. Bactron-DS", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "50 ml", safe: "Unsafe", pet: "Safe", base: 0.05, unit: "ml", ind: "Severe bacterial pneumonia", co: "Square", type: "c", str: "480mg/ml", mgkg: "15-30mg/kg"},
+    {sl: 485, name: "Bol. Bactron-DS", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 0.5, unit: "bolus", ind: "Metritis, Enteritis", co: "Square", type: "c", str: "Combined", mgkg: "15-30mg/kg"},
+    {sl: 486, name: "Inj. Sul-Trim DS", comp_val: "Sulfadiazine + Trimethoprim", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 0.05, unit: "ml", ind: "HS, BQ, Pneumonia", co: "Techno", type: "c", str: "480mg/ml", mgkg: "15-30mg/kg"},
+    {sl: 487, name: "Bol. Sul-Trim DS", comp_val: "Sulfadiazine + Trimethoprim", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 0.5, unit: "bolus", ind: "Severe systemic infection", co: "Techno", type: "c", str: "Combined", mgkg: "15-30mg/kg"},
+    {sl: 488, name: "Inj. Sulprim-Z", comp_val: "Sulfadiazine + Trimethoprim", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Urinary tract infections", co: "ACI", type: "c", str: "240mg/ml", mgkg: "15-30mg/kg"},
+    {sl: 489, name: "Bol. Sulprim-Z", comp_val: "Sulfadiazine + Trimethoprim", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Mixed bacterial infections", co: "ACI", type: "c", str: "Combined", mgkg: "15-30mg/kg"},
+    {sl: 490, name: "Inj. Trimevet-Z", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "30 ml", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Respiratory infections, Scours", co: "Techno", type: "c", str: "240mg/ml", mgkg: "15-30mg/kg"},
+    {sl: 491, name: "Bol. Trimevet-Z", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Systemic oral antibiotic", co: "Techno", type: "c", str: "Combined", mgkg: "15-30mg/kg"},
+    {sl: 492, name: "Pulv. Sumid-Z", comp_val: "Sulphadimidine Sodium", pack: "100 gm", safe: "Unsafe", pet: "Safe(Caution)", base: 10, unit: "gm", ind: "Coccidiosis, HS, BQ", co: "Square", type: "c", str: "WSP", mgkg: "100-200mg/kg"},
+    {sl: 493, name: "Pulv. Nilamide-Z", comp_val: "Sulphadimidine Sodium", pack: "100 gm", safe: "Unsafe", pet: "Safe(Caution)", base: 10, unit: "gm", ind: "Bacterial enteritis, Foot rot", co: "Techno", type: "c", str: "WSP", mgkg: "100-200mg/kg"},
+    {sl: 494, name: "Pulv. Sulphavet-Z", comp_val: "Sulphadimidine Sodium", pack: "100 gm", safe: "Unsafe", pet: "Safe(Caution)", base: 10, unit: "gm", ind: "Calf scours, Metritis", co: "Incepta", type: "c", str: "WSP", mgkg: "100-200mg/kg"},
+    {sl: 495, name: "Pulv. Sulfa-Z", comp_val: "Sulphadimidine Sodium", pack: "100 gm", safe: "Unsafe", pet: "Safe(Caution)", base: 10, unit: "gm", ind: "Bacterial scours", co: "Popular", type: "c", str: "WSP", mgkg: "100-200mg/kg"},
+    {sl: 496, name: "Bol. Dermaphyl-Z", comp_val: "Griseofulvin 500 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe(Caution)", base: 0.02, unit: "bolus", ind: "Dermatophytosis, Ringworm", co: "Navana", type: "c", str: "500mg", mgkg: "10mg/kg"},
+    {sl: 497, name: "Bol. Grisin-Z", comp_val: "Griseofulvin 500 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe(Caution)", base: 0.02, unit: "bolus", ind: "Fungal skin diseases", co: "Renata", type: "c", str: "500mg", mgkg: "10mg/kg"},
+    {sl: 498, name: "Bol. Fungivin-Z", comp_val: "Griseofulvin 500 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe(Caution)", base: 0.02, unit: "bolus", ind: "Skin fungal infections", co: "Acme", type: "c", str: "500mg", mgkg: "10mg/kg"},
+    {sl: 499, name: "Bol. Gris-Z", comp_val: "Griseofulvin 500 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe(Caution)", base: 0.02, unit: "bolus", ind: "Trichophyton species infections", co: "Popular", type: "c", str: "500mg", mgkg: "10mg/kg"},
+    {sl: 500, name: "Bol. Antifung-Z", comp_val: "Griseofulvin 500 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe(Caution)", base: 0.02, unit: "bolus", ind: "Ringworm treatment", co: "Techno", type: "c", str: "500mg", mgkg: "10mg/kg"},
     
     
     
+    
+
+    // --- Antiprotozoal (Babesiosis & Trypanosomiasis) ---
+    {sl: 501, name: "Inj. Berenil RTU 7%", comp_val: "Diminazene Aceturate 7.0g + Phenazone 37.5g", pack: "30/90 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Babesiosis, Trypanosomiasis, Theileriosis", co: "Intervet (MSD)", type: "c", str: "70mg/ml", mgkg: "1ml/20kg"},
+    {sl: 502, name: "Inj. Babesin Vet", comp_val: "Diminazene Aceturate 1.05g", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Protozoal infections with fever", co: "Square", type: "c", str: "Combined", mgkg: "1ml/12.5kg"},
+    {sl: 503, name: "Inj. Imizol", comp_val: "Imidocarb Dipropionate 12%", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Treatment and prevention of Anaplasmosis", co: "Intervet", type: "c", str: "120mg/ml", mgkg: "1ml/40kg"},
+    {sl: 504, name: "Inj. E-Carbzol", comp_val: "Imidocarb Dipropionate", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 0.01, unit: "ml", ind: "Babesia and Anaplasma prevention", co: "ACI", type: "c", str: "120mg/ml", mgkg: "1ml/100kg"},
+    {sl: 505, name: "Inj. Butalex", comp_val: "Buparvaquone 50 mg/ml", pack: "20 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Theileriosis (East Coast Fever)", co: "MSD", type: "c", str: "50mg/ml", mgkg: "1ml/20kg"},
+
+    // --- Antihistamines (Allergy & Shock) ---
+    {sl: 506, name: "Inj. Avil Vet", comp_val: "Pheniramine Maleate 22.7 mg/ml", pack: "10/33/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Urticaria, Anaphylactic shock, Hay fever", co: "Sanofi", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
+    {sl: 507, name: "Inj. Antihist Vet", comp_val: "Chlorpheniramine Maleate 10 mg/ml", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Insect bites, Photosensitization, Allergy", co: "Square", type: "c", str: "10mg/ml", mgkg: "1ml/25kg"},
+    {sl: 508, name: "Inj. Histacin-V", comp_val: "Chlorpheniramine Maleate", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic rhinitis, General allergy", co: "ACI", type: "c", str: "10mg/ml", mgkg: "1ml/25kg"},
+    {sl: 509, name: "Inj. Promethazine-V", comp_val: "Promethazine Hydrochloride", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Severe allergic reactions, Sedative effect", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- NSAIDs (Pain, Fever & Inflammation) ---
+    {sl: 510, name: "Inj. Melocam Vet", comp_val: "Meloxicam 5 mg/ml", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Mastitis, Arthritis, Lameness, Post-surgery", co: "Popular", type: "c", str: "5mg/ml", mgkg: "0.5mg/kg"},
+    {sl: 511, name: "Inj. Melovet", comp_val: "Meloxicam 5 mg/ml", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Pain and inflammation in respiratory infection", co: "Acme", type: "c", str: "5mg/ml", mgkg: "0.5mg/kg"},
+    {sl: 512, name: "Inj. Ketovet 100", comp_val: "Ketoprofen 100 mg/ml", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Musculoskeletal disorders, Chronic pain", co: "Techno", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+    {sl: 513, name: "Inj. Flunixin-V", comp_val: "Flunixin Meglumine 50 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Colic, Endotoxic shock, Fever in BRD", co: "Square", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+    {sl: 514, name: "Inj. Tolfen Vet", comp_val: "Tolfenamic Acid 40 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Acute mastitis, Bovine respiratory disease", co: "Techno", type: "c", str: "40mg/ml", mgkg: "2mg/kg"},
+    {sl: 515, name: "Bol. Para-Vet Plus", comp_val: "Paracetamol + Diclofenac Sodium", pack: "Bolus", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Severe pain, Fever, Swelling", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 516, name: "Bol. Ace-Vet 500", comp_val: "Paracetamol 500 mg", pack: "Bolus", safe: "Safe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Anti-pyretic for livestock", co: "Square", type: "c", str: "500mg", mgkg: "N/A"},
+
+    // --- Vitamins & Metabolic Stimulants ---
+    {sl: 517, name: "Inj. Catophos", comp_val: "Butafosfan 100 mg + Vitamin B12 50 mcg", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Phosphorus metabolism stimulus, Infertility", co: "Bayer (ACI)", type: "c", str: "Combined", mgkg: "1ml/10-20kg"},
+    {sl: 518, name: "Inj. Butavet-V", comp_val: "Butafosfan + Vitamin B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic disorder, Stress, Fatigue", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 519, name: "Inj. Vitade Vet", comp_val: "Vitamin A + D3 + E", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth, Immunity, Epithelial health", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 520, name: "Inj. Rena-ADE", comp_val: "Vitamin A + D3 + E", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fertility boost, Stress prevention", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Digestive & Rumenotorics ---
+    {sl: 521, name: "Bol. Rumicid Vet", comp_val: "Ammonium Bicarbonate + Nuxvomica + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Indigestion, Anorexia, Ruminal atony", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus/animal"},
+    {sl: 522, name: "Bol. Bio-Gut", comp_val: "Probiotics + Saccharomyces cerevisiae", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Bloat, Ruminal pH balancing", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 523, name: "Pulv. Zyme-Vet", comp_val: "Multienzyme complex", pack: "100 gm sachet", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Digestive aid, Feed conversion improvement", co: "Popular", type: "c", str: "WSP", mgkg: "N/A"},
+
+    // --- Liver Support ---
+    {sl: 524, name: "Liq. Hepaguard Vet", comp_val: "Silymarin + Choline + L-Carnitine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fatty liver, Jaundice, Hepatic cirrhosis", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 525, name: "Liq. Livo-C", comp_val: "Liver extract + Vitamin B12 + C", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Hepatoprotective tonic", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Reproductive Hormones ---
+    {sl: 526, name: "Inj. Receptal", comp_val: "Buserelin Acetate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Delayed ovulation, Ovarian cysts", co: "MSD", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 527, name: "Inj. Ovurelin", comp_val: "Gonadorelin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Cystic ovaries, Oestrus synchronization", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 528, name: "Inj. Oxytocin-V", comp_val: "Oxytocin (Synthetic)", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Uterine inertia, Agalactia", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics (Dewormers) ---
+    {sl: 529, name: "Bol. Almex Vet", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Roundworms, Lungworms, Liver flukes", co: "Renata", type: "c", str: "600mg", mgkg: "7.5-10mg/kg"},
+    {sl: 530, name: "Bol. LT-Vet", comp_val: "Triclabendazole 900 mg + Levamisole 600 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum fascioliasis treatment", co: "Square", type: "c", str: "Combined", mgkg: "1bolus/75kg"},
+    {sl: 531, name: "Inj. Vermic-10", comp_val: "Ivermectin 1%", pack: "Vial", safe: "Safe", pet: "Safe(Caution)", base: 0.02, unit: "ml", ind: "Endo & Ectoparasite control", co: "Renata", type: "c", str: "10mg/ml", mgkg: "1ml/50kg"},
+
+    // --- Additional Items ---
+    {sl: 532, name: "Inj. B-Com Vet", comp_val: "Vitamin B1+B2+B6+B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "B-vitamin deficiency, Weakness", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 533, name: "Liq. Amino-Acid", comp_val: "Essential Amino Acids + Vitamins", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth promoter, Convalescence tonic", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 534, name: "Inj. G-Vitamix", comp_val: "Multivitamins", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "General metabolic boost", co: "Gonoshasthaya", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 535, name: "Liq. Povisep Vet", comp_val: "Povidone Iodine 10%", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgical site and wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 536, name: "Inj. Lidocaine-V 2%", comp_val: "Lidocaine HCl", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local anesthesia, Surgical procedures", co: "Square", type: "c", str: "2%", mgkg: "N/A"},
+
+    // --- More Recent Market Entries ---
+    {sl: 537, name: "Inj. Ceftio-V 1g", comp_val: "Ceftiofur Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute BRD, Foot rot, Shipping fever", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1.1-2.2mg/kg"},
+    {sl: 538, name: "Inj. Melofen", comp_val: "Meloxicam + Paracetamol", pack: "100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe fever and inflammation", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 539, name: "Liq. Digex", comp_val: "Digestive Enzymes Liquid", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Indigestion and ruminal stasis in calves", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 540, name: "Pulv. Electromin", comp_val: "Electrolytes + Minerals", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Heat stress and rehydration", co: "Square", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 541, name: "Inj. B1+B6+B12", comp_val: "Neurotropic Vitamins", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve tone booster, Paralysis support", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 542, name: "Inj. Cal-Bor", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 543, name: "Bol. Metro-A 2g", comp_val: "Metronidazole 2000 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Amoebiasis and Giardiasis in cattle", co: "Acme", type: "c", str: "2g", mgkg: "N/A"},
+    {sl: 544, name: "Oint. Nitrofur-V", comp_val: "Nitrofurazone 0.2%", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Infected surface wounds", co: "Popular", type: "f", str: "0.2%", mgkg: "N/A"},
+    {sl: 545, name: "Inj. Frusemide-10", comp_val: "Furosemide", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Post-calving udder edema", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 546, name: "Liq. Liver-G", comp_val: "Herbal Liver Protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning and detoxification", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 547, name: "Inj. Dexazone", comp_val: "Dexamethasone Sodium Phosphate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anaphylaxis relief", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 548, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Milk ejection stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 549, name: "Inj. Lidocaine-Z", comp_val: "Lidocaine HCl 2%", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local nerve block", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 550, name: "Bol. Paracet-V", comp_val: "Paracetamol", pack: "Bolus", safe: "Safe", pet: "Unsafe", base: 1, unit: "bolus", ind: "General pain and fever reduction", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    
+    
+    
+    
+    const allDrugsPart13 = [
+    // --- Antiprotozoal (Babesiosis & Trypanosomiasis) ---
+    {sl: 501, name: "Inj. Berenil RTU 7%", comp_val: "Diminazene Aceturate 7.0g + Phenazone 37.5g", pack: "30/90 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Babesiosis, Trypanosomiasis, Theileriosis", co: "Intervet (MSD)", type: "c", str: "70mg/ml", mgkg: "1ml/20kg"},
+    {sl: 502, name: "Inj. Babesin Vet", comp_val: "Diminazene Aceturate 1.05g", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Protozoal infections with fever", co: "Square", type: "c", str: "Combined", mgkg: "1ml/12.5kg"},
+    {sl: 503, name: "Inj. Imizol", comp_val: "Imidocarb Dipropionate 12%", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Treatment and prevention of Anaplasmosis", co: "Intervet", type: "c", str: "120mg/ml", mgkg: "1ml/40kg"},
+    {sl: 504, name: "Inj. E-Carbzol", comp_val: "Imidocarb Dipropionate", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 0.01, unit: "ml", ind: "Babesia and Anaplasma prevention", co: "ACI", type: "c", str: "120mg/ml", mgkg: "1ml/100kg"},
+    {sl: 505, name: "Inj. Butalex", comp_val: "Buparvaquone 50 mg/ml", pack: "20 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Theileriosis (East Coast Fever)", co: "MSD", type: "c", str: "50mg/ml", mgkg: "1ml/20kg"},
+
+    // --- Antihistamines (Allergy & Shock) ---
+    {sl: 506, name: "Inj. Avil Vet", comp_val: "Pheniramine Maleate 22.7 mg/ml", pack: "10/33/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Urticaria, Anaphylactic shock, Hay fever", co: "Sanofi", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
+    {sl: 507, name: "Inj. Antihist Vet", comp_val: "Chlorpheniramine Maleate 10 mg/ml", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Insect bites, Photosensitization, Allergy", co: "Square", type: "c", str: "10mg/ml", mgkg: "1ml/25kg"},
+    {sl: 508, name: "Inj. Histacin-V", comp_val: "Chlorpheniramine Maleate", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic rhinitis, General allergy", co: "ACI", type: "c", str: "10mg/ml", mgkg: "1ml/25kg"},
+    {sl: 509, name: "Inj. Promethazine-V", comp_val: "Promethazine Hydrochloride", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Severe allergic reactions, Sedative effect", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- NSAIDs (Pain, Fever & Inflammation) ---
+    {sl: 510, name: "Inj. Melocam Vet", comp_val: "Meloxicam 5 mg/ml", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Mastitis, Arthritis, Lameness, Post-surgery", co: "Popular", type: "c", str: "5mg/ml", mgkg: "0.5mg/kg"},
+    {sl: 511, name: "Inj. Melovet", comp_val: "Meloxicam 5 mg/ml", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Pain and inflammation in respiratory infection", co: "Acme", type: "c", str: "5mg/ml", mgkg: "0.5mg/kg"},
+    {sl: 512, name: "Inj. Ketovet 100", comp_val: "Ketoprofen 100 mg/ml", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Musculoskeletal disorders, Chronic pain", co: "Techno", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+    {sl: 513, name: "Inj. Flunixin-V", comp_val: "Flunixin Meglumine 50 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Colic, Endotoxic shock, Fever in BRD", co: "Square", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+    {sl: 514, name: "Inj. Tolfen Vet", comp_val: "Tolfenamic Acid 40 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Acute mastitis, Bovine respiratory disease", co: "Techno", type: "c", str: "40mg/ml", mgkg: "2mg/kg"},
+    {sl: 515, name: "Bol. Para-Vet Plus", comp_val: "Paracetamol + Diclofenac Sodium", pack: "Bolus", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Severe pain, Fever, Swelling", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 516, name: "Bol. Ace-Vet 500", comp_val: "Paracetamol 500 mg", pack: "Bolus", safe: "Safe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Anti-pyretic for livestock", co: "Square", type: "c", str: "500mg", mgkg: "N/A"},
+
+    // --- Vitamins & Metabolic Stimulants ---
+    {sl: 517, name: "Inj. Catophos", comp_val: "Butafosfan 100 mg + Vitamin B12 50 mcg", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Phosphorus metabolism stimulus, Infertility", co: "Bayer (ACI)", type: "c", str: "Combined", mgkg: "1ml/10-20kg"},
+    {sl: 518, name: "Inj. Butavet-V", comp_val: "Butafosfan + Vitamin B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic disorder, Stress, Fatigue", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 519, name: "Inj. Vitade Vet", comp_val: "Vitamin A + D3 + E", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth, Immunity, Epithelial health", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 520, name: "Inj. Rena-ADE", comp_val: "Vitamin A + D3 + E", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fertility boost, Stress prevention", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Digestive & Rumenotorics ---
+    {sl: 521, name: "Bol. Rumicid Vet", comp_val: "Ammonium Bicarbonate + Nuxvomica + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Indigestion, Anorexia, Ruminal atony", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus/animal"},
+    {sl: 522, name: "Bol. Bio-Gut", comp_val: "Probiotics + Saccharomyces cerevisiae", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Bloat, Ruminal pH balancing", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 523, name: "Pulv. Zyme-Vet", comp_val: "Multienzyme complex", pack: "100 gm sachet", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Digestive aid, Feed conversion improvement", co: "Popular", type: "c", str: "WSP", mgkg: "N/A"},
+
+    // --- Liver Support ---
+    {sl: 524, name: "Liq. Hepaguard Vet", comp_val: "Silymarin + Choline + L-Carnitine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fatty liver, Jaundice, Hepatic cirrhosis", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 525, name: "Liq. Livo-C", comp_val: "Liver extract + Vitamin B12 + C", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Hepatoprotective tonic", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Reproductive Hormones ---
+    {sl: 526, name: "Inj. Receptal", comp_val: "Buserelin Acetate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Delayed ovulation, Ovarian cysts", co: "MSD", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 527, name: "Inj. Ovurelin", comp_val: "Gonadorelin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Cystic ovaries, Oestrus synchronization", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 528, name: "Inj. Oxytocin-V", comp_val: "Oxytocin (Synthetic)", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Uterine inertia, Agalactia", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics (Dewormers) ---
+    {sl: 529, name: "Bol. Almex Vet", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Roundworms, Lungworms, Liver flukes", co: "Renata", type: "c", str: "600mg", mgkg: "7.5-10mg/kg"},
+    {sl: 530, name: "Bol. LT-Vet", comp_val: "Triclabendazole 900 mg + Levamisole 600 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum fascioliasis treatment", co: "Square", type: "c", str: "Combined", mgkg: "1bolus/75kg"},
+    {sl: 531, name: "Inj. Vermic-10", comp_val: "Ivermectin 1%", pack: "Vial", safe: "Safe", pet: "Safe(Caution)", base: 0.02, unit: "ml", ind: "Endo & Ectoparasite control", co: "Renata", type: "c", str: "10mg/ml", mgkg: "1ml/50kg"},
+
+    // --- Additional Items ---
+    {sl: 532, name: "Inj. B-Com Vet", comp_val: "Vitamin B1+B2+B6+B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "B-vitamin deficiency, Weakness", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 533, name: "Liq. Amino-Acid", comp_val: "Essential Amino Acids + Vitamins", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth promoter, Convalescence tonic", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 534, name: "Inj. G-Vitamix", comp_val: "Multivitamins", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "General metabolic boost", co: "Gonoshasthaya", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 535, name: "Liq. Povisep Vet", comp_val: "Povidone Iodine 10%", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgical site and wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 536, name: "Inj. Lidocaine-V 2%", comp_val: "Lidocaine HCl", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local anesthesia, Surgical procedures", co: "Square", type: "c", str: "2%", mgkg: "N/A"},
+
+    // --- More Recent Market Entries ---
+    {sl: 537, name: "Inj. Ceftio-V 1g", comp_val: "Ceftiofur Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute BRD, Foot rot, Shipping fever", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1.1-2.2mg/kg"},
+    {sl: 538, name: "Inj. Melofen", comp_val: "Meloxicam + Paracetamol", pack: "100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe fever and inflammation", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 539, name: "Liq. Digex", comp_val: "Digestive Enzymes Liquid", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Indigestion and ruminal stasis in calves", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 540, name: "Pulv. Electromin", comp_val: "Electrolytes + Minerals", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Heat stress and rehydration", co: "Square", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 541, name: "Inj. B1+B6+B12", comp_val: "Neurotropic Vitamins", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve tone booster, Paralysis support", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 542, name: "Inj. Cal-Bor", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 543, name: "Bol. Metro-A 2g", comp_val: "Metronidazole 2000 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Amoebiasis and Giardiasis in cattle", co: "Acme", type: "c", str: "2g", mgkg: "N/A"},
+    {sl: 544, name: "Oint. Nitrofur-V", comp_val: "Nitrofurazone 0.2%", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Infected surface wounds", co: "Popular", type: "f", str: "0.2%", mgkg: "N/A"},
+    {sl: 545, name: "Inj. Frusemide-10", comp_val: "Furosemide", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Post-calving udder edema", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 546, name: "Liq. Liver-G", comp_val: "Herbal Liver Protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning and detoxification", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 547, name: "Inj. Dexazone", comp_val: "Dexamethasone Sodium Phosphate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anaphylaxis relief", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 548, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Milk ejection stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 549, name: "Inj. Lidocaine-Z", comp_val: "Lidocaine HCl 2%", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local nerve block", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 550, name: "Bol. Paracet-V", comp_val: "Paracetamol", pack: "Bolus", safe: "Safe", pet: "Unsafe", base: 1, unit: "bolus", ind: "General pain and fever reduction", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    
+    
+    
+    
+    
+  
+    // --- Macrolide Antibiotics (শ্বাসতন্ত্র ও চর্মরোগের জন্য উন্নত অ্যান্টিবায়োটিক) ---
+    {sl: 551, name: "Inj. Tylosin-V 200", comp_val: "Tylosin Tartrate 200 mg/ml", pack: "10/100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Mycoplasmosis, Foot rot, Mastitis, Metritis", co: "ACI", type: "c", str: "200mg/ml", mgkg: "10mg/kg"},
+    {sl: 552, name: "Inj. Tylan 200", comp_val: "Tylosin", pack: "100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Pneumonia, Diphtheria in cattle", co: "Elanco", type: "c", str: "200mg/ml", mgkg: "10mg/kg"},
+    {sl: 553, name: "Inj. Tilmicosin Vet", comp_val: "Tilmicosin Phosphate", pack: "50 ml vial", safe: "Safe", pet: "Unsafe", base: 0.03, unit: "ml", ind: "Bovine respiratory disease (BRD)", co: "Techno", type: "c", str: "300mg/ml", mgkg: "10mg/kg"},
+    {sl: 554, name: "Inj. Micotil 300", comp_val: "Tilmicosin 300 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Unsafe", base: 0.03, unit: "ml", ind: "Severe Pneumonia, Pasteurellosis", co: "Elanco", type: "c", str: "300mg/ml", mgkg: "10mg/kg"},
+    {sl: 555, name: "Inj. Tulathromycin-V", comp_val: "Tulathromycin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.025, unit: "ml", ind: "Single dose BRD treatment", co: "Generic", type: "c", str: "100mg/ml", mgkg: "2.5mg/kg"},
+
+    // --- Digestive & Laxatives (হজম ও কোষ্ঠকাঠিন্য নিরোধক) ---
+    {sl: 556, name: "Liq. Paraffin Vet", comp_val: "Liquid Paraffin (Medicinal)", pack: "500 ml bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Constipation, Ruminal impaction", co: "Generic", type: "c", str: "100%", mgkg: "N/A"},
+    {sl: 557, name: "Liq. Castor-V", comp_val: "Castor Oil", pack: "100 ml", safe: "Safe", pet: "Safe", base: 10, unit: "ml", ind: "Laxative for calves and small animals", co: "Generic", type: "c", str: "100%", mgkg: "N/A"},
+    {sl: 558, name: "Pulv. Epsom Salt", comp_val: "Magnesium Sulphate", pack: "100/500 gm", safe: "Safe", pet: "Safe", base: 10, unit: "gm", ind: "Saline purgative for impaction", co: "Generic", type: "c", str: "Pure", mgkg: "N/A"},
+    {sl: 559, name: "Bol. Lax-Aid", comp_val: "Laxative Salts + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Mild constipation and indigestion", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 560, name: "Bol. Gas-Free", comp_val: "Simethicone + Antacids", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Bloat and flatulence in ruminants", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- NSAIDs & Advanced Pain Relief (ব্যথানাশক) ---
+    {sl: 561, name: "Inj. Tolfedine 4%", comp_val: "Tolfenamic Acid", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Anti-inflammatory, Analgesic, Mastitis", co: "Vetoquinol", type: "c", str: "40mg/ml", mgkg: "2mg/kg"},
+    {sl: 562, name: "Inj. Flunixin-V", comp_val: "Flunixin Meglumine 50 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Colic pain, Endotoxic shock", co: "Square", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+    {sl: 563, name: "Inj. Finadyne", comp_val: "Flunixin Meglumine", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Fever and acute inflammation in BRD", co: "MSD", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+    {sl: 564, name: "Inj. Ketovet 100", comp_val: "Ketoprofen 100 mg/ml", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Musculoskeletal pain, Fever reduction", co: "Techno", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+
+    // --- Hormones & Steroids (হরমোন ও স্টেরয়েড) ---
+    {sl: 565, name: "Inj. Chorulon", comp_val: "hCG (Human Chorionic Gonadotrophin)", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Infertility, Follicular cysts in cows", co: "MSD", type: "c", str: "1500 IU", mgkg: "N/A"},
+    {sl: 566, name: "Inj. Folligon", comp_val: "PMSG", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Superovulation induction", co: "Intervet", type: "c", str: "1000 IU", mgkg: "N/A"},
+    {sl: 567, name: "Inj. Estrumate", comp_val: "Cloprostenol Sodium", pack: "Vial", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "ml", ind: "Luteolysis, Heat synchronization", co: "MSD", type: "c", str: "250mcg/ml", mgkg: "2ml/cow"},
+    {sl: 568, name: "Inj. Prednisolone-V", comp_val: "Prednisolone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Ketosis, Allergic dermatitis", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics: Modern Combinations (উন্নত কৃমিনাশক) ---
+    {sl: 569, name: "Bol. Iver-A", comp_val: "Ivermectin + Albendazole", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Endo & Ectoparasite control", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 570, name: "Bol. Closavet", comp_val: "Closantel", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Liver fluke, Haemonchosis", co: "Techno", type: "c", str: "Combined", mgkg: "10mg/kg"},
+    {sl: 571, name: "Inj. Closantel-V", comp_val: "Closantel", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Nematodes and larval stages", co: "Renata", type: "c", str: "50mg/ml", mgkg: "5-10mg/kg"},
+
+    // --- Hematinics & Iron (রক্তাল্পতা রোধক) ---
+    {sl: 572, name: "Inj. Iron-DS", comp_val: "Iron Dextran + Vitamin B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Piglet anemia prevention", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 573, name: "Inj. Hemovet", comp_val: "Iron + B12 + Folic Acid", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Anemia during recovery", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 574, name: "Inj. Ferron-V", comp_val: "Iron Dextran", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "General iron deficiency", co: "Acme", type: "c", str: "100mg/ml", mgkg: "N/A"},
+
+    // --- Liver Support (লিভার সুরক্ষা) ---
+    {sl: 575, name: "Liq. Silymarin-Plus", comp_val: "Silymarin + Choline + B-Vit", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Hepatic cirrhosis, Fatty liver", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 576, name: "Liq. Hepatocare", comp_val: "Herbal liver tonic", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Detoxification and appetite stimulant", co: "Renata", type: "c", str: "Herbal", mgkg: "N/A"},
+
+    // --- Diagnostic & Antiseptic (রোগ নির্ণয় ও জীবাণুনাশক) ---
+    {sl: 577, name: "CMT Test Kit", comp_val: "Reagent Solution", pack: "200 ml + Paddle", safe: "Safe", pet: "N/A", inst: "2ml milk + 2ml reagent", ind: "Field detection of sub-clinical mastitis", co: "ACI", type: "f", str: "Reagent", mgkg: "N/A"},
+    {sl: 578, name: "Liq. TH4 Plus", comp_val: "Quat + Glutaraldehyde", pack: "1L Bottle", safe: "Safe", pet: "Safe", inst: "2-4 ml/Liter water", ind: "Powerful farm disinfectant", co: "Sodexo (Renata)", type: "f", str: "Liquid", mgkg: "N/A"},
+    {sl: 579, name: "Spray Oxytetra", comp_val: "Oxytetracycline", pack: "Aerosol", safe: "Safe", pet: "Safe", base: 1, unit: "spray", ind: "Wound healing and foot rot", co: "Generic", type: "f", str: "Combined", mgkg: "N/A"},
+
+    // --- Feed Additives & Vitamins (খাদ্য সম্পূরক) ---
+    {sl: 580, name: "Pulv. Megavit-DB", comp_val: "Vit + Min + Amino Acids", pack: "1 kg", safe: "Safe", pet: "Safe", base: 10, unit: "gm", ind: "Boosts milk yield and growth", co: "Acme", type: "c", str: "Powder", mgkg: "10-20g daily"},
+    {sl: 581, name: "Pulv. ACI DCP Gold", comp_val: "Calcium + Phosphorus + Trace Elements", pack: "1 kg", safe: "Safe", pet: "Safe", base: 15, unit: "gm", ind: "Bone skeletal development", co: "ACI", type: "c", str: "Powder", mgkg: "15g/100kg"},
+    {sl: 582, name: "Liq. Vit-E Plus Selenium", comp_val: "Vitamin E + Selenium", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Prevents muscular dystrophy", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Additional Antibiotics & Antiprotozoals ---
+    {sl: 583, name: "Inj. Diminal", comp_val: "Diminazene diaceturate + Phenazone", pack: "2.36g vial", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Babesia & Trypanosoma control", co: "ACI (Eagle Vet)", type: "c", str: "Combined", mgkg: "1ml/12.5kg"},
+    {sl: 584, name: "Inj. Babcop-Vet", comp_val: "Diminazene aceturate + Phenazone", pack: "20 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Pyrexia in protozoal diseases", co: "Square", type: "c", str: "70mg/ml", mgkg: "1ml/20kg"},
+    {sl: 585, name: "Inj. Imidox Vet", comp_val: "Imidocarb Dipropionate", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Babesiosis & Anaplasmosis", co: "Acme", type: "c", str: "120mg/ml", mgkg: "1ml/40kg"},
+
+    // --- Antihistamines & Vitamins ---
+    {sl: 586, name: "Inj. Histacin-V", comp_val: "Chlorpheniramine Maleate", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "General allergic conditions", co: "ACI", type: "c", str: "10mg/ml", mgkg: "1ml/25kg"},
+    {sl: 587, name: "Inj. Vitade-V", comp_val: "Vit A + D3 + E", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Immunity and fertility boost", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 588, name: "Inj. Phosphorus-Aid", comp_val: "Phosphorus Solution", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Pica, Downer cow syndrome", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Misc Bolus & Tablets ---
+    {sl: 589, name: "Bol. Bio-Gut", comp_val: "Probiotics + Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Ruminal flora restoration", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 590, name: "Bol. Rumen-Vet", comp_val: "Herbal Rumenotorics", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Loss of appetite in cattle", co: "ACI", type: "c", str: "Combined", mgkg: "1-2 bolus"},
+    {sl: 591, name: "Bol. Para-Vet Plus", comp_val: "Paracetamol + Diclofenac", pack: "Bolus", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Severe pain and fever", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 592, name: "Bol. Ace-Vet 500", comp_val: "Paracetamol", pack: "Bolus", safe: "Safe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Mild fever and pain reduction", co: "Square", type: "c", str: "500mg", mgkg: "N/A"},
+    {sl: 593, name: "Oint. Burn-Care", comp_val: "Silver Sulphadiazine", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Burn wounds dressing", co: "Square", type: "f", str: "1%", mgkg: "N/A"},
+    {sl: 594, name: "Inj. Dexazone-S", comp_val: "Dexamethasone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anti-inflammatory and stress relief", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 595, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Milk ejection stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 596, name: "Inj. Lidocaine-Z", comp_val: "Lidocaine HCl 2%", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local nerve block", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 597, name: "Bol. Digesta-V", comp_val: "Digestive Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Appetite boost for calves", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 598, name: "Inj. Neuro-B Plus", comp_val: "Vit B1+B6+B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Treatment for nerve disorders", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 599, name: "Inj. Gentax-V", comp_val: "Gentamicin Sulphate", pack: "Vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.08, unit: "ml", ind: "Broad spectrum bacterial infections", co: "Acme", type: "c", str: "50mg/ml", mgkg: "4mg/kg"},
+    {sl: 600, name: "Inj. Enrocin-Vet", comp_val: "Enrofloxacin 10%", pack: "100 ml vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.05, unit: "ml", ind: "Digestive & Respiratory control", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "5mg/kg"},
+
+
+
+  
+    
+      
+    // --- Fluoroquinolones (উন্নত অ্যান্টিবায়োটিক) ---
+    {sl: 601, name: "Inj. Marbo-Vet", comp_val: "Marbofloxacin 100 mg/ml", pack: "10/30 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Acute mastitis, Severe respiratory infections", co: "SK+F", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+    {sl: 602, name: "Inj. Marbores 10%", comp_val: "Marbofloxacin", pack: "20 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Pneumonia, Gastroenteritis in calves", co: "ACI", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+    {sl: 603, name: "Inj. Danoflox-V", comp_val: "Danofloxacin Mesylate", pack: "10 ml vial", safe: "Unsafe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Bovine respiratory disease, Enteritis", co: "Generic", type: "c", str: "25mg/ml", mgkg: "1.25mg/kg"},
+    {sl: 604, name: "Inj. DFN Vet", comp_val: "Danofloxacin 2.5%", pack: "10 ml", safe: "Unsafe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Severe respiratory & enteric infections", co: "SK+F", type: "c", str: "25mg/ml", mgkg: "1.25mg/kg"},
+
+    // --- Oral Anthelmintics (তরল ও পাউডার কৃমিনাশক) ---
+    {sl: 605, name: "Liq. Helmex Vet", comp_val: "Pyrantel Pamoate", pack: "60 ml bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Roundworms, Hookworms, Pinworms", co: "Popular", type: "c", str: "50mg/ml", mgkg: "N/A"},
+    {sl: 606, name: "Pulv. Piperazine", comp_val: "Piperazine Citrate 100%", pack: "100 gm sachet", safe: "Safe", pet: "Safe", base: 10, unit: "gm", ind: "Large roundworms in poultry & livestock", co: "Generic", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 607, name: "Liq. Levon-V", comp_val: "Levamisole Hydrochloride", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Gastrointestinal & Lungworms", co: "Renata", type: "c", str: "Tonic", mgkg: "7.5mg/kg"},
+    {sl: 608, name: "Liq. Alzol Vet", comp_val: "Albendazole 2.5%", pack: "100 ml bottle", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Liver fluke & roundworm oral suspension", co: "ACI", type: "c", str: "25mg/ml", mgkg: "7.5-10mg/kg"},
+
+    // --- Vitamin & Mineral Tonic (পুষ্টি ও বর্ধক) ---
+    {sl: 609, name: "Liq. Rena-Vit ADE", comp_val: "Vitamin A + D3 + E", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth boost, Immunity, Stress relief", co: "Renata", type: "c", str: "Combined", mgkg: "5-10 ml daily"},
+    {sl: 610, name: "Liq. AD3E Gold", comp_val: "Vit A, D3, E Enriched", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Reproduction & skeletal maintenance", co: "Popular", type: "c", str: "Oral Soln", mgkg: "N/A"},
+    {sl: 611, name: "Pulv. Rena-C", comp_val: "Ascorbic Acid (Vitamin C)", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Heat stroke, Anti-stress, Immunity", co: "Renata", type: "c", str: "100% WSP", mgkg: "1g/2L water"},
+    {sl: 612, name: "Liq. Vit-E Plus Selenium", comp_val: "Vitamin E + Selenium", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Encephalomalacia, Muscular dystrophy", co: "Square", type: "c", str: "Combined", mgkg: "1ml/2L water"},
+
+    // --- Digestive & Rumen Buffer (হজম ও পেট ফাঁপা) ---
+    {sl: 613, name: "Powder Acid-Fix", comp_val: "Rumen Buffer Salts", pack: "100 gm", safe: "Safe", pet: "Safe", base: 2.5, unit: "gm", ind: "Prevention of ruminal acidosis", co: "Agro-Vet", type: "c", str: "Buffer", mgkg: "2.5gm/kg"},
+    {sl: 614, name: "Bol. Rumicare", comp_val: "Herbal Rumenotorics", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Anorexia, Indigestion, Impaction", co: "Popular", type: "c", str: "Herbal", mgkg: "1-2 bolus"},
+    {sl: 615, name: "Liq. Digex", comp_val: "Digestive Enzyme Soln", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Indigestion and calf scours", co: "Acme", type: "c", str: "Liquid", mgkg: "N/A"},
+
+    // --- Liver Support & Hepatoprotective (লিভারের ওষুধ) ---
+    {sl: 616, name: "Liq. Hepa-Clear", comp_val: "Herbal Liver Support", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Detoxification, Liver conditioning", co: "ACI", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 617, name: "Liq. Hepatotonic", comp_val: "Methionine + Choline + Biotin", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic stimulant, Fatty liver", co: "Popular", type: "c", str: "Combined", mgkg: "20-50 ml"},
+    {sl: 618, name: "Liq. Eliver Vet", comp_val: "Vit B12 + Methionine + Lysine", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Enhances hepatic functions", co: "Chemist", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Advanced Antibiotics (Injectables) ---
+    {sl: 619, name: "Inj. Cefaprin", comp_val: "Ceftriaxone Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Acute respiratory & urinary infections", co: "Incepta", type: "c", str: "1g", mgkg: "10-20mg/kg"},
+    {sl: 620, name: "Inj. Cefquinome-V", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Mastitis, MMA, Foot rot", co: "Popular", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+
+    // --- Hormones (প্রজনন ও অন্যান্য) ---
+    {sl: 621, name: "Inj. Chorulon", comp_val: "hCG 1500 IU", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Infertility, Follicular cysts", co: "MSD", type: "c", str: "1500 IU", mgkg: "N/A"},
+    {sl: 622, name: "Inj. Folligon", comp_val: "PMSG 1000 IU", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Superovulation, Estrus induction", co: "Intervet", type: "c", str: "1000 IU", mgkg: "N/A"},
+    {sl: 623, name: "Inj. Estrumate", comp_val: "Cloprostenol Sodium", pack: "Vial", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "ml", ind: "Luteolysis, Synchronization", co: "MSD", type: "c", str: "250mcg/ml", mgkg: "2ml/cow"},
+
+    // --- Iron & Blood Boosters (রক্তবর্ধক) ---
+    {sl: 624, name: "Inj. Iron-DS Vet", comp_val: "Iron Dextran + B12", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Iron deficiency anemia, Piglet recovery", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 625, name: "Inj. Hemovet-V", comp_val: "Iron + Vitamin B12 + Folic Acid", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Post-infection weakness booster", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Miscellaneous & Disinfectants ---
+    {sl: 626, name: "Liq. TH4 Plus", comp_val: "Quat + Glutaraldehyde", pack: "1L bottle", safe: "Safe", pet: "Safe", inst: "2-4 ml/L water", ind: "Farm premise disinfectant", co: "Sodexo (Renata)", type: "f", str: "Liquid", mgkg: "N/A"},
+    {sl: 627, name: "Spray Oxytetra", comp_val: "Oxytetracycline HCl", pack: "Aerosol", safe: "Safe", pet: "Safe", base: 1, unit: "spray", ind: "Foot rot, Topical wound care", co: "Generic", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 628, name: "Liq. Virocid", comp_val: "Combined Disinfectant", pack: "1L", safe: "Safe", pet: "Safe", inst: "Farm biosecurity", ind: "Antiviral & antibacterial spray", co: "Ceva", type: "f", str: "Liquid", mgkg: "N/A"},
+
+    // --- Continuing with top market brands (629-650) ---
+    {sl: 629, name: "Inj. Neuro-B Plus", comp_val: "Vit B1 + B6 + B12", pack: "Ampoule", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve weakness, Paralysis", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 630, name: "Bol. Bio-Gut", comp_val: "Probiotics + Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Ruminal pH balance", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 631, name: "Inj. Tolfenamic-V", comp_val: "Tolfenamic Acid", pack: "50 ml", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Inflammation control", co: "Square", type: "c", str: "40mg/ml", mgkg: "2mg/kg"},
+    {sl: 632, name: "Inj. Dexazone-Z", comp_val: "Dexamethasone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anaphylactic shock treatment", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 633, name: "Liq. Aminovet-Plus", comp_val: "Amino Acids + B-Vit", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth booster tonic", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 634, name: "Inj. Babcop-Vet", comp_val: "Diminazene Aceturate", pack: "20 ml", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Tick fever treatment", co: "Square", type: "c", str: "Combined", mgkg: "1ml/20kg"},
+    {sl: 635, name: "Bol. Metro-A 2g", comp_val: "Metronidazole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Enteritis, Giardiasis", co: "Acme", type: "c", str: "2g", mgkg: "N/A"},
+    {sl: 636, name: "Oint. Burn-Care", comp_val: "Silver Sulphadiazine", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Topical burn healing", co: "Square", type: "f", str: "1%", mgkg: "N/A"},
+    {sl: 637, name: "Inj. Lidocaine HCl", comp_val: "Lidocaine 2%", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local anesthesia", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 638, name: "Bol. Ace-Vet 500", comp_val: "Paracetamol", pack: "Bolus", safe: "Safe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Fever and mild pain", co: "Square", type: "c", str: "500mg", mgkg: "N/A"},
+    {sl: 639, name: "Inj. Mely-V", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anti-inflammatory support", co: "Acme", type: "c", str: "Combined", mgkg: "0.5mg/kg"},
+    {sl: 640, name: "Inj. Gentren-10", comp_val: "Gentamicin Sulphate", pack: "100 ml", safe: "Unsafe", pet: "Safe(Caution)", base: 0.04, unit: "ml", ind: "Septicemia control", co: "Renata", type: "c", str: "100mg/ml", mgkg: "4mg/kg"},
+    {sl: 641, name: "Inj. Enrocin-Vet", comp_val: "Enrofloxacin", pack: "100 ml", safe: "Unsafe", pet: "Safe(Caution)", base: 0.05, unit: "ml", ind: "Pneumonia, Scours", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "5mg/kg"},
+    {sl: 642, name: "Pulv. Electromin", comp_val: "Electrolytes + Minerals", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Heat stress prevention", co: "Square", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 643, name: "Liq. Hepa-Sol", comp_val: "Sorbitol + Methionine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Hepatic tonic", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 644, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Uterine stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 645, name: "Inj. B1+B6+B12-Z", comp_val: "Neurotropic Vitamins", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve tone booster", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 646, name: "Bol. Digesta-V", comp_val: "Digestive Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Appetite booster", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 647, name: "Inj. Melofen-DS", comp_val: "Meloxicam + Paracetamol", pack: "100 ml", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe fever & swelling", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 648, name: "Oint. Nitrofur-V Plus", comp_val: "Nitrofurazone", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Bacterial surface wounds", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 649, name: "Inj. Cal-Bor Plus", comp_val: "Calcium Borogluconate", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 650, name: "Liq. Liver-G Plus", comp_val: "Herbal liver protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    
+    
+    
+    
+
+    // --- Digestive & Rumen Buffer (পরিপাক ও রুমানোটোরিক) ---
+    {sl: 651, name: "Pulv. Acid-Fix", comp_val: "Sodium Bicarbonate + Buffer Salts", pack: "100 gm sachet", safe: "Safe", pet: "Safe", base: 2.5, unit: "gm", ind: "Acute ruminal acidosis, Indigestion", co: "Agro-Vet", type: "c", str: "Buffer", mgkg: "2.5gm/kg"},
+    {sl: 652, name: "Bol. Rumicid-Plus", comp_val: "Ammonium Bicarbonate + Nuxvomica + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Digestive stimulant, Ruminal atony", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus/animal"},
+    {sl: 653, name: "Bol. Digevet-DS", comp_val: "Digestive Enzymes + Probiotics", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Loss of appetite, Rumen dysfunction", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 654, name: "Pulv. Anorexon", comp_val: "Appetizer powder", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Restores appetite in large animals", co: "ACI", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 655, name: "Bol. Bio-Zyme", comp_val: "Multienzyme + Yeast", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Improves digestion and feed intake", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Advanced Antibiotics (উন্নত অ্যান্টিবায়োটিক) ---
+    {sl: 656, name: "Inj. Cefaprin 1g", comp_val: "Ceftriaxone Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Urogenital and respiratory tract infections", co: "Incepta", type: "c", str: "1g/vial", mgkg: "10-20mg/kg"},
+    {sl: 657, name: "Inj. Cefquinome-V 2.5%", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute Mastitis, Foot rot, MMA syndrome", co: "Popular", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 658, name: "Inj. Cobactan", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Severe respiratory diseases in cattle", co: "MSD", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 659, name: "Inj. Marbores 10%", comp_val: "Marbofloxacin", pack: "20 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Gastroenteritis, Pneumonia", co: "ACI", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+    {sl: 660, name: "Inj. Danoflox-V", comp_val: "Danofloxacin Mesylate", pack: "10 ml vial", safe: "Unsafe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Bovine respiratory disease (BRD)", co: "Generic", type: "c", str: "25mg/ml", mgkg: "1.25mg/kg"},
+
+    // --- Antiprotozoal & Tick Fever (পরজীবী জ্বর নিরোধক) ---
+    {sl: 661, name: "Inj. Babesin-Vet", comp_val: "Diminazene Aceturate", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Babesiosis, Trypanosomiasis", co: "Square", type: "c", str: "Combined", mgkg: "3.5mg/kg"},
+    {sl: 662, name: "Inj. Ectorid", comp_val: "Imidocarb Dipropionate", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Tick fever prevention, Anaplasmosis", co: "Renata", type: "c", str: "133.26mg/ml", mgkg: "1ml/31kg"},
+    {sl: 663, name: "Inj. Butalex", comp_val: "Buparvaquone", pack: "20 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Theileriosis (East Coast Fever)", co: "MSD", type: "c", str: "50mg/ml", mgkg: "1ml/20kg"},
+    {sl: 664, name: "Inj. Babcop-Vet", comp_val: "Diminazene + Phenazone", pack: "20 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Fever and Babesia control", co: "Square", type: "c", str: "Combined", mgkg: "1ml/20kg"},
+
+    // --- Liver & Metabolism Stimulants (লিভার ও বিপাকীয় উদ্দীপক) ---
+    {sl: 665, name: "Liq. Hepa-Clear", comp_val: "Herbal Liver Conditioner", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning, Detoxification", co: "ACI", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 666, name: "Inj. Catophos", comp_val: "Butafosfan + Vitamin B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic disorders, Stress recovery", co: "Bayer (ACI)", type: "c", str: "Combined", mgkg: "1ml/10-20kg"},
+    {sl: 667, name: "Liq. Restoliv", comp_val: "Choline + Carnitine + Methionine", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fatty liver prevention, Tonic", co: "Opsonin", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 668, name: "Liq. Hepaguard Vet", comp_val: "Silymarin + Choline", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Protects liver from mycotoxins", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Minerals & Vitamins (খনিজ ও ভিটামিন) ---
+    {sl: 669, name: "Inj. Cal-Bor Plus", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Acute milk fever emergency", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 670, name: "Soln. Zis-Vet", comp_val: "Zinc Methionine Hydroxy Analogue", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Skin health, Zinc deficiency", co: "Renata", type: "c", str: "85mg/ml", mgkg: "50-100ml"},
+    {sl: 671, name: "Liq. Z-Complex", comp_val: "Zinc + B-Vitamins", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Immunity and growth enhancer", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 672, name: "Inj. Neuro-B Plus", comp_val: "Vitamin B1 + B6 + B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve inflammation, Weakness", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- NSAIDs & Steroids (ব্যথানাশক ও স্টেরয়েড) ---
+    {sl: 673, name: "Inj. Melofen-DS", comp_val: "Meloxicam + Paracetamol", pack: "100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe fever and body pain", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 674, name: "Inj. Dexazone-S", comp_val: "Dexamethasone Sodium Phosphate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Ketosis, Anti-inflammatory", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 675, name: "Inj. Mely-Z", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "NSAID, Lameness control", co: "Square", type: "c", str: "Combined", mgkg: "0.5mg/kg"},
+    {sl: 676, name: "Bol. Para-Vet Plus", comp_val: "Paracetamol + Diclofenac", pack: "Bolus", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "bolus", ind: "High fever in cattle", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Antibiotics (Sulfa & Trimethoprim DS) ---
+    {sl: 677, name: "Inj. Sulprim-Z 480", comp_val: "Sulfadiazine + Trimethoprim", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 0.05, unit: "ml", ind: "Severe systemic bacterial infection", co: "Renata", type: "c", str: "480mg/ml", mgkg: "15mg/kg"},
+    {sl: 678, name: "Inj. Aditrim-DS", comp_val: "Sulfadiazine + Trimethoprim", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 0.05, unit: "ml", ind: "Acute respiratory pneumonia", co: "Acme", type: "c", str: "480mg/ml", mgkg: "15mg/kg"},
+    {sl: 679, name: "Inj. Trimevet-DS", comp_val: "Sulfamethoxazole + Trimethoprim", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 0.05, unit: "ml", ind: "Systemic broad spectrum control", co: "Techno", type: "c", str: "480mg/ml", mgkg: "15mg/kg"},
+
+    // --- Hormones & Antiseptics ---
+    {sl: 680, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Milk ejection, Uterine stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 681, name: "Inj. Receptal", comp_val: "Buserelin Acetate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Delayed ovulation treatment", co: "MSD", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 682, name: "Oint. Burn-Care", comp_val: "Silver Sulphadiazine", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Burn wounds dressing", co: "Square", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 683, name: "Liq. Povisep Vet", comp_val: "Povidone Iodine 10%", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgery/wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+
+    // --- Anthelmintics (കൃমিনাশক) ---
+    {sl: 684, name: "Bol. Almex-Vet", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Roundworms, Flukes therapy", co: "Renata", type: "c", str: "600mg", mgkg: "7.5mg/kg"},
+    {sl: 685, name: "Inj. Vermic-10", comp_val: "Ivermectin 1%", pack: "Vial", safe: "Safe", pet: "Safe(Caution)", base: 0.02, unit: "ml", ind: "Tick, Lice and Mange control", co: "Renata", type: "c", str: "10mg/ml", mgkg: "1ml/50kg"},
+    {sl: 686, name: "Bol. LT-Vet", comp_val: "Triclabendazole + Levamisole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum fascioliasis control", co: "Square", type: "c", str: "Combined", mgkg: "1bolus/75kg"},
+
+    // --- Additional Items ---
+    {sl: 687, name: "Inj. Gentren-10", comp_val: "Gentamicin Sulphate", pack: "100 ml vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.04, unit: "ml", ind: "Septicemia and scour control", co: "Renata", type: "c", str: "100mg/ml", mgkg: "4mg/kg"},
+    {sl: 688, name: "Inj. Enrocin-Vet", comp_val: "Enrofloxacin 10%", pack: "100 ml vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.05, unit: "ml", ind: "Respiratory tract infections", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "5mg/kg"},
+    {sl: 689, name: "Pulv. Electromin", comp_val: "Electrolytes + Minerals", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Heat stress relief", co: "Square", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 690, name: "Bol. Metro-A 2g", comp_val: "Metronidazole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Dysentery control in large animals", co: "Acme", type: "c", str: "2g", mgkg: "N/A"},
+    {sl: 691, name: "Inj. Dexon-S", comp_val: "Dexamethasone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Shock and stress relief", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 692, name: "Bol. Rumivet-Z", comp_val: "Rumenotoric stimulant", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Indigestion and impaction", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 693, name: "Inj. Melovet-V", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Acute anti-inflammatory support", co: "Acme", type: "c", str: "Combined", mgkg: "0.5mg/kg"},
+    {sl: 694, name: "Liq. Amino-Acid Plus", comp_val: "Essential Amino Acids", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth booster, Tonic", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 695, name: "Inj. Avil Vet-Z", comp_val: "Pheniramine Maleate", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic reaction relief", co: "Sanofi", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
+    {sl: 696, name: "Bol. Digesta-V", comp_val: "Digestive Salts", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Appetite booster for cattle", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 697, name: "Inj. Lidocaine 2%-Z", comp_val: "Lidocaine HCl", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local nerve block", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 698, name: "Inj. B1+B6+B12-A", comp_val: "Neurotropic Vit", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve tone booster", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 699, name: "Liq. Liver-G Plus", comp_val: "Herbal liver protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 700, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Uterine stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    
+       
+  
+          
+                  
+                          
+
+    // --- Anthelmintics: Advanced Drenches (উন্নত কৃমিনাশক লিকুইড) ---
+    {sl: 701, name: "Liq. LT-Vet", comp_val: "Triclabendazole + Levamisole", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fascioliasis and mixed nematode infections", co: "Square", type: "c", str: "Combined", mgkg: "1ml/10kg"},
+    {sl: 702, name: "Liq. Renadex", comp_val: "Triclabendazole + Levamisole", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Broad spectrum deworming for ruminants", co: "Renata", type: "c", str: "Combined", mgkg: "1ml/10kg"},
+    {sl: 703, name: "Liq. Trilavet", comp_val: "Triclabendazole + Levamisole", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Combined action against flukes and worms", co: "Acme", type: "c", str: "Combined", mgkg: "1ml/10kg"},
+    {sl: 704, name: "Liq. Alzol DS", comp_val: "Albendazole 12.5%", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "High potency liver fluke & roundworm control", co: "ACI", type: "c", str: "125mg/ml", mgkg: "1ml/12.5kg"},
+
+    // --- Ectoparasiticides: Pour-on & Wash (বহিঃপরজীবী নাশক) ---
+    {sl: 705, name: "Soln. Cythion-Vet", comp_val: "Cypermethrin 10%", pack: "100 ml", safe: "Safe", pet: "Safe(Caution)", inst: "1 ml/Liter water", ind: "Ticks, Lice, Mites and Flies control", co: "Acme", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 706, name: "Soln. Deltamethrin Vet", comp_val: "Deltamethrin 1.25%", pack: "100 ml", safe: "Safe", pet: "Safe(Caution)", inst: "2 ml/Liter water", ind: "External parasite wash", co: "Popular", type: "f", str: "1.25%", mgkg: "N/A"},
+    {sl: 707, name: "Soln. Renegade", comp_val: "Deltamethrin", pack: "100 ml", safe: "Safe", pet: "Safe(Caution)", inst: "Spray or Wash", ind: "Effective against pyrethroid resistant ticks", co: "Renata", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 708, name: "Soln. A-Mectin Pour-on", comp_val: "Ivermectin Pour-on", pack: "100 ml", safe: "Safe", pet: "Safe", inst: "Apply on backline", ind: "Internal and external parasite control", co: "Acme", type: "f", str: "0.5%", mgkg: "1ml/10kg"},
+
+    // --- Modern Antibiotics: Macrolides & Others (উন্নত অ্যান্টিবায়োটিক) ---
+    {sl: 709, name: "Inj. Zuprevo", comp_val: "Tildipirosin", pack: "Vial", safe: "Safe", pet: "Unsafe", base: 0.04, unit: "ml", ind: "Bovine respiratory disease (Single dose)", co: "MSD", type: "c", str: "180mg/ml", mgkg: "4mg/kg"},
+    {sl: 710, name: "Inj. Draxin", comp_val: "Tulathromycin", pack: "50 ml", safe: "Safe", pet: "Safe", base: 0.025, unit: "ml", ind: "Treatment of BRD and Foot rot", co: "Zoetis", type: "c", str: "100mg/ml", mgkg: "2.5mg/kg"},
+    {sl: 711, name: "Inj. Gamithromycin-V", comp_val: "Gamithromycin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Advanced macrolide for pneumonia", co: "Generic", type: "c", str: "150mg/ml", mgkg: "6mg/kg"},
+
+    // --- Mastitis Special: Intramammary Infusions (ওলান পাকা রোগের টিউব) ---
+    {sl: 712, name: "Tube. Mastijet Forte", comp_val: "Tetracycline + Neomycin + Bacitracin + Prednisolone", pack: "8 gm tube", safe: "Safe", pet: "N/A", inst: "1 tube per quarter", ind: "Acute and chronic mastitis", co: "MSD", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 713, name: "Tube. Curamast", comp_val: "Cefuroxime", pack: "Tube", safe: "Safe", pet: "N/A", inst: "Intramammary use", ind: "Bovine mastitis treatment", co: "Renata", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 714, name: "Tube. Cobactan LC", comp_val: "Cefquinome Sulfate", pack: "8 gm tube", safe: "Safe", pet: "N/A", inst: "1 tube/12 hours", ind: "Lactating cow mastitis", co: "Intervet", type: "f", str: "75mg", mgkg: "N/A"},
+
+    // --- Antiprotozoal (Advanced) ---
+    {sl: 715, name: "Inj. Trypamidium", comp_val: "Isometamidium Chloride", pack: "1 gm", safe: "Safe", pet: "Unsafe", base: 1, unit: "vial", ind: "Trypanosomiasis prophylactic treatment", co: "Merial", type: "c", str: "1g/vial", mgkg: "1mg/kg"},
+    {sl: 716, name: "Inj. Buparvet-Z Plus", comp_val: "Buparvaquone + Vitamin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Theileriosis with recovery support", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1ml/20kg"},
+
+    // --- Liver and Metabolic Stimulants ---
+    {sl: 717, name: "Liq. Liver-On", comp_val: "Vitamin B-Complex + Amino Acids", pack: "1L Bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Improve appetite and liver function", co: "Advent", type: "c", str: "Tonic", mgkg: "5-10 ml daily"},
+    {sl: 718, name: "Inj. Butasyl-V", comp_val: "Butafosfan + B12", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic boost during stress", co: "Ceva", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 719, name: "Liq. Hepa-Protec", comp_val: "Silymarin + L-Carnitine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver regeneration stimulant", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Hormones & Reproductive Support ---
+    {sl: 720, name: "Inj. Gestagen", comp_val: "Hydroxyprogesterone Caproate", pack: "3 ml ampoule", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Prevention of threatened abortion", co: "Renata", type: "c", str: "250mg/ml", mgkg: "N/A"},
+    {sl: 721, name: "Inj. Pragma", comp_val: "Cloprostenol", pack: "2 ml vial", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "ml", ind: "Estrus induction and synchronization", co: "Acme", type: "c", str: "250mcg/ml", mgkg: "2ml/cow"},
+    {sl: 722, name: "Inj. GnRH-Vet", comp_val: "Gonadorelin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Cystic ovaries and infertility", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- NSAIDs & Pain Relief (ব্যথানাশক) ---
+    {sl: 723, name: "Inj. Melovet-Plus", comp_val: "Meloxicam + Paracetamol", pack: "100 ml", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe pain and fever in livestock", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 724, name: "Inj. Ketovet-Z", comp_val: "Ketoprofen", pack: "50 ml", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "NSAID for chronic inflammation", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+    {sl: 725, name: "Inj. Diclo-Z", comp_val: "Diclofenac Sodium", pack: "30 ml vial", safe: "Unsafe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Acute pain and swelling", co: "Generic", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+
+    // --- Calcium & Vitamin Supplements ---
+    {sl: 726, name: "Inj. Cal-D-Mag Plus", comp_val: "Calcium + Mag + Phos + D3", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency infusion", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 727, name: "Inj. B-Com Gold", comp_val: "Vitamin B-Complex Enriched", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Anorexia and metabolic weakness", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 728, name: "Liq. ADE-V", comp_val: "Vitamin A + D3 + E", pack: "500 ml bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Oral vitamin supplement for production", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics: Bolus (কৃমিনাশক বোলাস) ---
+    {sl: 729, name: "Bol. Albendol DS", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Effective against roundworms and flukes", co: "ACI", type: "c", str: "600mg", mgkg: "7.5mg/kg"},
+    {sl: 730, name: "Bol. Fenvet 1.5g", comp_val: "Fenbendazole 1500 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum oral anthelmintic", co: "Techno", type: "c", str: "1.5g", mgkg: "5-7.5mg/kg"},
+    {sl: 731, name: "Bol. Ivermectin-Z", comp_val: "Ivermectin 100 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Oral internal parasite control", co: "Generic", type: "c", str: "100mg", mgkg: "N/A"},
+
+    // --- Rumenotorics & Digestives ---
+    {sl: 732, name: "Bol. Bio-Yeast Plus", comp_val: "Live Yeast + B-Complex", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Digestive stimulant for ruminants", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 733, name: "Bol. Digevet-V", comp_val: "Enzymes + Rumen salts", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Corrects indigestion and impaction", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 734, name: "Pulv. Anorexon-V", comp_val: "Herbal appetizer powder", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Loss of appetite treatment", co: "ACI", type: "c", str: "Herbal", mgkg: "N/A"},
+
+    // --- Antiseptics & Misc ---
+    {sl: 735, name: "Liq. Povisep-V", comp_val: "Povidone Iodine 10%", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgery and wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 736, name: "Spray Iodo-Z", comp_val: "Povidone Iodine Spray", pack: "Aerosol", safe: "Safe", pet: "Safe", base: 1, unit: "spray", ind: "Antiseptic topical spray", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 737, name: "Oint. Zinc-V", comp_val: "Zinc Oxide Ointment", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Protective ointment for skin lesions", co: "Square", type: "f", str: "Combined", mgkg: "N/A"},
+
+    // --- Advanced Antibiotics (Injectables) ---
+    {sl: 738, name: "Inj. Gentren-10", comp_val: "Gentamicin Sulphate", pack: "100 ml vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.04, unit: "ml", ind: "Broad spectrum bacterial infection control", co: "Renata", type: "c", str: "100mg/ml", mgkg: "4mg/kg"},
+    {sl: 739, name: "Inj. Enrocin-V", comp_val: "Enrofloxacin 10%", pack: "100 ml vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.05, unit: "ml", ind: "Respiratory and GI tract infections", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "5mg/kg"},
+    {sl: 740, name: "Inj. Ceftio-Z 1g", comp_val: "Ceftiofur Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute respiratory disease, Foot rot", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1.1-2.2mg/kg"},
+
+    // --- Vitamins & Tonics ---
+    {sl: 741, name: "Inj. Neuro-B-V", comp_val: "Neurotropic Vitamins", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Treatment for nerve disorders and paralysis", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 742, name: "Inj. Cal-Bor-Z", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Acute milk fever emergency treatment", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 743, name: "Liq. Aminovet-Plus-Z", comp_val: "Amino Acids + B-Complex", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "General tonic and growth promoter", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Digestive & Laxative ---
+    {sl: 744, name: "Bol. Lax-Vet Plus", comp_val: "Laxative Salts + Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Constipation and impaction relief", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 745, name: "Liq. Paraffin-Z", comp_val: "Liquid Paraffin", pack: "500 ml bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Medicinal laxative for ruminants", co: "Generic", type: "c", str: "100%", mgkg: "N/A"},
+    {sl: 746, name: "Inj. Atropen-V", comp_val: "Atropine Sulphate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Antidote for organophosphate poisoning", co: "Popular", type: "c", str: "Combined", mgkg: "0.04mg/kg"},
+
+    // --- External Applications ---
+    {sl: 747, name: "Oint. Nitrofur-Z Plus", comp_val: "Nitrofurazone", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Infected surface wounds dressing", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 748, name: "Inj. Dexasone-V", comp_val: "Dexamethasone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anti-inflammatory and shock relief", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 749, name: "Bol. Digesta-V Plus", comp_val: "Digestive Enzymes + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Appetite booster for calves", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 750, name: "Inj. Oxytocin-S Plus", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Milk letdown stimulant", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    
+    
+    
+    // --- Advanced Antibiotics: Cephalosporins (উন্নত অ্যান্টিবায়োটিক) ---
+    {sl: 751, name: "Inj. Cefaprin 1g", comp_val: "Ceftriaxone Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Severe respiratory & urogenital infections", co: "Incepta", type: "c", str: "1g/vial", mgkg: "10-20mg/kg"},
+    {sl: 752, name: "Inj. Cefquinome-V 2.5%", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute Mastitis, Foot rot, MMA syndrome", co: "Popular", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 753, name: "Inj. Cobactan", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Severe respiratory diseases in cattle", co: "MSD", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 754, name: "Inj. Marbores 10%", comp_val: "Marbofloxacin", pack: "20 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Gastroenteritis, Pneumonia", co: "ACI", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+    {sl: 755, name: "Inj. Danoflox-V", comp_val: "Danofloxacin Mesylate", pack: "10 ml vial", safe: "Unsafe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Bovine respiratory disease (BRD)", co: "Generic", type: "c", str: "25mg/ml", mgkg: "1.25mg/kg"},
+
+    // --- Antiprotozoal & Tick Fever (পরজীবী জ্বর নিরোধক) ---
+    {sl: 756, name: "Inj. Babesin-Vet", comp_val: "Diminazene Aceturate", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Babesiosis, Trypanosomiasis", co: "Square", type: "c", str: "Combined", mgkg: "3.5mg/kg"},
+    {sl: 757, name: "Inj. Ectorid", comp_val: "Imidocarb Dipropionate", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Tick fever prevention, Anaplasmosis", co: "Renata", type: "c", str: "133.26mg/ml", mgkg: "1ml/31kg"},
+    {sl: 758, name: "Inj. Butalex", comp_val: "Buparvaquone", pack: "20 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Theileriosis (East Coast Fever)", co: "MSD", type: "c", str: "50mg/ml", mgkg: "1ml/20kg"},
+    {sl: 759, name: "Inj. Babcop-Vet", comp_val: "Diminazene + Phenazone", pack: "20 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Fever and Babesia control", co: "Square", type: "c", str: "Combined", mgkg: "1ml/20kg"},
+
+    // --- Liver & Metabolism Stimulants (লিভার ও বিপাকীয় উদ্দীপক) ---
+    {sl: 760, name: "Liq. Hepa-Clear", comp_val: "Herbal Liver Conditioner", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning, Detoxification", co: "ACI", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 761, name: "Inj. Catophos", comp_val: "Butafosfan + Vitamin B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic disorders, Stress recovery", co: "Bayer (ACI)", type: "c", str: "Combined", mgkg: "1ml/10-20kg"},
+    {sl: 762, name: "Liq. Restoliv", comp_val: "Choline + Carnitine + Methionine", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fatty liver prevention, Tonic", co: "Opsonin", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 763, name: "Liq. Hepaguard Vet", comp_val: "Silymarin + Choline", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Protects liver from mycotoxins", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Digestive Support (পরিপাক ও রুমানোটোরিক) ---
+    {sl: 764, name: "Pulv. Acid-Fix", comp_val: "Sodium Bicarbonate + Buffer Salts", pack: "100 gm sachet", safe: "Safe", pet: "Safe", base: 2.5, unit: "gm", ind: "Acute ruminal acidosis, Indigestion", co: "Agro-Vet", type: "c", str: "Buffer", mgkg: "2.5gm/kg"},
+    {sl: 765, name: "Bol. Rumicid-Plus", comp_val: "Ammonium Bicarbonate + Nuxvomica + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Digestive stimulant, Ruminal atony", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus/animal"},
+    {sl: 766, name: "Bol. Digevet-DS", comp_val: "Digestive Enzymes + Probiotics", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Loss of appetite, Rumen dysfunction", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 767, name: "Pulv. Anorexon", comp_val: "Appetizer powder", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Restores appetite in large animals", co: "ACI", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 768, name: "Bol. Bio-Zyme", comp_val: "Multienzyme + Yeast", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Improves digestion and feed intake", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics: Advanced Drenches (উন্নত কৃমিনাশক লিকুইড) ---
+    {sl: 769, name: "Liq. LT-Vet", comp_val: "Triclabendazole + Levamisole", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fascioliasis and mixed nematode infections", co: "Square", type: "c", str: "Combined", mgkg: "1ml/10kg"},
+    {sl: 770, name: "Liq. Renadex", comp_val: "Triclabendazole + Levamisole", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Broad spectrum deworming for ruminants", co: "Renata", type: "c", str: "Combined", mgkg: "1ml/10kg"},
+    {sl: 771, name: "Liq. Trilavet", comp_val: "Triclabendazole + Levamisole", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Combined action against flukes and worms", co: "Acme", type: "c", str: "Combined", mgkg: "1ml/10kg"},
+    {sl: 772, name: "Liq. Alzol DS", comp_val: "Albendazole 12.5%", pack: "100 ml", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "High potency liver fluke & roundworm control", co: "ACI", type: "c", str: "125mg/ml", mgkg: "1ml/12.5kg"},
+
+    // --- Ectoparasiticides: Pour-on & Wash (বহিঃপরজীবী নাশক) ---
+    {sl: 773, name: "Soln. Cythion-Vet", comp_val: "Cypermethrin 10%", pack: "100 ml", safe: "Safe", pet: "Safe(Caution)", inst: "1 ml/Liter water", ind: "Ticks, Lice, Mites and Flies control", co: "Acme", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 774, name: "Soln. Deltamethrin Vet", comp_val: "Deltamethrin 1.25%", pack: "100 ml", safe: "Safe", pet: "Safe(Caution)", inst: "2 ml/Liter water", ind: "External parasite wash", co: "Popular", type: "f", str: "1.25%", mgkg: "N/A"},
+    {sl: 775, name: "Soln. Renegade", comp_val: "Deltamethrin", pack: "100 ml", safe: "Safe", pet: "Safe(Caution)", inst: "Spray or Wash", ind: "Effective against pyrethroid resistant ticks", co: "Renata", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 776, name: "Soln. A-Mectin Pour-on", comp_val: "Ivermectin Pour-on", pack: "100 ml", safe: "Safe", pet: "Safe", inst: "Apply on backline", ind: "Internal and external parasite control", co: "Acme", type: "f", str: "0.5%", mgkg: "1ml/10kg"},
+
+    // --- Antiprotozoal (Advanced) ---
+    {sl: 777, name: "Inj. Trypamidium", comp_val: "Isometamidium Chloride", pack: "1 gm", safe: "Safe", pet: "Unsafe", base: 1, unit: "vial", ind: "Trypanosomiasis prophylactic treatment", co: "Merial", type: "c", str: "1g/vial", mgkg: "1mg/kg"},
+    {sl: 778, name: "Inj. Buparvet-Z Plus", comp_val: "Buparvaquone + Vitamin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Theileriosis with recovery support", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1ml/20kg"},
+
+    // --- Liver and Metabolic Stimulants ---
+    {sl: 779, name: "Liq. Liver-On", comp_val: "Vitamin B-Complex + Amino Acids", pack: "1L Bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Improve appetite and liver function", co: "Advent", type: "c", str: "Tonic", mgkg: "5-10 ml daily"},
+    {sl: 780, name: "Inj. Butasyl-V", comp_val: "Butafosfan + B12", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic boost during stress", co: "Ceva", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 781, name: "Liq. Hepa-Protec", comp_val: "Silymarin + L-Carnitine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver regeneration stimulant", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Hormones & Reproductive Support ---
+    {sl: 782, name: "Inj. Gestagen", comp_val: "Hydroxyprogesterone Caproate", pack: "3 ml ampoule", safe: "Safe", pet: "Safe", base: 1, unit: "vial", ind: "Prevention of threatened abortion", co: "Renata", type: "c", str: "250mg/ml", mgkg: "N/A"},
+    {sl: 783, name: "Inj. Pragma", comp_val: "Cloprostenol", pack: "2 ml vial", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "ml", ind: "Estrus induction and synchronization", co: "Acme", type: "c", str: "250mcg/ml", mgkg: "2ml/cow"},
+    {sl: 784, name: "Inj. GnRH-Vet", comp_val: "Gonadorelin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Cystic ovaries and infertility", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- NSAIDs & Pain Relief (ব্যথানাশক) ---
+    {sl: 785, name: "Inj. Melovet-Plus", comp_val: "Meloxicam + Paracetamol", pack: "100 ml", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe pain and fever in livestock", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 786, name: "Inj. Ketovet-Z", comp_val: "Ketoprofen", pack: "50 ml", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "NSAID for chronic inflammation", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+    {sl: 787, name: "Inj. Diclo-Z", comp_val: "Diclofenac Sodium", pack: "30 ml vial", safe: "Unsafe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Acute pain and swelling", co: "Generic", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+
+    // --- Calcium & Vitamin Supplements ---
+    {sl: 788, name: "Inj. Cal-D-Mag Plus", comp_val: "Calcium + Mag + Phos + D3", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency infusion", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 789, name: "Inj. B-Com Gold", comp_val: "Vitamin B-Complex Enriched", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Anorexia and metabolic weakness", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 790, name: "Liq. ADE-V", comp_val: "Vitamin A + D3 + E", pack: "500 ml bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Oral vitamin supplement for production", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics: Bolus (কৃমিনাশক বোলাস) ---
+    {sl: 791, name: "Bol. Albendol DS", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Effective against roundworms and flukes", co: "ACI", type: "c", str: "600mg", mgkg: "7.5mg/kg"},
+    {sl: 792, name: "Bol. Fenvet 1.5g", comp_val: "Fenbendazole 1500 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum oral anthelmintic", co: "Techno", type: "c", str: "1.5g", mgkg: "5-7.5mg/kg"},
+    {sl: 793, name: "Bol. Ivermectin-Z", comp_val: "Ivermectin 100 mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Oral internal parasite control", co: "Generic", type: "c", str: "100mg", mgkg: "N/A"},
+
+    // --- Rumenotorics & Digestives ---
+    {sl: 794, name: "Bol. Bio-Yeast Plus", comp_val: "Live Yeast + B-Complex", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Digestive stimulant for ruminants", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 795, name: "Bol. Digevet-V", comp_val: "Enzymes + Rumen salts", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Corrects indigestion and impaction", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 796, name: "Pulv. Anorexon-V", comp_val: "Herbal appetizer powder", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Loss of appetite treatment", co: "ACI", type: "c", str: "Herbal", mgkg: "N/A"},
+
+    // --- Antiseptics & Misc ---
+    {sl: 797, name: "Liq. Povisep-V", comp_val: "Povidone Iodine 10%", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgery and wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 798, name: "Spray Iodo-Z", comp_val: "Povidone Iodine Spray", pack: "Aerosol", safe: "Safe", pet: "Safe", base: 1, unit: "spray", ind: "Antiseptic topical spray", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 799, name: "Oint. Zinc-V", comp_val: "Zinc Oxide Ointment", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Protective ointment for skin lesions", co: "Square", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 800, name: "Inj. Gentax-V", comp_val: "Gentamicin Sulphate", pack: "Vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.08, unit: "ml", ind: "Broad spectrum bacterial infections", co: "Acme", type: "c", str: "50mg/ml", mgkg: "4mg/kg"},
+
+
+                
+    
+
+    // --- Antiprotozoal: Diminazene & Imidocarb (পরজীবী নাশক) ---
+    {sl: 801, name: "Inj. Renazene-Vet", comp_val: "Diminazene Aceturate 1.05g + Phenazone", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Babesiosis, Trypanosomiasis in cattle", co: "Renata", type: "c", str: "Combined", mgkg: "3.5mg/kg"},
+    {sl: 802, name: "Inj. Trypazene Vet", comp_val: "Diminazene Aceturate", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Protozoal infections with high fever", co: "Popular", type: "c", str: "Combined", mgkg: "3.5mg/kg"},
+    {sl: 803, name: "Inj. Babecure", comp_val: "Imidocarb Dipropionate 120 mg/ml", pack: "2 ml ampoule", safe: "Safe", pet: "Safe", base: 0.025, unit: "ml", ind: "Severe Babesiosis treatment", co: "Acme", type: "c", str: "120mg/ml", mgkg: "1ml/40kg"},
+    {sl: 804, name: "Inj. Imidocarb-Vet", comp_val: "Imidocarb Dipropionate", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Tick fever and Anaplasmosis", co: "Popular", type: "c", str: "133mg/ml", mgkg: "1ml/31kg"},
+
+    // --- Vitamin ADE & B-Complex (ভিটামিন ও শক্তি বর্ধক) ---
+    {sl: 805, name: "Inj. Hyvit ADE-Vet", comp_val: "Vitamin A + D3 + E", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic boost, Stress and Night blindness", co: "Popular", type: "c", str: "Combined", mgkg: "5-12ml (Large)"},
+    {sl: 806, name: "Inj. Es-ADE", comp_val: "Vitamin A + D3 + E", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Immunity and skeletal development", co: "SK+F", type: "c", str: "Combined", mgkg: "5-10ml (Cattle)"},
+    {sl: 807, name: "Inj. Thiamin-Vet", comp_val: "Vitamin B1 (Thiamine HCl) 100mg/ml", pack: "10/100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Polioencephalomalacia, Anorexia", co: "Acme", type: "c", str: "100mg/ml", mgkg: "1ml/10-20kg"},
+    {sl: 808, name: "Inj. Becovet", comp_val: "Vitamin B-Complex (B1, B2, B6, Nicotinamide)", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic tonic, Appetite stimulant", co: "Popular", type: "c", str: "Combined", mgkg: "5-10ml (Large)"},
+
+    // --- Liver Support & Amino Acids (লিভার ও এমিনো এসিড) ---
+    {sl: 809, name: "Liq. Hepatonic Liq.", comp_val: "Methionine + Choline + Biotin", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver regeneration and detoxification", co: "Popular", type: "c", str: "Combined", mgkg: "20-50ml (Cattle)"},
+    {sl: 810, name: "Liq. Superliv", comp_val: "Herbal Liver Tonic", pack: "500 ml bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Natural hepatic protection", co: "Ayurvet (ACI)", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 811, name: "Liq. Amino-V", comp_val: "Essential Amino Acids + Vitamins", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Protein supplement for growth", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 812, name: "Liq. Aminovet-Plus", comp_val: "Amino Acids + Vit B-Complex", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Recovery from illness, Tonic", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Digestive & Rumenotorics (হজম ও জাবর কাটা) ---
+    {sl: 813, name: "Bol. Rumicid-Plus", comp_val: "Ammonium Bicarbonate + Nuxvomica", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Corrects ruminal stasis and indigestion", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus"},
+    {sl: 814, name: "Bol. Digevet-DS", comp_val: "Enzymes + Probiotics", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Digestive dysfunction in large animals", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 815, name: "Pulv. Zyme-Vet WSP", comp_val: "Multienzyme complex", pack: "100 gm sachet", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Improves feed conversion ratio", co: "Popular", type: "c", str: "WSP", mgkg: "N/A"},
+
+    // --- Minerals & Electrolytes (খনিজ ও ইলেকট্রোলাইট) ---
+    {sl: 816, name: "Inj. Phosphorus-Vet", comp_val: "Sodium Acid Phosphate", pack: "30/100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Pica, Infertility, Post-parturient hemoglobinuria", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 817, name: "Bol. Calvet-DB", comp_val: "Calcium + Phos + D3 + B12", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Mineral deficiency, Bone health", co: "ACI", type: "c", str: "Combined", mgkg: "1 bolus daily"},
+    {sl: 818, name: "Gel. Cal-Boost", comp_val: "Calcium 43.5g + Magnesium 2.5g", pack: "300 ml bottle", safe: "Safe", pet: "Safe", base: 1, unit: "bottle", ind: "Instant oral calcium after delivery", co: "Renata", type: "c", str: "Combined", mgkg: "1 bottle"},
+
+    // --- Pain & Allergy (ব্যথা ও এলার্জি) ---
+    {sl: 819, name: "Inj. Phenavet", comp_val: "Chlorpheniramine Maleate", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic conditions, Insect bites", co: "Techno", type: "c", str: "10mg/ml", mgkg: "1ml/25kg"},
+    {sl: 820, name: "Inj. Melovet-Plus", comp_val: "Meloxicam + Paracetamol", pack: "100 ml", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe pain and body fever", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 821, name: "Inj. Ketovet", comp_val: "Ketoprofen 100 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "NSAID for chronic pain management", co: "Techno", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+
+    // --- Antiseptics & External (বাহ্যিক ব্যবহার) ---
+    {sl: 822, name: "Oint. Burn-Free", comp_val: "Silver Sulphadiazine", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Wound and burn topical treatment", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 823, name: "Spray Iodo-Z", comp_val: "Povidone Iodine Spray", pack: "Aerosol", safe: "Safe", pet: "Safe", base: 1, unit: "spray", ind: "Surface antiseptic for cattle", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 824, name: "Soln. Deltamethrin Vet", comp_val: "Deltamethrin 1.25%", pack: "100 ml", safe: "Safe", pet: "Safe(Caution)", inst: "2 ml/Liter water", ind: "External parasite wash", co: "Popular", type: "f", str: "1.25%", mgkg: "N/A"},
+
+    // --- Antibiotics & Others (অ্যান্টিবায়োটিক ও অন্যান্য) ---
+    {sl: 825, name: "Inj. Ceftio-Z", comp_val: "Ceftiofur Sodium 1g", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute respiratory disease, Foot rot", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1.1-2.2mg/kg"},
+    {sl: 826, name: "Inj. Atropen-V", comp_val: "Atropine Sulphate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Antidote for poisoning", co: "Popular", type: "c", str: "Combined", mgkg: "0.04mg/kg"},
+    {sl: 827, name: "Bol. Metro-Vet Plus", comp_val: "Metronidazole + Furazolidone", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Mixed intestinal infection control", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 828, name: "Liq. Eliver vet", comp_val: "Vit B12 + Methionine + Choline", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning, Metabolic disorders", co: "Chemist", type: "c", str: "Combined", mgkg: "20-40ml"},
+
+    // --- Homeopathic/Herbal (হোমিও ও হারবাল) ---
+    {sl: 829, name: "Liq. Thuja occi 200", comp_val: "Thuja Occidentalis 200", pack: "Bottle", safe: "Safe", pet: "Safe", base: 1, unit: "drop", ind: "Warts/Papilloma treatment", co: "Homeo", type: "f", str: "200 CH", mgkg: "10 drops"},
+    {sl: 830, name: "Liq. Croton tig 200", comp_val: "Croton Tiglium 200", pack: "Bottle", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Skin irritation and eczema", co: "Homeo", type: "f", str: "200 CH", mgkg: "1ml"},
+    {sl: 831, name: "Ficus religiosa leaf", comp_val: "Ficus Leaf Extract", pack: "Natural", safe: "Safe", pet: "Safe", base: 1, unit: "piece", ind: "Traditional aid for Babesiosis", co: "Natural", type: "f", str: "Leaf", mgkg: "Daily"},
+    {sl: 832, name: "Liq. Abies Canadensis", comp_val: "Abies Canadensis", pack: "Bottle", safe: "Safe", pet: "Safe", base: 2, unit: "tsp", ind: "Indigestion and gastric relief", co: "Homeo", type: "f", str: "Combined", mgkg: "2-4 tsp"},
+
+    // --- Additional Market Items (৮৩৩ - ৮৫০) ---
+    {sl: 833, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Milk ejection stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 834, name: "Bol. Digesta-V Plus", comp_val: "Digestive Enzymes + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Corrects loss of appetite in cattle", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 835, name: "Inj. Dexazone-S", comp_val: "Dexamethasone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Shock, Acute inflammation relief", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 836, name: "Oint. Zinc-V", comp_val: "Zinc Oxide", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Protective ointment for skin", co: "Square", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 837, name: "Liq. Aminovet-Plus-Z", comp_val: "Amino Acids + B-Complex", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "General tonic and growth promoter", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 838, name: "Inj. Lidocaine 2%-Z", comp_val: "Lidocaine HCl", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local nerve block anesthesia", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 839, name: "Bol. Lax-Vet Plus", comp_val: "Laxative Salts + Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Constipation and impaction relief", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 840, name: "Inj. Gentax-V", comp_val: "Gentamicin Sulphate", pack: "Vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.08, unit: "ml", ind: "Broad spectrum bacterial infections", co: "Acme", type: "c", str: "50mg/ml", mgkg: "4mg/kg"},
+    {sl: 841, name: "Inj. Melofen-DS", comp_val: "Meloxicam + Paracetamol", pack: "100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe fever and body pain", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 842, name: "Inj. Cal-Bor Plus", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Acute milk fever treatment", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 843, name: "Liq. Liver-G Plus", comp_val: "Herbal liver protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning naturally", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 844, name: "Bol. Rumivet-Z", comp_val: "Rumenotoric stimulant", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Indigestion and ruminal stasis", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 845, name: "Inj. Neuro-B-V", comp_val: "Neurotropic Vitamins", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve disorder treatment", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 846, name: "Inj. Frusemide-10", comp_val: "Furosemide", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Post-calving udder edema", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 847, name: "Liq. Povisep Vet", comp_val: "Povidone Iodine 10%", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgery & wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 848, name: "Inj. Enrocin-Vet", comp_val: "Enrofloxacin 10%", pack: "100 ml vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.05, unit: "ml", ind: "Respiratory & GI tract infections", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "5mg/kg"},
+    {sl: 849, name: "Bol. LT-Vet Plus", comp_val: "Triclabendazole + Levamisole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum fascioliasis control", co: "Square", type: "c", str: "Combined", mgkg: "1bolus/75kg"},
+    {sl: 850, name: "Inj. B1+B6+B12-A", comp_val: "Neurotropic Vit", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve tone booster", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+
+    
+    
+    
+    
+    
+
+    // --- NSAIDs: Pain & Fever (ব্যথানাশক ও জ্বর নিরোধক) ---
+    {sl: 851, name: "Inj. Tolfedin 4%", comp_val: "Tolfenamic Acid", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Acute mastitis and respiratory disease pain", co: "Vetoquinol (Renata)", type: "c", str: "40mg/ml", mgkg: "2mg/kg"},
+    {sl: 852, name: "Inj. Flunixin-V", comp_val: "Flunixin Meglumine 50 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Colic pain, Endotoxic shock, Fever", co: "Square", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+    {sl: 853, name: "Inj. Melofen-DS", comp_val: "Meloxicam + Paracetamol", pack: "100 ml vial", safe: "Safe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe fever and body swelling", co: "Techno", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 854, name: "Inj. Diclo-Z", comp_val: "Diclofenac Sodium", pack: "30/100 ml", safe: "Unsafe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Acute musculoskeletal pain and swelling", co: "Popular", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 855, name: "Bol. Para-Vet Plus", comp_val: "Paracetamol + Diclofenac Sodium", pack: "Bolus", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Chronic pain and high fever in cattle", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Steroids & Anti-inflammatory (স্টেরয়েড) ---
+    {sl: 856, name: "Inj. Prednisolone-V", comp_val: "Prednisolone Acetate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Ketosis, Allergic dermatitis, Shock", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 857, name: "Inj. Dexasone-S", comp_val: "Dexamethasone Sodium Phosphate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anaphylaxis relief, Anti-inflammatory", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 858, name: "Inj. Dexon", comp_val: "Dexamethasone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Stress and acute inflammation treatment", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Powder Antibiotics: WSP (পাউডার অ্যান্টিবায়োটিক) ---
+    {sl: 859, name: "Pulv. Doxy-Vet", comp_val: "Doxycycline Hydrochloride", pack: "100 gm", safe: "Unsafe", pet: "Safe", base: 1, unit: "gm", ind: "CRD, Calf pneumonia, Salmonellosis", co: "Acme", type: "c", str: "WSP", mgkg: "10-20mg/kg"},
+    {sl: 860, name: "Pulv. Renamycin Soluble", comp_val: "Oxytetracycline HCl", pack: "100 gm", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "gm", ind: "Broad spectrum bacterial infection control", co: "Renata", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 861, name: "Pulv. Ciprocin-V WSP", comp_val: "Ciprofloxacin", pack: "100 gm", safe: "Unsafe", pet: "Safe", base: 1, unit: "gm", ind: "E. coli and Salmonella infections", co: "Square", type: "c", str: "10% WSP", mgkg: "N/A"},
+    {sl: 862, name: "Pulv. Erythro-Vet", comp_val: "Erythromycin Thiocyanate", pack: "100 gm", safe: "Safe", pet: "Unsafe", base: 1, unit: "gm", ind: "Infectious Coryza, Mycoplasmosis", co: "SK+F", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 863, name: "Pulv. Amprol-Vet", comp_val: "Amprolium Hydrochloride", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Coccidiosis in poultry and calves", co: "Acme", type: "c", str: "WSP", mgkg: "N/A"},
+
+    // --- Liver & Metabolism Support (লিভার ও মেটাবলিক সাপোর্ট) ---
+    {sl: 864, name: "Liq. Hepa-Sol", comp_val: "Sorbitol + Methionine + Choline", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Fatty liver, Jaundice, Detoxification", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 865, name: "Liq. Hepaguard Vet", comp_val: "Silymarin + Choline + Carnitine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Hepatic cirrhosis and toxin clearance", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 866, name: "Inj. Coforta 10%", comp_val: "Butafosfan", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic boost and stress prevention", co: "Bayer", type: "c", str: "100mg/ml", mgkg: "N/A"},
+    {sl: 867, name: "Inj. Catophos", comp_val: "Butafosfan + Vitamin B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic stimulant, Infertility aid", co: "ACI", type: "c", str: "Combined", mgkg: "1ml/10-20kg"},
+
+    // --- Vitamins & Tonics (ভিটামিন ও টনিক) ---
+    {sl: 868, name: "Inj. Vit-ADE Vet", comp_val: "Vitamin A + D3 + E", pack: "10/100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth, Immunity and reproductive health", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 869, name: "Inj. Neuro-B", comp_val: "Vitamin B1 + B6 + B12", pack: "Ampoule", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve weakness, Paralysis support", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 870, name: "Liq. Aminovet-Plus", comp_val: "Essential Amino Acids + Vitamins", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth promoter and recovery tonic", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Digestive & Rumen Support (হজম ও রুমান সাপোর্ট) ---
+    {sl: 871, name: "Bol. Rumicid Vet", comp_val: "Ammonium Bicarbonate + Nuxvomica", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Indigestion and loss of appetite", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus"},
+    {sl: 872, name: "Bol. Bio-Gut", comp_val: "Probiotics + Saccharomyces cerevisiae", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Rumen pH balancer and bloat control", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 873, name: "Pulv. Zyme-Vet", comp_val: "Multi-enzyme mixture", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Digestive aid and feed utilization", co: "Popular", type: "c", str: "WSP", mgkg: "N/A"},
+
+    // --- Reproductive Hormones (প্রজনন হরমোন) ---
+    {sl: 874, name: "Inj. Receptal", comp_val: "Buserelin Acetate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Ovarian cysts, Infertility treatment", co: "MSD", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 875, name: "Inj. Ovurelin", comp_val: "Gonadorelin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Delayed ovulation and heat sync", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 876, name: "Inj. Oxytocin-V", comp_val: "Oxytocin (Synthetic)", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Milk letdown, Uterine stimulation", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics (কৃমিনাশক) ---
+    {sl: 877, name: "Bol. LT-Vet", comp_val: "Triclabendazole + Levamisole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Mixed parasitic infection control", co: "Square", type: "c", str: "Combined", mgkg: "1bol/75kg"},
+    {sl: 878, name: "Inj. Vermic-10", comp_val: "Ivermectin 1%", pack: "Vial", safe: "Safe", pet: "Safe(Caution)", base: 0.02, unit: "ml", ind: "Tick, lice and internal parasite control", co: "Renata", type: "c", str: "10mg/ml", mgkg: "1ml/50kg"},
+    {sl: 879, name: "Bol. Almex Vet", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum dewormer", co: "Renata", type: "c", str: "600mg", mgkg: "7.5mg/kg"},
+
+    // --- Antiprotozoal (পরজীবী জ্বর নিরোধক) ---
+    {sl: 880, name: "Inj. Babesin-Vet", comp_val: "Diminazene Aceturate", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Babesiosis and Trypanosomiasis control", co: "Square", type: "c", str: "Combined", mgkg: "3.5mg/kg"},
+    {sl: 881, name: "Inj. Ectorid", comp_val: "Imidocarb Dipropionate", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Anaplasmosis and Tick fever prevention", co: "Renata", type: "c", str: "133mg/ml", mgkg: "1ml/31kg"},
+
+    // --- Topical & External (বাহ্যিক ব্যবহার) ---
+    {sl: 882, name: "Oint. Burn-Care", comp_val: "Silver Sulphadiazine", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Topical burn healing dressing", co: "Square", type: "f", str: "1%", mgkg: "N/A"},
+    {sl: 883, name: "Liq. Povisep Vet", comp_val: "Povidone Iodine 10%", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgery and wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 884, name: "Oint. Scabic-Vet", comp_val: "Benzyl Benzoate", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Scabies and mange treatment", co: "ACI", type: "f", str: "Combined", mgkg: "N/A"},
+
+    // --- Hematinics & Iron (রক্তবর্ধক) ---
+    {sl: 885, name: "Inj. Iron-DS", comp_val: "Iron Dextran + Vitamin B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Piglet anemia prevention", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 886, name: "Inj. Hemovet", comp_val: "Iron + Vitamin B12 + Folic Acid", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Weakness during recovery", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Electrolytes & Misc (ইলেক্ট্রোলাইট ও অন্যান্য) ---
+    {sl: 887, name: "Pulv. Electromin", comp_val: "Electrolytes + Minerals", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Heat stress and dehydration relief", co: "Square", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 888, name: "Inj. Lidocaine HCl", comp_val: "Lidocaine 2%", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local and nerve block anesthesia", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 889, name: "Bol. Metro-A 2g", comp_val: "Metronidazole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Amoebiasis and Giardiasis control", co: "Acme", type: "c", str: "2g", mgkg: "N/A"},
+    {sl: 890, name: "Inj. Atropen", comp_val: "Atropine Sulphate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Organophosphate poisoning antidote", co: "Popular", type: "c", str: "Combined", mgkg: "0.04mg/kg"},
+
+    // --- Additional Market Data (৮৯১ - ৯০০) ---
+    {sl: 891, name: "Inj. Ceftio-V 1g", comp_val: "Ceftiofur Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute respiratory disease, Foot rot", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1.1-2.2mg/kg"},
+    {sl: 892, name: "Inj. Gentax-V", comp_val: "Gentamicin Sulphate", pack: "Vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.08, unit: "ml", ind: "Severe bacterial infections", co: "Acme", type: "c", str: "50mg/ml", mgkg: "4mg/kg"},
+    {sl: 893, name: "Liq. Liver-G Plus", comp_val: "Herbal liver protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Natural liver conditioning", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 894, name: "Bol. Digesta-V", comp_val: "Digestive Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Appetite booster for calves", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 895, name: "Inj. Neuro-B Plus", comp_val: "Vit B1+B6+B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve tone maintenance", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 896, name: "Inj. Cal-Bor Plus", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency treatment", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 897, name: "Inj. Frusemide-10", comp_val: "Furosemide", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Post-parturient udder edema", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 898, name: "Bol. Lax-Vet Plus", comp_val: "Laxative Salts", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Constipation relief", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 899, name: "Inj. Phenamil", comp_val: "Pheniramine Maleate", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic reaction control", co: "Techno", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
+    {sl: 900, name: "Inj. Mely-Z", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anti-inflammatory support", co: "Square", type: "c", str: "Combined", mgkg: "0.5mg/kg"},
+    
+    
+    
+
+    // --- Advanced Cephalosporins (উন্নত সেফালোস্পোরিন) ---
+    {sl: 901, name: "Inj. Cefepime-V 1g", comp_val: "Cefepime Hydrochloride", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Severe respiratory & skin infections", co: "Popular", type: "c", str: "1g/vial", mgkg: "11mg/kg"},
+    {sl: 902, name: "Inj. Ceftiofur-LA", comp_val: "Ceftiofur Crystalline Free Acid", pack: "100 ml", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Long acting - Single dose treatment for BRD", co: "Zoetis", type: "c", str: "100mg/ml", mgkg: "6.6mg/kg"},
+    {sl: 903, name: "Inj. Cefquinome Vet", comp_val: "Cefquinome Sulfate", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute mastitis, Foot rot, MMA syndrome", co: "Intervet", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 904, name: "Inj. Excede", comp_val: "Ceftiofur Crystalline Free Acid", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Bovine respiratory disease treatment", co: "Zoetis", type: "c", str: "200mg/ml", mgkg: "6.6mg/kg"},
+
+    // --- Antihistamines & Allergy (এলার্জি ও শক নিরোধক) ---
+    {sl: 905, name: "Inj. Avil-V", comp_val: "Pheniramine Maleate 22.7 mg/ml", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Urticaria, Anaphylactic shock, Hay fever", co: "Sanofi", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
+    {sl: 906, name: "Inj. Antihist-V", comp_val: "Chlorpheniramine Maleate 10 mg/ml", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic rhinitis, Photosensitization", co: "Square", type: "c", str: "10mg/ml", mgkg: "1ml/25kg"},
+    {sl: 907, name: "Inj. Phenergan Vet", comp_val: "Promethazine Hydrochloride", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Potent anti-allergic with sedation", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Pain & Fever Management (NSAIDs) ---
+    {sl: 908, name: "Inj. Flunixin-V", comp_val: "Flunixin Meglumine 50 mg/ml", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Endotoxic shock, Colic pain in horses", co: "Square", type: "c", str: "50mg/ml", mgkg: "2.2mg/kg"},
+    {sl: 909, name: "Inj. Melocam-V", comp_val: "Meloxicam 5 mg/ml", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Pain, Inflammation, Mastitis support", co: "Popular", type: "c", str: "5mg/ml", mgkg: "0.5mg/kg"},
+    {sl: 910, name: "Inj. Ketovet-100", comp_val: "Ketoprofen 100 mg/ml", pack: "10/50 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Chronic musculoskeletal pain control", co: "Techno", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+
+    // --- Vitamins & Metabolic Stimulants (ভিটামিন ও উদ্দীপক) ---
+    {sl: 911, name: "Inj. Catophos", comp_val: "Butafosfan + Vitamin B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic boost, Infertility recovery", co: "Bayer (ACI)", type: "c", str: "Combined", mgkg: "1ml/10-20kg"},
+    {sl: 912, name: "Inj. Vitade-V", comp_val: "Vitamin A + D3 + E", pack: "10/100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Reproduction health, Immunity boost", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 913, name: "Inj. Neuro-B", comp_val: "Vit B1 + B6 + B12", pack: "Ampoule", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve inflammation, Weakness, Paralysis", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Liver & Digestive Support (লিভার ও হজম) ---
+    {sl: 914, name: "Liq. Hepaguard Vet", comp_val: "Silymarin + Choline + L-Carnitine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Jaundice, Liver cirrhosis treatment", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 915, name: "Liq. Livo-C", comp_val: "Liver extract + Vitamin B12 + C", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Hepatic tonic and appetite stimulant", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 916, name: "Bol. Rumicid Vet", comp_val: "Ammonium Bicarbonate + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Anorexia, Indigestion, Rumen atony", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus"},
+
+    // --- Reproductive Hormones (প্রজনন হরমোন) ---
+    {sl: 917, name: "Inj. Receptal", comp_val: "Buserelin Acetate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Delayed ovulation, Follicular cysts", co: "MSD", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 918, name: "Inj. Ovurelin", comp_val: "Gonadorelin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Infertility, Oestrus induction", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 919, name: "Inj. Oxytocin-V", comp_val: "Oxytocin (Synthetic)", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Uterine inertia, Milk letdown", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- External Applications & Antiseptics (বাহ্যিক ব্যবহার) ---
+    {sl: 920, name: "Oint. Burn-Care", comp_val: "Silver Sulphadiazine 1%", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Topical burn dressing, Skin wounds", co: "Square", type: "f", str: "1%", mgkg: "N/A"},
+    {sl: 921, name: "Liq. Povisep Vet", comp_val: "Povidone Iodine 10%", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Surgical site preparation, Antiseptic", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 922, name: "Oint. Nitrofur-V", comp_val: "Nitrofurazone 0.2%", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Surface wound bacterial infections", co: "Popular", type: "f", str: "0.2%", mgkg: "N/A"},
+
+    // --- Anthelmintics (কৃমিনাশক) ---
+    {sl: 923, name: "Bol. LT-Vet", comp_val: "Triclabendazole + Levamisole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Mixed parasitic infection control", co: "Square", type: "c", str: "Combined", mgkg: "1bol/75kg"},
+    {sl: 924, name: "Inj. Vermic-10", comp_val: "Ivermectin 1%", pack: "Vial", safe: "Safe", pet: "Safe(Caution)", base: 0.02, unit: "ml", ind: "Internal and external parasite control", co: "Renata", type: "c", str: "10mg/ml", mgkg: "1ml/50kg"},
+    {sl: 925, name: "Bol. Almex Vet", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum deworming therapy", co: "Renata", type: "c", str: "600mg", mgkg: "7.5mg/kg"},
+
+    // --- Antiprotozoal (পরজীবী জ্বর) ---
+    {sl: 926, name: "Inj. Babesin-Vet", comp_val: "Diminazene Aceturate", pack: "2.36g sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Babesiosis and Trypanosomiasis control", co: "Square", type: "c", str: "Combined", mgkg: "3.5mg/kg"},
+    {sl: 927, name: "Inj. Ectorid", comp_val: "Imidocarb Dipropionate", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Tick fever prevention, Anaplasmosis", co: "Renata", type: "c", str: "133mg/ml", mgkg: "1ml/31kg"},
+
+    // --- Specific Antiseptics & Sprays ---
+    {sl: 928, name: "Spray Oxytetra", comp_val: "Oxytetracycline HCl", pack: "Aerosol", safe: "Safe", pet: "Safe", base: 1, unit: "spray", ind: "Topical wound treatment, Foot rot", co: "Generic", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 929, name: "Spray Iodo-V", comp_val: "Povidone Iodine Spray", pack: "Aerosol", safe: "Safe", pet: "Safe", base: 1, unit: "spray", ind: "Antiseptic spray for wounds", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+
+    // --- Miscellaneous Market Data (৯৩০ - ৯৫০) ---
+    {sl: 930, name: "Inj. Ceftio-V 1g", comp_val: "Ceftiofur Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute respiratory disease treatment", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1.1-2.2mg/kg"},
+    {sl: 931, name: "Inj. Gentax-V", comp_val: "Gentamicin Sulphate", pack: "Vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.08, unit: "ml", ind: "Severe bacterial infection control", co: "Acme", type: "c", str: "50mg/ml", mgkg: "4mg/kg"},
+    {sl: 932, name: "Liq. Liver-G", comp_val: "Herbal liver protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Liver conditioning naturally", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 933, name: "Bol. Digesta-V", comp_val: "Digestive Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Appetite booster for large animals", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 934, name: "Inj. Neuro-B Plus", comp_val: "Vit B1+B6+B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve tone booster, Paralysis support", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 935, name: "Inj. Cal-Bor Plus", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency infusion", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 936, name: "Inj. Frusemide-10", comp_val: "Furosemide", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Post-parturient udder edema relief", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 937, name: "Bol. Lax-Vet Plus", comp_val: "Laxative Salts + Ginger", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Constipation relief for ruminants", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 938, name: "Inj. Phenamil", comp_val: "Pheniramine Maleate", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic reaction control", co: "Techno", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
+    {sl: 939, name: "Inj. Mely-Z", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anti-inflammatory and lameness control", co: "Square", type: "c", str: "Combined", mgkg: "0.5mg/kg"},
+    {sl: 940, name: "Inj. Atropen", comp_val: "Atropine Sulphate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Antidote for organophosphate poisoning", co: "Popular", type: "c", str: "Combined", mgkg: "0.04mg/kg"},
+    {sl: 941, name: "Liq. Z-Complex", comp_val: "Zinc + Vit B-Complex", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Growth booster and immune support", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 942, name: "Inj. B1+B6+B12-A", comp_val: "Neurotropic Vitamins", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Supportive treatment for paralysis", co: "Generic", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 943, name: "Bol. Metro-A 2g", comp_val: "Metronidazole 2000mg", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Enteric infections, Amoebiasis", co: "Acme", type: "c", str: "2g", mgkg: "N/A"},
+    {sl: 944, name: "Inj. Enrocin-V", comp_val: "Enrofloxacin 10%", pack: "100 ml", safe: "Unsafe", pet: "Safe(Caution)", base: 0.05, unit: "ml", ind: "Digestive and respiratory infections", co: "Incepta", type: "c", str: "100mg/ml", mgkg: "5mg/kg"},
+    {sl: 945, name: "Liq. Hepa-Sol", comp_val: "Sorbitol + Methionine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic liver stimulant tonic", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 946, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 1, unit: "ml", ind: "Uterine contraction and milk letdown", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 947, name: "Bol. Digevet-Z", comp_val: "Rumenotoric stimulant", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Corrects ruminal stasis and appetite", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 948, name: "Oint. Nitrofur-Z Plus", comp_val: "Nitrofurazone", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Wound infection dressing", co: "Popular", type: "f", str: "Combined", mgkg: "N/A"},
+    {sl: 949, name: "Inj. Lidocaine-Z", comp_val: "Lidocaine HCl 2%", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local nerve block anesthesia", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 950, name: "Bol. Para-Vet-Z", comp_val: "Paracetamol", pack: "Bolus", safe: "Safe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Pain and fever reduction in cattle", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+
+    
+    
+
+    // --- NSAIDs: Pain & Inflammation (ব্যথানাশক ও প্রদাহ নিরোধক) ---
+    {sl: 951, name: "Inj. Tolfenamic-V 4%", comp_val: "Tolfenamic Acid", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Acute mastitis and bovine respiratory disease", co: "Square", type: "c", str: "40mg/ml", mgkg: "2mg/kg"},
+    {sl: 952, name: "Inj. Diclo-Vet", comp_val: "Diclofenac Sodium", pack: "30/100 ml", safe: "Unsafe", pet: "Unsafe", base: 0.1, unit: "ml", ind: "Severe pain and inflammatory conditions", co: "Acme", type: "c", str: "25mg/ml", mgkg: "1mg/kg"},
+    {sl: 953, name: "Inj. Melocam-DS", comp_val: "Meloxicam High Potency", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Chronic pain, Arthritis and Lameness", co: "Popular", type: "c", str: "20mg/ml", mgkg: "0.5mg/kg"},
+    {sl: 954, name: "Inj. Ketovet Plus", comp_val: "Ketoprofen", pack: "50 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Fever, Pain and Musculoskeletal disorders", co: "Techno", type: "c", str: "100mg/ml", mgkg: "3mg/kg"},
+    {sl: 955, name: "Bol. Para-Vet Plus", comp_val: "Paracetamol + Diclofenac Sodium", pack: "Bolus", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "bolus", ind: "Chronic pain and fever in livestock", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Steroids (স্টেরয়েড ইনজেকশন) ---
+    {sl: 956, name: "Inj. Dexazone", comp_val: "Dexamethasone Sodium Phosphate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anaphylactic shock, Acute allergy, Ketosis", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 957, name: "Inj. Pred-Vet", comp_val: "Prednisolone Acetate", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Anti-inflammatory and supportive therapy", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 958, name: "Inj. Dexa-S Vet", comp_val: "Dexamethasone", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Stress and acute inflammatory relief", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Powder Antibiotics & Coccidiostats (পাউডার ওষুধ) ---
+    {sl: 959, name: "Pulv. Doxy-Vet WSP", comp_val: "Doxycycline Hydrochloride", pack: "100 gm", safe: "Unsafe", pet: "Safe", base: 1, unit: "gm", ind: "CRD, Mycoplasmosis, Calf pneumonia", co: "Acme", type: "c", str: "WSP", mgkg: "10-20mg/kg"},
+    {sl: 960, name: "Pulv. Renamycin Soluble", comp_val: "Oxytetracycline HCl", pack: "100 gm", safe: "Unsafe", pet: "Unsafe", base: 1, unit: "gm", ind: "Broad spectrum bacterial control", co: "Renata", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 961, name: "Pulv. Ciprocin-V", comp_val: "Ciprofloxacin", pack: "100 gm", safe: "Unsafe", pet: "Safe", base: 1, unit: "gm", ind: "Colibacillosis, Salmonellosis control", co: "Square", type: "c", str: "10% WSP", mgkg: "N/A"},
+    {sl: 962, name: "Pulv. Erythro-Vet", comp_val: "Erythromycin Thiocyanate", pack: "100 gm", safe: "Safe", pet: "Unsafe", base: 1, unit: "gm", ind: "Infectious Coryza and Mycoplasmosis", co: "SK+F", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 963, name: "Pulv. Amprol-Vet", comp_val: "Amprolium Hydrochloride", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Coccidiosis in poultry and calves", co: "Acme", type: "c", str: "WSP", mgkg: "N/A"},
+
+    // --- Liver & Metabolic Stimulants (লিভার ও মেটাবলিক উদ্দীপক) ---
+    {sl: 964, name: "Liq. Hepa-Sol Plus", comp_val: "Sorbitol + Methionine + Choline", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Jaundice, Liver cirrhosis, Detoxification", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 965, name: "Liq. Hepaguard Vet", comp_val: "Silymarin + Choline + Carnitine", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Protects liver from toxins and fatty changes", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 966, name: "Inj. Coforta 10%", comp_val: "Butafosfan", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic and tonic therapy, Stress relief", co: "Bayer", type: "c", str: "100mg/ml", mgkg: "N/A"},
+    {sl: 967, name: "Inj. Catophos-V", comp_val: "Butafosfan + Vitamin B12", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Metabolic stimulant, Phosphorus deficiency", co: "ACI", type: "c", str: "Combined", mgkg: "1ml/10-20kg"},
+
+    // --- Vitamins & Health Tonics (ভিটামিন ও টনিক) ---
+    {sl: 968, name: "Inj. Vitade Vet", comp_val: "Vitamin A + D3 + E", pack: "10/100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Immunity booster and reproductive health", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 969, name: "Inj. Neuro-B-V", comp_val: "Vitamin B1 + B6 + B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Supportive treatment for nerve disorders", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 970, name: "Liq. Aminovet-Plus", comp_val: "Essential Amino Acids + Vitamins", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Health tonic and growth promotion", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Digestive Support (হজম ও রুমান সাপোর্ট) ---
+    {sl: 971, name: "Bol. Rumicid-Plus", comp_val: "Ammonium Bicarbonate + Nuxvomica", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Corrects indigestion and ruminal stasis", co: "Renata", type: "c", str: "Combined", mgkg: "1-2 bolus"},
+    {sl: 972, name: "Bol. Bio-Gut", comp_val: "Probiotics + Saccharomyces cerevisiae", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Digestive improvement and bloat control", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 973, name: "Pulv. Zyme-Vet WSP", comp_val: "Multi-enzyme mixture", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Feed conversion improvement, Digestive aid", co: "Popular", type: "c", str: "WSP", mgkg: "N/A"},
+
+    // --- Hormones & Reproductive (প্রজনন হরমোন) ---
+    {sl: 974, name: "Inj. Receptal Vet", comp_val: "Buserelin Acetate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Follicular cysts, Delayed ovulation treatment", co: "MSD", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 975, name: "Inj. Ovurelin-Z", comp_val: "Gonadorelin", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Heat synchronization and infertility treatment", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 976, name: "Inj. Oxytocin-A", comp_val: "Oxytocin Synthetic", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Uterine inertia and milk ejection stimulant", co: "ACI", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Anthelmintics: Modern (উন্নত কৃমিনাশক) ---
+    {sl: 977, name: "Bol. LT-Vet", comp_val: "Triclabendazole + Levamisole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Broad spectrum oral fascioliasis control", co: "Square", type: "c", str: "Combined", mgkg: "1bol/75kg"},
+    {sl: 978, name: "Inj. Vermic-10", comp_val: "Ivermectin 1%", pack: "Vial", safe: "Safe", pet: "Safe(Caution)", base: 0.02, unit: "ml", ind: "Lice, Mange, and Internal parasite control", co: "Renata", type: "c", str: "10mg/ml", mgkg: "1ml/50kg"},
+    {sl: 979, name: "Bol. Almex Vet", comp_val: "Albendazole 600 mg", pack: "Bolus", safe: "Unsafe", pet: "Safe", base: 1, unit: "bolus", ind: "Oral broad spectrum deworming therapy", co: "Renata", type: "c", str: "600mg", mgkg: "7.5mg/kg"},
+
+    // --- Antiprotozoal: Babesiosis & Tick Fever (পরজীবী জ্বর) ---
+    {sl: 980, name: "Inj. Babesin-Vet", comp_val: "Diminazene Aceturate", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Babesiosis and Trypanosomiasis control", co: "Square", type: "c", str: "Combined", mgkg: "3.5mg/kg"},
+    {sl: 981, name: "Inj. Ectorid", comp_val: "Imidocarb Dipropionate", pack: "10 ml vial", safe: "Safe", pet: "Safe", base: 0.03, unit: "ml", ind: "Tick fever and Anaplasmosis prevention", co: "Renata", type: "c", str: "133mg/ml", mgkg: "1ml/31kg"},
+
+    // --- Topical & External (বাহ্যিক ব্যবহার) ---
+    {sl: 982, name: "Oint. Burn-Care", comp_val: "Silver Sulphadiazine 1%", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Topical burn healing and wound dressing", co: "Square", type: "f", str: "1%", mgkg: "N/A"},
+    {sl: 983, name: "Liq. Povisep Vet", comp_val: "Povidone Iodine 10%", pack: "100/500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Antiseptic for surgical site and wounds", co: "JMI", type: "f", str: "10%", mgkg: "N/A"},
+    {sl: 984, name: "Oint. Scabic-Vet", comp_val: "Benzyl Benzoate", pack: "Tube", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Scabies and mange treatment in animals", co: "ACI", type: "f", str: "Combined", mgkg: "N/A"},
+
+    // --- Hematinics & Iron (রক্তবর্ধক) ---
+    {sl: 985, name: "Inj. Iron-DS", comp_val: "Iron Dextran + Vitamin B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Iron deficiency anemia prevention", co: "Square", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 986, name: "Inj. Hemovet-V", comp_val: "Iron + Vitamin B12 + Folic Acid", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "General weakness during recovery booster", co: "Renata", type: "c", str: "Combined", mgkg: "N/A"},
+
+    // --- Electrolytes & Antidotes (ইলেক্ট্রোলাইট ও বিষ নিরোধক) ---
+    {sl: 887, name: "Pulv. Electromin-V", comp_val: "Electrolytes + Minerals", pack: "100 gm", safe: "Safe", pet: "Safe", base: 1, unit: "gm", ind: "Dehydration and heat stress relief", co: "Square", type: "c", str: "WSP", mgkg: "N/A"},
+    {sl: 988, name: "Inj. Lidocaine HCl 2%", comp_val: "Lidocaine Hydrochloride", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Local and nerve block anesthesia", co: "Generic", type: "c", str: "2%", mgkg: "N/A"},
+    {sl: 989, name: "Bol. Metro-A 2g", comp_val: "Metronidazole", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Enteric amoebiasis and giardiasis", co: "Acme", type: "c", str: "2g", mgkg: "N/A"},
+    {sl: 990, name: "Inj. Atropen-V", comp_val: "Atropine Sulphate", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Organophosphate poisoning antidote", co: "Popular", type: "c", str: "Combined", mgkg: "0.04mg/kg"},
+
+    // --- Additional Market Data (৯৯১ - ১০০০) ---
+    {sl: 991, name: "Inj. Ceftio-V 1g", comp_val: "Ceftiofur Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Acute respiratory disease treatment", co: "Popular", type: "c", str: "50mg/ml", mgkg: "1.1-2.2mg/kg"},
+    {sl: 992, name: "Inj. Gentax-V", comp_val: "Gentamicin Sulphate", pack: "Vial", safe: "Unsafe", pet: "Safe(Caution)", base: 0.08, unit: "ml", ind: "Severe systemic bacterial infections", co: "Acme", type: "c", str: "50mg/ml", mgkg: "4mg/kg"},
+    {sl: 993, name: "Liq. Liver-G Plus", comp_val: "Herbal liver protector", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Natural liver conditioning and health", co: "Gonoshasthaya", type: "c", str: "Herbal", mgkg: "N/A"},
+    {sl: 994, name: "Bol. Digesta-V", comp_val: "Digestive Enzymes", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Appetite booster for livestock", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 995, name: "Inj. Neuro-B Plus", comp_val: "Vit B1+B6+B12", pack: "Vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Nerve inflammation and paralysis maintenance", co: "Incepta", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 996, name: "Inj. Cal-Bor Plus", comp_val: "Calcium Borogluconate 25%", pack: "500 ml vial", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Milk fever emergency treatment", co: "Techno", type: "c", str: "25%", mgkg: "N/A"},
+    {sl: 997, name: "Inj. Frusemide-10", comp_val: "Furosemide", pack: "Vial", safe: "Unsafe", pet: "Safe", base: 0.1, unit: "ml", ind: "Post-parturient udder edema relief", co: "Popular", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 998, name: "Bol. Lax-Vet Plus", comp_val: "Laxative Salts", pack: "Bolus", safe: "Safe", pet: "Safe", base: 1, unit: "bolus", ind: "Constipation relief and impaction", co: "Acme", type: "c", str: "Combined", mgkg: "N/A"},
+    {sl: 999, name: "Inj. Phenamil", comp_val: "Pheniramine Maleate", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic reaction and shock control", co: "Techno", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
+    {sl: 1000, name: "Inj. Mely-Z", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Acute anti-inflammatory support", co: "Square", type: "c", str: "Combined", mgkg: "0.5mg/kg"}
 ];
+
 
     

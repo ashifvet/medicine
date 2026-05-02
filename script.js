@@ -3,13 +3,12 @@ const wInput = document.getElementById('weight');
 const sInput = document.getElementById('search');
 const sIndInput = document.getElementById('searchInd');
 
-// পারফরম্যান্স বাড়ানোর জন্য রেন্ডার ফাংশন আপডেট করা হয়েছে
 function render() {
     const weight = parseFloat(wInput.value) || 0;
     const search = sInput.value.toLowerCase();
     const searchInd = sIndInput.value.toLowerCase();
     
-    // একটি স্ট্রিং-এ সব ডেটা জমা রাখা হচ্ছে
+    // পারফরম্যান্স বাড়ানোর জন্য স্ট্রিং বাফার ব্যবহার
     let rowsHtml = '';
 
     allDrugs.forEach(d => {
@@ -29,7 +28,6 @@ function render() {
         const pregClass = d.safe === "Safe" ? "safe-val" : "unsafe-val";
         const petClass = d.pet === "Safe" || d.pet === "Highly Safe" ? "safe-val" : (d.pet.includes("Caution") ? "caution-val" : "unsafe-val");
 
-        // স্ট্রিং কনক্যাটিনেশন (বারবার DOM আপডেট করার চেয়ে এটি দ্রুত)
         rowsHtml += `<tr>
             <td>${d.sl}</td>
             <td><b>${d.name}</b></td>
@@ -45,20 +43,18 @@ function render() {
         </tr>`;
     });
 
-    // শেষে একবার মেইন টেবিল বডি আপডেট করা হচ্ছে
-    mBody.innerHTML = rowsHtml;
+    mBody.innerHTML = rowsHtml; // ১ বারে পুরো টেবিল রেন্ডার হবে
 }
 
-// Debounce ফাংশন: টাইপ করার সময় সার্চ যেন আটকে না যায়
-let timeout = null;
-function debounceRender() {
-    clearTimeout(timeout);
-    timeout = setTimeout(render, 300); // ৩০০ মিলিসেকেন্ড পর রেন্ডার হবে
-}
+// টাইপিংয়ের সময় সার্চ যাতে আটকে না যায় (Debouncing)
+let debounceTimer;
+const debounceRender = () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(render, 300);
+};
 
 wInput.oninput = debounceRender;
 sInput.oninput = debounceRender;
 sIndInput.oninput = debounceRender;
 
-// প্রথমবার লোড হওয়ার জন্য সরাসরি কল
 render();

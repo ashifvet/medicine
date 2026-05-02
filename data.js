@@ -1,5 +1,3 @@
-const allDrugs = [
-
 
 const allDrugs = [
     // --- Penicillins ---

@@ -1,4 +1,3 @@
-
 const allDrugs = [
     // --- Penicillins ---
     {sl: 1, name: "Inj. Bipen-Vet 40", comp_val: "Procaine Penicillin + Benzyl Penicillin Sodium", pack: "40 lac vial + 10 ml WFI", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Actinomycosis, Anthrax, BQ, Pneumonia", co: "Square", type: "c", str: "40 Lac/vial", mgkg: "1ml/10kg"},
@@ -820,7 +819,7 @@ const allDrugs = [
     
     
     
-    const allDrugsPart13 = [
+
     // --- Antiprotozoal (Babesiosis & Trypanosomiasis) ---
     {sl: 501, name: "Inj. Berenil RTU 7%", comp_val: "Diminazene Aceturate 7.0g + Phenazone 37.5g", pack: "30/90 ml vial", safe: "Safe", pet: "Unsafe", base: 0.05, unit: "ml", ind: "Babesiosis, Trypanosomiasis, Theileriosis", co: "Intervet (MSD)", type: "c", str: "70mg/ml", mgkg: "1ml/20kg"},
     {sl: 502, name: "Inj. Babesin Vet", comp_val: "Diminazene Aceturate 1.05g", pack: "2.36g Sachet", safe: "Safe", pet: "Unsafe", base: 0.08, unit: "ml", ind: "Protozoal infections with fever", co: "Square", type: "c", str: "Combined", mgkg: "1ml/12.5kg"},
@@ -1597,6 +1596,3 @@ const allDrugs = [
     {sl: 999, name: "Inj. Phenamil", comp_val: "Pheniramine Maleate", pack: "100 ml", safe: "Safe", pet: "Safe", base: 1, unit: "ml", ind: "Allergic reaction and shock control", co: "Techno", type: "c", str: "22.7mg/ml", mgkg: "1ml/25kg"},
     {sl: 1000, name: "Inj. Mely-Z", comp_val: "Meloxicam", pack: "Vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Acute anti-inflammatory support", co: "Square", type: "c", str: "Combined", mgkg: "0.5mg/kg"},
 ];
-
-
-    

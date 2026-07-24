@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Animal Medicines Directory</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0284c7;
+            --primary-hover: #0369a1;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+            --safe-color: #16a34a;
+            --unsafe-color: #dc2626;
+            --caution-color: #d97706;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-hover);
+            margin-bottom: 5px;
+        }
+
+        p.subtitle {
+            color: #64748b;
+            margin-top: 0;
+        }
+
+        /* ট্যাব নেভিগেশন বার */
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+
+        .nav-tabs a {
+            text-decoration: none;
+            padding: 10px 18px;
+            background-color: #ffffff;
+            color: #334155;
+            font-weight: 600;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .nav-tabs a:hover {
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .nav-tabs a.active {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+
+        /* কন্ট্রোল ও সার্চ ইনপুট */
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .control-group {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .input-field {
+            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .input-field:focus {
+            border-color: var(--primary-color);
+        }
+
+        .counter {
+            align-self: flex-end;
+            font-weight: bold;
+            color: var(--primary-hover);
+            background-color: #e0f2fe;
+            padding: 10px 16px;
+            border-radius: 8px;
+            white-space: nowrap;
+        }
+
+        /* কার্ড গ্রিড লেআউট */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .drug-name {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin: 0;
+        }
+
+        .badges {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .badge-safe { background-color: #dcfce7; color: var(--safe-color); }
+        .badge-unsafe { background-color: #fee2e2; color: var(--unsafe-color); }
+        .badge-caution { background-color: #fef3c7; color: var(--caution-color); }
+
+        .company {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .info-row {
+            margin: 6px 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .dose-box {
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .dose-value {
+            font-weight: bold;
+            color: #0284c7;
+            font-size: 1rem;
+        }
+
+        .indication {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 0.88rem;
+            color: #334155;
+        }
+
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 40px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🐶 Pet Animal Medicines Directory</h1>
+            <p class="subtitle">উপজেলা প্রাণিসম্পদ কর্মকর্তার দপ্তর ও ভেটেরিনারি হাসপাতাল</p>
+        </header>
+
+        <!-- ট্যাব নেভিগেশন বার -->
+        <nav class="nav-tabs">
+            <a href="index.html">All Drugs</a>
+            <a href="small-animals.html">Small or Pet Animal Medicines</a>
+            <a href="pregnancy-safe.html">Pregnancy Safe Medicines</a>
+            <a href="pet-animal.html" class="active">Pet Animal Medicines</a>
+        </nav>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="weight">পোষা প্রাণীর ওজন (kg):</label>
+                <input type="number" id="weight" class="input-field" value="5" min="0.1" step="0.1">
+            </div>
+            <div class="control-group" style="flex: 2;">
+                <label for="search">ওষুধের নাম, উপাদান বা নির্দেশিকা ফিল্টার করুন:</label>
+                <input type="text" id="search" class="input-field" placeholder="উদাঃ Amoxicillin, Antihistamine, Ivermectin...">
+            </div>
+            <div id="medicineCount" class="counter">মোট: 0 টি ওষুধ</div>
+        </div>
+
+        <div id="drugGrid" class="grid">
+            <!-- Dynamic Pet Drug Cards Will Be Rendered Here -->
+        </div>
+    </div>
+
+    <script>
+        // ক্রমিক নম্বর ১ থেকে সঠিকভাবে সাজানো ওষুধের তালিকা
+        const petDrugs = [
+            {sl: 1, name: "Inj. Hicomox", comp_val: "Amoxicillin Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Mastitis, Gastroenteritis, Calf scour", co: "Opsonin", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+            {sl: 2, name: "Inj. Moxacil-Vet", comp_val: "Amoxicillin Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Bronchopneumonia, Umbilical infection", co: "Square", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+            {sl: 3, name: "Inj. Moxilin Vet 1 gm", comp_val: "Amoxicillin Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Joint infection, UTI, HS", co: "Acme", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+            {sl: 4, name: "Inj. Renamox 1 gm", comp_val: "Amoxicillin Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Pharyngitis, Foot rot, Fever", co: "Renata", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+            {sl: 5, name: "Inj. Acimox Vet", comp_val: "Amoxicillin Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Bacterial infections in livestock", co: "ACI", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+            {sl: 6, name: "Inj. Amoxyvet", comp_val: "Amoxicillin Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Pharyngitis, Bronchopneumonia", co: "Techno", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+            {sl: 7, name: "Inj. Fimox Vet", comp_val: "Amoxicillin Sodium", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Black quarter, Joint infection", co: "Popular", type: "c", str: "100mg/ml", mgkg: "10mg/kg"},
+            {sl: 8, name: "Inj. Moxilin Vet LA", comp_val: "Amoxicillin trihydrate", pack: "100 ml vial", safe: "Safe", pet: "Safe", base: 0.1, unit: "ml", ind: "Long acting - Respiratory & Alimentary", co: "Acme", type: "c", str: "150mg/ml", mgkg: "15mg/kg"},
+            {sl: 9, name: "Inj. Fimox DS Vet", comp_val: "Amoxicillin Sodium", pack: "2 gm vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Mastitis, Metritis, Calf scour", co: "Popular", type: "c", str: "200mg/ml", mgkg: "10mg/kg"},
+            {sl: 10, name: "Inj. Aject DS Vet", comp_val: "Amoxicillin Sodium", pack: "2 gm vial", safe: "Safe", pet: "Safe", base: 0.05, unit: "ml", ind: "Bacterial infections in ruminants", co: "SK+F", type: "c", str: "200mg/ml", mgkg: "10mg/kg"},
+            {sl: 11, name: "Bol. Moxilin vet", comp_val: "Amoxicillin Trihydrate", pack: "1 gm bolus", safe: "Safe", pet: "Safe", base: 0.008, unit: "bolus", ind: "Oral antibiotic for Livestock", co: "Acme", type: "c", str: "1g/bol", mgkg: "8mg/kg"},
+            {sl: 12, name: "Bol. Renamox", comp_val: "Amoxicillin", pack: "500 mg bolus", safe: "Safe", pet: "Safe", base: 0.02, unit: "bolus", ind: "Bacterial infections in small ruminants", co: "Renata", type: "c", str: "500mg/bol", mgkg: "10mg/kg"},
+            {sl: 13, name: "Bol. Navamox vet", comp_val: "Amoxicillin", pack: "500 mg bolus", safe: "Safe", pet: "Safe", base: 0.02, unit: "bolus", ind: "Salmonellosis, Calf scour", co: "Navana", type: "c", str: "500mg/bol", mgkg: "10mg/kg"},
+            {sl: 14, name: "Inj. Triject vet", comp_val: "Ceftriaxone", pack: "250 mg vial", safe: "Safe", pet: "Safe", base: 0.06, unit: "ml", ind: "Septicemia, Bone & Joint infections", co: "SK+F", type: "c", str: "50mg/ml", mgkg: "15-50mg/kg"},
+            {sl: 15, name: "Inj. ACICEF-3 (Vet)", comp_val: "Ceftriaxone", pack: "250 mg vial", safe: "Safe", pet: "Safe", base: 0.06, unit: "ml", ind: "Respiratory & Uro-genital infections", co: "ACI", type: "c", str: "50mg/ml", mgkg: "15-50mg/kg"},
+            {sl: 16, name: "Inj. Eracef vet", comp_val: "Ceftriaxone", pack: "250 mg vial", safe: "Safe", pet: "Safe", base: 0.06, unit: "ml", ind: "Skin & Soft tissue infections", co: "Popular", type: "c", str: "50mg/ml", mgkg: "15-50mg/kg"},
+            {sl: 17, name: "Inj. Trizon Vet", comp_val: "Ceftriaxone", pack: "250 mg vial", safe: "Safe", pet: "Safe", base: 0.06, unit: "ml", ind: "Calf scours, Enteritis, Diarrhoea", co: "Acme", type: "c", str: "50mg/ml", mgkg: "15-50mg/kg"},
+            {sl: 18, name: "Inj. Inject-Vet", comp_val: "Ceftriaxone", pack: "500 mg vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Mastitis, Meningitis, Pre-operative", co: "SK+F", type: "c", str: "250mg/ml", mgkg: "10mg/kg"},
+            {sl: 19, name: "Inj. Cefixon Vet", comp_val: "Ceftriaxone", pack: "500 mg vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Post-operative bacterial infections", co: "Techno", type: "c", str: "250mg/ml", mgkg: "10mg/kg"},
+            {sl: 20, name: "Inj. Renacef vet 1 gm", comp_val: "Ceftriaxone", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.035, unit: "ml", ind: "Septicemia, Severe Pneumonia", co: "Renata", type: "c", str: "285mg/ml", mgkg: "10mg/kg"},
+            {sl: 21, name: "Inj. Bovixon Vet 1 gm", comp_val: "Ceftriaxone", pack: "1 gm vial", safe: "Safe", pet: "Safe", base: 0.04, unit: "ml", ind: "Bone & Joint infections, Metritis", co: "Incepta", type: "c", str: "250mg/ml", mgkg: "10mg/kg"},
+            {sl: 22, name: "Inj. Renacef vet 2 gm", comp_val: "Ceftriaxone", pack: "2 gm vial", safe: "Safe", pet: "Safe", base: 0.035, unit: "ml", ind: "Large animal systemic infections", co: "Renata", type: "c", str: "285mg/ml", mgkg: "10mg/kg"},
+            {sl: 23, name: "Inj. Marbo Vet", comp_val: "Marbofloxacin", pack: "30 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Acute mastitis, Severe respiratory infections", co: "SK+F", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+            {sl: 24, name: "Inj. Marbores 10%", comp_val: "Marbofloxacin", pack: "20 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Neonatal gastro-enteritis, Pneumonia", co: "ACI", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+            {sl: 25, name: "Inj. Marboflox", comp_val: "Marbofloxacin", pack: "10 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Gram positive & negative infections", co: "Bridge", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+            {sl: 26, name: "Inj. Arbocin Vet", comp_val: "Marbofloxacin", pack: "10 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Severe Pneumonia, Mastitis", co: "Acme", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+            {sl: 27, name: "Bol. Marbo Vet", comp_val: "Marbofloxacin", pack: "50 mg bolus", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "bolus", ind: "Oral therapy for Calves", co: "SK+F", type: "c", str: "50mg/bol", mgkg: "1mg/kg"},
+            {sl: 28, name: "Bol. Marquin Vet", comp_val: "Marbofloxacin", pack: "50 mg bolus", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "bolus", ind: "Oral antibiotic for small ruminants", co: "Navana", type: "c", str: "50mg/bol", mgkg: "1mg/kg"},
+            {sl: 29, name: "Inj. Moraxacin-Vet", comp_val: "Marbofloxacin", pack: "30 ml vial", safe: "Unsafe", pet: "Safe", base: 0.02, unit: "ml", ind: "Acute mastitis, Alimentary infections", co: "Square", type: "c", str: "100mg/ml", mgkg: "2mg/kg"},
+            {sl: 30, name: "Inj. Metro IV", comp_val: "Metronidazole", pack: "100 ml", safe: "N/A", pet: "Safe", base: 1.0, unit: "ml", ind: "Protozoal & Anaerobic infections", co: "OPSO saline", type: "c", str: "5mg/ml", mgkg: "5-10mg/kg"},
+            {sl: 31, name: "Inj. Flagyl IV", comp_val: "Metronidazole", pack: "100 ml", safe: "N/A", pet: "Safe", base: 1.0, unit: "ml", ind: "Protozoal & Anaerobic infections", co: "Synovia", type: "c", str: "5mg/ml", mgkg: "5-10mg/kg"},
+            {sl: 32, name: "Inj. Filmet IV", comp_val: "Metronidazole", pack: "100 ml", safe: "N/A", pet: "Safe", base: 1.0, unit: "ml", ind: "Protozoal & Anaerobic infections", co: "Beximco", type: "c", str: "5mg/ml", mgkg: "5-10mg/kg"},
+            {sl: 33, name: "Bol. Amodis-Vet", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "SQUARE", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 34, name: "Bol. Dirovet", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "ACME", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 35, name: "Bol. Remenid", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "Bengal", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 36, name: "Bol. Metrovet", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "TECHNO", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 37, name: "Bol. Metonid", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "POPULAR", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 38, name: "Bol. Renamet", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "RENATA", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 39, name: "Bol. Zonabac", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "OPSONIN", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 40, name: "Bol. Metrodon", comp_val: "Metronidazole BP", pack: "2 gm bolus", safe: "Safe", pet: "N/A", base: 1.0, unit: "bolus", ind: "Amoebiasis, Giardiasis, Trichomoniasis", co: "Chemist", type: "c", str: "2000mg", mgkg: "40-50mg/kg"},
+            {sl: 41, name: "Pulv. Dirovet", comp_val: "Metronidazole BP", pack: "100 gm Sachet", safe: "Safe", pet: "N/A", base: 4.0, unit: "gm", ind: "Amoebiasis, Black head, Giardiasis", co: "Acme", type: "c", str: "300mg/gm", mgkg: "48mg/kg"},
+            {sl: 42, name: "Pulv. Acimetro vet", comp_val: "Metronidazole BP", pack: "100 gm Sachet", safe: "Safe", pet: "N/A", base: 4.0, unit: "gm", ind: "Amoebiasis, Black head, Giardiasis", co: "ACI", type: "c", str: "300mg/gm", mgkg: "48mg/kg"},
+            {sl: 43, name: "Inj. Acimec 1%", comp_val: "Ivermectin", pack: "N/A", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Internal and external parasites", co: "ACI", type: "c", str: "10 mg/ml", mgkg: "0.2 mg/kg"},
+            {sl: 44, name: "Inj. A-mectin Vet", comp_val: "Ivermectin", pack: "N/A", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Internal and external parasites", co: "ACME", type: "c", str: "10 mg/ml", mgkg: "0.2 mg/kg"},
+            {sl: 45, name: "Inj. Parakil vet", comp_val: "Ivermectin", pack: "N/A", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Internal and external parasites", co: "Incepta", type: "c", str: "10 mg/ml", mgkg: "0.2 mg/kg"},
+            {sl: 46, name: "Inj. Vetmectin", comp_val: "Ivermectin", pack: "5 ml, 10 ml, 30 ml", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Internal and external parasites", co: "Albion", type: "c", str: "10 mg/ml", mgkg: "0.2 mg/kg"},
+            {sl: 47, name: "Inj. Invet", comp_val: "Ivermectin", pack: "N/A", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Internal and external parasites", co: "Popular", type: "c", str: "10 mg/ml", mgkg: "0.2 mg/kg"},
+            {sl: 48, name: "Inj. Vermishin", comp_val: "Ivermectin", pack: "5 ml, 10 ml", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Internal and external parasites", co: "Shinil", type: "c", str: "10 mg/ml", mgkg: "0.2 mg/kg"},
+            {sl: 49, name: "A-mectin vet (Pour on)", comp_val: "Ivermectin", pack: "15 ml dropper bottle", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "External parasites (Lice, Mites, Ticks)", co: "ACME", type: "c", str: "5 mg/ml", mgkg: "0.5 mg/kg"},
+            {sl: 50, name: "I-POUR", comp_val: "Ivermectin", pack: "N/A", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "External parasites (Lice, Mites, Ticks)", co: "Albion", type: "c", str: "5 mg/ml", mgkg: "0.5 mg/kg"},
+            {sl: 51, name: "Normectin", comp_val: "Ivermectin", pack: "250 ml", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "External parasites (Lice, Mites, Ticks)", co: "SQUARE", type: "c", str: "5 mg/ml", mgkg: "0.5 mg/kg"},
+            {sl: 52, name: "Emulsion: L.T.M Killer-EC", comp_val: "Cypermethrin USP", pack: "100 ml, 500 ml, 1 L bottle", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Lice, Ticks, Mites, Flies & Mosquitos", co: "Super power", type: "c", str: "20 gm/100 ml", mgkg: "10-50 ml per 10-18L water"},
+            {sl: 53, name: "Soln. Superkiller-E", comp_val: "Cypermethrin USP", pack: "1 litter, 4 litter container", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "House flies, Mosquitos, Ticks (Mites)", co: "PHARMA & FIRM", type: "c", str: "20 gm/100 ml", mgkg: "15-50 mL per 10-18L water"},
+            {sl: 54, name: "Oint. Dressgel-FR vet", comp_val: "Nim oil + Marigold oil", pack: "50 gm tube", safe: "Safe", pet: "Safe", base: 1.0, unit: "apply", ind: "Herbal Antiseptic & Fly Repellent", co: "ACME", type: "c", str: "5.0 g + 1.0 g per 50 gm", mgkg: "Apply to the affected area"},
+            {sl: 55, name: "Inj. Anthiomat", comp_val: "Lithium Antimony Thiomalate", pack: "50 ml", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Nasal granuloma (Schistosomiasis), Papillomatosis, Filariasis, Leishmaniasis", co: "TECHNO", type: "c", str: "6% w/v (12 mg Antimony Trioxide/ml)", mgkg: "1.2-2.2 mg/kg"},
+            {sl: 56, name: "Inj. Ectorid", comp_val: "Imidocarb Dipropionate", pack: "10 ml", safe: "N/A", pet: "Safe", base: 1.0, unit: "ml", ind: "Babesiosis, Anaplasmosis", co: "RENATA", type: "c", str: "133.26 mg/ml", mgkg: "3 mg/kg"},
+            {sl: 57, name: "Inj. Babenil", comp_val: "Imidocarb Dipropionate", pack: "2 ml, 10 ml vial", safe: "N/A", pet: "Safe", base: 1.0, unit: "ml", ind: "Babesiosis, Anaplasmosis", co: "TECHNO", type: "c", str: "133.26 mg/ml", mgkg: "3 mg/kg"},
+            {sl: 58, name: "Inj. Babecure", comp_val: "Imidocarb Dipropionate INN", pack: "2 ml ampoule", safe: "N/A", pet: "Safe", base: 1.0, unit: "ml", ind: "Babesiosis, Anaplasmosis", co: "ACME", type: "c", str: "120 mg/ml", mgkg: "3 mg/kg"},
+            {sl: 59, name: "Inj. E-Carbzol", comp_val: "Imidocarb dipropionate + Methyl parahydroxybenzoate + Propyl parahydroxybenzoate", pack: "100 ml Vial", safe: "N/A", pet: "Safe", base: 1.0, unit: "ml", ind: "Treatment and prevention of Babesiosis, Anaplasmosis", co: "ACI", type: "c", str: "120 mg + 0.45 mg + 0.05 mg per ml", mgkg: "1-2.5 ml per 100 kg BW"},
+            {sl: 60, name: "Inj. Berenil Vet 7% RTU", comp_val: "Diminazene aceturate + Phenazone BP", pack: "20 ml, 30 ml, 90 ml", safe: "Safe", pet: "N/A", base: 1.0, unit: "ml", ind: "Trypanosomiasis, Babesiosis", co: "INTERVET", type: "c", str: "70 mg + 375.0 mg per ml", mgkg: "3.5 mg/kg (as Diminazene)"},
+            {sl: 61, name: "Soln. Amprol L", comp_val: "Amprolium Hydrochloride", pack: "500 ml", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Coccidiosis", co: "SK+F", type: "c", str: "200 mg/ml", mgkg: "25-300 mg/kg"},
+            {sl: 62, name: "Pulv. Remecox Vet", comp_val: "Amprolium Hydrochloride USP + Sulphaquinoxaline Sodium USP + Vitamin K", pack: "100 gm, 500 gm", safe: "Safe", pet: "N/A", base: 1.0, unit: "gm", ind: "Coccidiosis", co: "Bengal", type: "c", str: "17 gm + 17 gm + 0.10 gm per 100 gm", mgkg: "1 gm/ 50 kg"},
+            {sl: 63, name: "Pulv. Amprol EP", comp_val: "Amprolium hydrochloride + Ethopabate BP + Sulphaquinoxaline USP + Vit K3 + Vit C", pack: "6 gm, 100 gm pack", safe: "Safe", pet: "N/A", base: 1.0, unit: "gm", ind: "Coccidiosis", co: "SK+F", type: "c", str: "100 mg + 5 mg + 60 mg + 2 mg + 20 mg per gm", mgkg: "1 gm/ 10 kg"},
+            {sl: 64, name: "Pulv. Coctreat-EP", comp_val: "Amprolium hydrochloride + Ethopabate BP + Sulphaquinoxaline USP + Vit K3 + Vit C", pack: "100 gm", safe: "Safe", pet: "N/A", base: 1.0, unit: "gm", ind: "Coccidiosis", co: "Square", type: "c", str: "100 mg + 5 mg + 60 mg + 2 mg + 20 mg per gm", mgkg: "1 gm/ 10 kg"},
+            {sl: 65, name: "Amprium vet powder", comp_val: "Amprolium HCl 20%", pack: "100 gm", safe: "Safe", pet: "N/A", base: 2.0, unit: "gm", ind: "Coccidiosis", co: "Square", type: "c", str: "200 mg/gm", mgkg: "50 mg/kg"},
+            {sl: 66, name: "Pulv.Ampro vet", comp_val: "Amprolium HCl 20%", pack: "100 gm", safe: "Safe", pet: "N/A", base: 2.0, unit: "gm", ind: "Coccidiosis", co: "Agrovet", type: "c", str: "200 mg/gm", mgkg: "50 mg/kg"},
+            {sl: 67, name: "Pulv.coccinil 20", comp_val: "Amprolium HCl 20%", pack: "100 gm", safe: "Safe", pet: "N/A", base: 2.0, unit: "gm", ind: "Coccidiosis", co: "Techno", type: "c", str: "200 mg/gm", mgkg: "50 mg/kg"},
+            {sl: 68, name: "Pulv.Rollium 20", comp_val: "Amprolium HCl 20%", pack: "100 gm", safe: "Safe", pet: "N/A", base: 2.0, unit: "gm", ind: "Coccidiosis", co: "Super power", type: "c", str: "200 mg/gm", mgkg: "50 mg/kg"},
+            {sl: 69, name: "Pulv.Amolium 20% vet", comp_val: "Amprolium HCl 20%", pack: "100 gm", safe: "Safe", pet: "N/A", base: 2.0, unit: "gm", ind: "Coccidiosis", co: "Albion", type: "c", str: "200 mg/gm", mgkg: "50 mg/kg"},
+            {sl: 70, name: "Prolium oral powder", comp_val: "Amprolium Hydrochloride 20gm/100gm", pack: "100gm & 500gm pack", safe: "Safe", pet: "N/A", base: 1.5, unit: "gm", ind: "Coccidiosis", co: "SHINIL Pharma Ltd", type: "c", str: "200 mg/gm", mgkg: "1.5 gm/ 5L water"},
+            {sl: 71, name: "Inj. Antihista vet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "SQUARE", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 72, name: "Inj. Histavet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "ACI", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 73, name: "Inj. Astavet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "ACME", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 74, name: "Inj. Niravet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "OPSONIN", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 75, name: "Inj. Alarvet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "POPULAR", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 76, name: "Inj. Alerin", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "SK+F", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 77, name: "Inj. Asta vet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "Acme", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 78, name: "Inj. Phenavet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "Eon", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"},
+            {sl: 79, name: "Inj. Phenadryl vet", comp_val: "Pheniramine Maleate BP", pack: "10 ml, 100 ml vial", safe: "Safe", pet: "Safe", base: 1.0, unit: "ml", ind: "Allergic conditions", co: "ACME", type: "c", str: "22.75 mg/ml", mgkg: "0.25-0.5 mg/kg"}
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const drugGrid = document.getElementById('drugGrid');
+            const weightInput = document.getElementById('weight');
+            const searchInput = document.getElementById('search');
+            const medicineCount = document.getElementById('medicineCount');
+
+            function render() {
+                const weight = parseFloat(weightInput.value) || 0;
+                const search = searchInput.value.toLowerCase().trim();
+
+                const filteredDrugs = petDrugs.filter(d => {
+                    return d.name.toLowerCase().includes(search) || 
+                           d.comp_val.toLowerCase().includes(search) ||
+                           (d.ind && d.ind.toLowerCase().includes(search)) ||
+                           (d.co && d.co.toLowerCase().includes(search));
+                });
+
+                medicineCount.textContent = `মোট: ${filteredDrugs.length} টি ওষুধ`;
+                drugGrid.innerHTML = '';
+
+                if (filteredDrugs.length === 0) {
+                    drugGrid.innerHTML = `<div class="no-results">কোনো ওষুধ খুঁজে পাওয়া যায়নি।</div>`;
+                    return;
+                }
+
+                filteredDrugs.forEach(d => {
+                    // Calculated Dose
+                    let doseDisplay = "";
+                    if (d.type === 'c') {
+                        const calculated = (d.base * weight).toFixed(2);
+                        doseDisplay = `${calculated} ${d.unit}`;
+                    } else {
+                        doseDisplay = d.inst || 'See Pack';
+                    }
+
+                    // Pregnancy Badge Class
+                    let pregBadgeClass = "badge-unsafe";
+                    if (d.safe === "Safe") {
+                        pregBadgeClass = "badge-safe";
+                    } else if (d.safe.includes("Caution")) {
+                        pregBadgeClass = "badge-caution";
+                    }
+                    const pregBadge = `<span class="badge ${pregBadgeClass}">Pregnancy: ${d.safe}</span>`;
+
+                    // Pet Safety Badge Class
+                    let petBadgeClass = "badge-unsafe";
+                    if (d.pet === "Safe" || d.pet === "Highly Safe") {
+                        petBadgeClass = "badge-safe";
+                    } else if (d.pet.includes("Caution")) {
+                        petBadgeClass = "badge-caution";
+                    }
+                    const petBadge = `<span class="badge ${petBadgeClass}">Pet: ${d.pet}</span>`;
+
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <div>
+                            <div class="card-header">
+                                <h3 class="drug-name">${d.sl}. ${d.name}</h3>
+                            </div>
+                            <div class="badges" style="margin-bottom: 8px;">
+                                ${pregBadge}
+                                ${petBadge}
+                            </div>
+                            <div class="company">কোম্পানি: ${d.co} | প্যাক: ${d.pack}</div>
+                            
+                            <div class="info-row">
+                                <span class="info-label">উপাদান:</span> ${d.comp_val}
+                            </div>
+                            
+                            <div class="dose-box">
+                                <div class="info-label" style="font-size: 0.8rem; color: #0284c7;">হিসাবকৃত মাত্রা (${weight} kg এর জন্য):</div>
+                                <div class="dose-value">${doseDisplay}</div>
+                            </div>
+
+                            <div class="info-row">
+                                <span class="info-label">স্ট্যান্ডার্ড ডোজ:</span> ${d.mgkg}
+                            </div>
+                            
+                            <div class="indication">
+                                <span class="info-label">নির্দেশনা:</span> ${d.ind}
+                            </div>
+                        </div>
+                    `;
+                    drugGrid.appendChild(card);
+                });
+            }
+
+            // Listeners for live filtering & calculation
+            weightInput.addEventListener('input', render);
+            searchInput.addEventListener('input', render);
+
+            // Initial render
+            render();
+        });
+    </script>
+</body>
+</html>

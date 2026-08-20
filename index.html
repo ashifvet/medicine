@@ -39,11 +39,38 @@
             margin: 0;
             padding: 28px 20px 60px;
         }
+		.container {
+  /* Size and Spacing */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(1rem, 5vw, 2.5rem);
+  
+  /* Visual Decoration */
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 
+              0 1px 3px rgba(0, 0, 0, 0.05);
+  
+  /* Typography and Layout */
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .container {
+/* Subtle hover effect for larger screens */
+.beautiful-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/*        .container {
             max-width: auto;
             margin: 10px auto;
         }
+
+*/		
 
         /* মাস্টহেড / লেটারহেড */
         .masthead {

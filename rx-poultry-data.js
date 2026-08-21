@@ -1,0 +1,540 @@
+// Poultry legacy protocols annotated for clinical review and stewardship — checked 2026-08-21
+const RX_POULTRY = [
+  {
+    "diagnosis": "Aflatoxicosis",
+    "category": "Other / Metabolic",
+    "findings": [
+      "Cachectic leg, breast bone and muscle",
+      "Gallbladder enlarged with bile",
+      "Body weight gradually decreasing"
+    ],
+    "treatment": [
+      "Toxin nutralizer: Liq. Two plus / Six plus — 1 ml/1 L DW, 5 days",
+      "Good liver tonic: Liq. Redliver / Hepafit — 1 ml/1 L DW, 5 days",
+      "Immune stimulator: Lisovit / Imolyte / Immofast — 1 ml/1 L DW, 5 days",
+      "If mixed infection suspected, add: Liq. Levomax/Acilevo — 1 ml/1 L DW, 5 days"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Aspergillosis / brooder pneumonia",
+    "category": "Other / Metabolic",
+    "findings": [],
+    "treatment": [
+      "Copper sulphate 1 g/2 L water, 2 hours daily, 5 days",
+      "Spray copper sulphate @ 4 g/L water, twice daily, 5 days",
+      "Liq. Aciflo/Novoflor 1 ml/2 L water, 24 h, 5 days",
+      "Syp. Nystat (human) 1 ml/2 L water, 24 h, 5 days — or Tab. Nystat 50-lac size / 3 L water, 5 days",
+      "Liq. Two plus @ 1 ml/2 L water, twice daily, 5 days",
+      "Liq. Aromax @ 1 ml/5 L water, once daily, 3 days"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "CCRD",
+    "category": "Bacterial",
+    "findings": [
+      "Trachea filled with hard, creamy mass",
+      "Air sac: cloudy"
+    ],
+    "treatment": [
+      "In water: Mucospel (bromhexine) 1 g/1 L",
+      "Aromax/Pulmocare 1 ml/4 L",
+      "Sulprim/ATI vet 1 ml/2 L (Sulfadiazine 400 mg + Trimethoprim 80 mg)",
+      "CTC 2 g/1 L",
+      "Feed 120 g/bird + toxin binder in feed",
+      "FAO guideline — 1st choice: Tilmicosin; 2nd choice: Tiamulin fumarate or Tylosin or Tylvalosin (1 ml/4 L DW)"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "CCRD (Colibacillosis)",
+    "category": "Bacterial",
+    "findings": [
+      "Lungs congested; ascites present",
+      "Previously affected with mycoplasma 2 weeks earlier and had recovered — this began again from the last day",
+      "Poor farm condition overall"
+    ],
+    "treatment": [
+      "Neomycin sulphate 1 g/1 L DW, or Norfloxacin 1 g/1 L DW, or Florfenicol 1 g/2 L DW",
+      "Toxin binder",
+      "Acidifier",
+      "Water purification"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Coccidiosis",
+    "category": "Other / Metabolic",
+    "findings": [
+      "Coccidiosis found 8 days earlier; recovered after treatment, then relapsed"
+    ],
+    "treatment": [
+      "Amprolium HCl + Ethopabate + Sulphaquinoxaline + Vitamin K3 + Vitamin C",
+      "Amprol EP / Coctreat EP — 1 g/2 L water, 5 days",
+      "Vit-K, Vit-C, and litter-quality improvement",
+      "May add Neomycin/Amoxicillin"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Egg-yolk peritonitis (Colibacillosis)",
+    "category": "Bacterial",
+    "findings": [
+      "Body weight decreasing day by day",
+      "Cough present",
+      "Peritonitis present"
+    ],
+    "treatment": [
+      "Neomycin sulphate 1 g/1 L DW, or Norfloxacin 1 g/1 L DW, or Florfenicol 1 g/2 L DW",
+      "Toxin binder",
+      "Acidifier",
+      "Water purification"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Egg-yolk peritonitis (E. coli), Salmonellosis",
+    "category": "Bacterial",
+    "findings": [
+      "PM: haemorrhage in trachea",
+      "Purulent cough",
+      "Liver fragile — colour like fried egg",
+      "Oviduct: egg-yolk-like material or other",
+      "Haemorrhage in oviduct"
+    ],
+    "treatment": [
+      "Florfenicol + Tilmicosin together — Sol. Aciflo/Novoflor 1 ml/2 L DW for 5 days, with a strong liver tonic, PH & a good bronchodilator",
+      "or: Q-till 1 ml/2 L + Eskatrim 1 ml/L + Captor 1.5 g/L + Restoliv 1 ml/L + Pulmocare spray 15 ml/L (evening)",
+      "FAO guideline: Neomycin 1 g/L DW for 5 days, with acidifier 1 ml/3 L DW"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Fowl Cholera (FC)",
+    "category": "Bacterial",
+    "findings": [
+      "Haemorrhage — middle side of heart, abdominal fat, upper back-side muscle; haemorrhage in the proventricular gland",
+      "Liver very friable; a few E. coli-affected whitish, wet-covered patches",
+      "Droppings deep greenish, some yellowish"
+    ],
+    "treatment": [
+      "Sulprim vet/ATI vet 1 ml/1 L",
+      "Neoxel 1 g/1 L",
+      "Toxol 1 ml/1 L",
+      "Cholera saline 3 ml/1 L",
+      "Wash shed, feeder and drinker with detergent powder; spray birds with Glutex GQ1 5 ml/1 L",
+      "If mortality runs higher than normal: Levofloxacin 1 ml/1 L, Gentamicin 1 ml/2 L, Andopen, or a human-grade cholera saline"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Fowl Cholera (FC) with mycotoxicosis",
+    "category": "Bacterial",
+    "findings": [
+      "No pericardial or abdominal-fat haemorrhage",
+      "Rounded necrotic foci on liver; liver fragile",
+      "Haemorrhagic ovarian follicles",
+      "No proventricular gland haemorrhage — haemorrhage in the internal proventricular wall",
+      "\"Confusing case\" — PM leaned toward Fowl Cholera despite atypical lesion pattern"
+    ],
+    "treatment": [
+      "Line 1: Sulprim 1 ml/2 L; CTC 1.5 g/1 L; toxin binder 2 ml/1 L; Nephrocare 1 ml/1 L; Liva vit 1 ml/1 L; cholera saline",
+      "Line 2: Florfenicol + CTC + liver tonic + toxin binder + cholera saline"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Fowl Cholera (FC) — crop impaction presentation",
+    "category": "Bacterial",
+    "findings": [
+      "Field demonstration of ascitic fluid on necropsy — a reminder to check the abdominal cavity whenever respiratory signs, poor growth, or sudden death cluster together"
+    ],
+    "treatment": [
+      "Sulprim 1 ml/2 L; CTC 1.5 g/1 L; toxin binder 2 ml/1 L; Nephrocare 1 ml/1 L; Liva vit 1 ml/1 L",
+      "or: Florfenicol + CTC + liver tonic + toxin binder + cholera saline",
+      "or: Eskatrim 1 ml/2 L; Doxtin; Heparen; Two plus; plus sugar water"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Fowl Cholera present — ND must also be ruled out",
+    "category": "Bacterial",
+    "findings": [
+      "Coughing; greenish / mucoid whitish diarrhoea; weak birds; very pale wattle",
+      "PM: pinpoint haemorrhage in fatty tissue and coronary fat; intestine filled with gas",
+      "Pinpoint haemorrhage near sternum; liver fragile; haemorrhage in caecal tonsil",
+      "ND Lasota given 25 days earlier; nothing abnormal in proventriculus & gizzard"
+    ],
+    "treatment": [
+      "Post-mortem points to Fowl Cholera, but ND titre may be low — check ND titre and start FC treatment",
+      "Also test AI (H7, H9) and ND HI titre — if both negative, treat as FC and expect a good response"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Gout",
+    "category": "Other / Metabolic",
+    "findings": [
+      "PM: chalky-white covering on liver and heart"
+    ],
+    "treatment": [
+      "Allopurinol 2.5 g/1 L, urinary acidifier, toxin binder, molasses and kidney tonic",
+      "If antibiotics are used: Levofloxacin 1 ml/L (or Amoxicillin 1 ml/L) twice daily, 4 days, with Allopurinol 1 g/L and acetic acid/vinegar 10 ml/L, twice daily, 4 days",
+      "Ensure abundant clean drinking water and good ventilation"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Highly Pathogenic Avian Influenza (AI)",
+    "category": "Viral",
+    "findings": [
+      "Mortality 20–30/day",
+      "Major lesions: haemorrhage on shank & comb; liver fragile; whole skin haemorrhagic",
+      "Pericardial fat and abdominal fat haemorrhage",
+      "Death within a few hours of onset"
+    ],
+    "treatment": [],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "diagnosis_only_no_treatment_encoded"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Infectious Bronchitis (IB)",
+    "category": "Viral",
+    "findings": [],
+    "treatment": [
+      "Live IB genotype-matched vaccine (Gallivac IB88 NeO / iBird / Nobilis IB-4/91) via drinking water",
+      "Supportive: Mucospel (bromhexine) 1 g/1 L — once daily",
+      "Aromax 1 ml/10 L — once daily",
+      "Ginger 2 g + garlic 2 g / 1 L water — once daily for 7–10 days, alongside Aromax 10 ml/1 L, 2–3×/day",
+      "Antibiotic response is generally poor in IB — if used: anti-mycoplasmal cover (Tilmicosin/Q-til 1 ml/3 L, or Doxivet 1 g/2 L)"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Infectious Bursal Disease (IBD / Gumboro)",
+    "category": "Viral",
+    "findings": [
+      "PM: haemorrhage in thigh and breast muscle",
+      "Haemorrhage in bursa of Fabricius",
+      "Haemorrhage at the junction of proventriculus and gizzard"
+    ],
+    "treatment": [
+      "Copper sulphate 1 g/3 L DW + acidifier, at dawn for 2–3 hours, 3–5 days (immune-enhancing, mild antimicrobial effect)",
+      "Antibiotic for secondary bacterial infection, BID/TID, 3–5 days — Quinolones (Levofloxacin/Ciprofloxacin/Norfloxacin) + Neomycin, or Florfenicol alone",
+      "Supportive: jaggery/sugar 10–20 g/L DW BID 5–7 days for instant energy",
+      "Vitamin C BID 5–7 days",
+      "Kidney tonic SID 3–5 days (IBD damages the kidney)",
+      "NSAID (paracetamol/tolfenamic acid) BID 3–5 days for fever/pain",
+      "Immunity stimulator SID 3–5 days (commercial or herbal — black cumin, ginger, garlic)",
+      "Toxin binder SID 3–5 days (optional in Gumboro, still generally beneficial)",
+      "Andrographis paniculata SID 3–5 days — antiviral activity against Gumboro virus"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Infectious Coryza",
+    "category": "Bacterial",
+    "findings": [
+      "Swollen face; some birds blind from facial enlargement",
+      "Coughing",
+      "Watery ocular discharge",
+      "Thin, white-shelled, deformed eggs",
+      "Feed intake decreased; production down 5–8%",
+      "Ammonia level consistently high",
+      "ND Lasota done the day before the visit"
+    ],
+    "treatment": [
+      "First remove the causal factor (ammonia) — spray GPC-8, 1 ml/5 L, twice daily, inside & outside",
+      "Line 1: Sulphadiazine+Trimethoprim (ATI vet/Sulprim vet) 1 ml/1 L; Chlortetracycline (Eska CTC) 1 g/1 L; Two plus/Six plus 2 ml/1 L; Nephrocare/Urinex 1 ml/1 L, 5–7 days",
+      "Spray: Pulmocare 8 ml/1 L water, twice daily; Glutex GQ1 (glutaraldehyde) 5 ml/1 L, twice daily until recovery",
+      "Follow-up in feed: Otetra vet/Renamycin powder 100 g/100 kg feed for 5–7 days, then Doxycycline in feed 5–7 days",
+      "Line 2: sulpha drug 7 days → chlortetracycline 5 days → sulpha drug 3 days, with a respiratory stimulant"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Infectious Coryza (post-vaccination flare)",
+    "category": "Bacterial",
+    "findings": [
+      "Coryza vaccine given at day 65 — head, face, neck swollen shortly after",
+      "Adipose tissue present within the swollen area",
+      "Previously treated (Micronid, Doxivet, Tilmisin) — no improvement after 7 days",
+      "Farmer suspected a vaccination reaction"
+    ],
+    "treatment": [
+      "Coryza-directed treatment: ATI vet 1 ml/1 L; Tam vet 2.5 g/1 L; Antox plus 3 ml/1 L; Mucospel 1 g/1 L; Envit-C 2 ml/1 L",
+      "Dexonex-C — 1 drop ×2 daily in affected birds' eyes",
+      "In feed: Cotra vet 200 g/100 kg feed",
+      "Follow-up protocol: diuretic double-dose day 1, then Cosumix Plus (Sulphachloropyridazine 10% + Trimethoprim 2%) 2 g/L DW ×2/day for 5 days",
+      "Denaguard/Renagard 1 g/3 L DW ×2/day for 5 days; diuretic ×2/day for 5–7 more days",
+      "Paracetamol powder (Acme) 1 g/L DW ×2/day for 1–2 days",
+      "After recovery: probiotic/prebiotic (Avibac) once daily 2–3 days; ND clone vaccine via eye-drop; local antiseptic + chloramphenicol eye drop 1×/eye, 3×/day for severe eye lesions"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Marek's Disease (MD)",
+    "category": "Neoplastic",
+    "findings": [
+      "Loss of appetite; feed & water supplied twice daily",
+      "5–7 birds died in the last 30 days",
+      "Dead birds cachectic, ~800–900 g",
+      "PM: enlargement of sciatic nerve; splenomegaly"
+    ],
+    "treatment": [
+      "Powder Refence — 300 g/100 kg feed for 2 weeks",
+      "Allicom — 150 g/100 kg feed for 2 weeks",
+      "Powder E-Sel — 150 g/100 kg feed for 2 weeks",
+      "Liver tonic for 7 days",
+      "Vit-C",
+      "Optional antiviral: Pulv. Xilian vet / Andopan vet — 1 g/2 L water, 1 week"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Mixed infection — MG, Infectious Coryza & mild ND",
+    "category": "Bacterial",
+    "findings": [
+      "2 days of nasal secretion, ocular discharge, swelling around the eyes",
+      "\"Ghor-ghor\" sound at night; some birds show suffocation and open-mouth breathing",
+      "Already given Tylosin & Levofloxacin — no response",
+      "AI rapid test: negative"
+    ],
+    "treatment": [
+      "Cosumix Plus / Sultrik — 5 days, breeder-appropriate dose (higher than commercial layer) via DW",
+      "Resmulin / Tia Vet — 5 days, breeder dose via DW",
+      "Pulmocare / Aeromax — spray morning & evening, 3–5 days",
+      "KC vet liquid — breeder dose, 5–7 days via DW",
+      "ND clone vaccination after 7 days, ideally after checking ND titre"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Mycoplasmosis",
+    "category": "Bacterial",
+    "findings": [
+      "Swollen head with conjunctivitis and discharge",
+      "Cloudy air sacs and peritoneum",
+      "Congested trachea with caseous mass",
+      "Moderate respiratory sound"
+    ],
+    "treatment": [
+      "Q-til-S 1 ml/2.5 L DW daily, 5 days, or Tylvasin vet 1 g/5 L DW daily, 3–5 days, or Myco-out 1 g/1 L DW daily, 5 days",
+      "Doxi vet 1 g/L, 3–5 days",
+      "Pulmocare 1 ml/4 L water, evenings only",
+      "20+ day broilers commonly show this — predisposing factors: ammonia gas, spider-web (dust/cobweb) buildup, relatively humid environment",
+      "Alt.: Sulprim/ATI vet 1 ml/2 L + Tylosin 2 g/1 L + Respiron 1 ml/1 L + Mucospel 1 g/1 L, twice daily, 5 days",
+      "FAO guideline — 1st choice Tilmicosin; 2nd choice Tiamulin fumarate or Tylosin"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Neoplastic disease (LL or MD)",
+    "category": "Neoplastic",
+    "findings": [
+      "Gradual weight loss (1.4 kg → 0.7–0.8 kg) over ~2 months, then death",
+      "No sneezing, no coughing, no paralysis, no visible abnormal nervous sign",
+      "PM: white-coloured tumour on liver and intestinal surface"
+    ],
+    "treatment": [],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "diagnosis_only_no_treatment_encoded"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Omphalitis",
+    "category": "Bacterial",
+    "findings": [
+      "Birds weak; an electricity outage occurred during this period",
+      "PM: unabsorbed yolk; white, thickened covering on liver"
+    ],
+    "treatment": [
+      "Neomycin sulphate 1 g/1 L DW, or Enrofloxacin 1 ml/1 L DW, or Florfenicol 1 g/2 L DW",
+      "Toxin binder",
+      "Acidifier",
+      "Water purification"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Perihepatitis (white covering on the liver) — Fatty Liver Haemorrhagic Syndrome",
+    "category": "Other / Metabolic",
+    "findings": [
+      "Progressive whitish/fibrinous covering of the liver capsule, shown here across escalating stages (1–4)"
+    ],
+    "treatment": [],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "diagnosis_only_no_treatment_encoded"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Staphylococcus infection",
+    "category": "Bacterial",
+    "findings": [],
+    "treatment": [
+      "Separate affected birds from the rest",
+      "Cause may be litter/bedding-related",
+      "At this weight (1.5 kg by day 29), avoid stepping up to higher-tier antibiotics",
+      "Spray litter/bedding with copper sulphate + disinfectant — Tute 3 g/1 L (morning), Timsen 2 g/1 L (evening)",
+      "Toxin binder and kidney tonic in water"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  },
+  {
+    "diagnosis": "Subcutaneous (SC) vaccination reaction at the neck",
+    "category": "Other / Metabolic",
+    "findings": [
+      "Problem noticed over the last 5 days",
+      "No abscess — felt like localized muscle/tissue growth",
+      "All vaccines completed; a killed vaccine was given 3 weeks earlier"
+    ],
+    "treatment": [
+      "Antibiotic + Vit-C; most birds recover within 3 weeks — a normal, sometimes positive, vaccine-response reaction (Salmonella, FC, Coryza)",
+      "Often due to killed-vaccine handling — ideally given at room temperature (22–26°C), which can be hard to maintain in winter (12–18°C)"
+    ],
+    "clinicalReviewRequired": true,
+    "validationStatus": "legacy_protocol_not_clinically_validated",
+    "qualityFlags": [
+      "flock_protocol_requires_veterinarian_review",
+      "antimicrobial_stewardship_review_required"
+    ],
+    "reviewNote": "Do not use as a stand-alone flock prescription. Confirm diagnosis, susceptibility, legal use, dose, water intake, interactions, and withdrawal period with a poultry veterinarian."
+  }
+];

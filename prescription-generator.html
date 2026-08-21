@@ -509,10 +509,182 @@
         .rx-head { flex-direction: column; }
     }
 
+    /* ---- Single-page A4 print stage ---- */
+    #singlePagePrintRoot { display: none; }
+
+    #singlePagePrintRoot .rx-sheet {
+        max-width: none;
+        margin: 0;
+        background: #fff;
+        border: 1px solid #cfcfcf;
+        border-radius: 0;
+        box-shadow: none;
+        overflow: hidden;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    #singlePagePrintRoot .rx-sheet::before { height: 3px; }
+    #singlePagePrintRoot .rx-head { gap: 8px; padding: 11px 14px 8px; }
+    #singlePagePrintRoot .rx-head .rx-mark { font-size: 1.65rem; }
+    #singlePagePrintRoot .rx-head .clinic { font-size: .58rem; margin-top: 1px; }
+    #singlePagePrintRoot .rx-meta {
+        grid-template-columns: repeat(4, minmax(80px, 1fr));
+        gap: 3px 10px;
+    }
+    #singlePagePrintRoot .rx-meta .m-item .k { font-size: .48rem; }
+    #singlePagePrintRoot .rx-meta .m-item .v { font-size: .68rem; margin-top: 0; }
+    #singlePagePrintRoot .rx-disease-row { padding: 6px 14px; }
+    #singlePagePrintRoot .rx-disease-row .dz-label { font-size: .48rem; margin-bottom: 1px; }
+    #singlePagePrintRoot .rx-disease-row h3 { font-size: .86rem; }
+    #singlePagePrintRoot .alert-banner {
+        margin: 4px 14px 0;
+        padding: 4px 7px;
+        border-radius: 5px;
+        font-size: .56rem;
+        line-height: 1.22;
+        gap: 5px;
+    }
+    #singlePagePrintRoot .alert-banner .ico { font-size: .72rem; }
+    #singlePagePrintRoot .meds-wrap { padding: 7px 14px 2px; }
+    #singlePagePrintRoot .meds-wrap h4 {
+        font-size: .76rem;
+        margin: 0 0 5px;
+        gap: 4px;
+    }
+    #singlePagePrintRoot .med-row {
+        border-left-width: 3px;
+        border-radius: 5px;
+        padding: 5px 7px;
+        margin-bottom: 5px;
+        min-width: 0;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    #singlePagePrintRoot .med-row-top { gap: 5px; }
+    #singlePagePrintRoot .med-name { font-size: .69rem; }
+    #singlePagePrintRoot .med-num {
+        width: 15px;
+        height: 15px;
+        margin-right: 4px;
+        font-size: .48rem;
+    }
+    #singlePagePrintRoot .badge-row { gap: 3px; }
+    #singlePagePrintRoot .badge {
+        padding: 1px 4px;
+        border-width: 1px;
+        font-size: .43rem;
+        letter-spacing: 0;
+    }
+    #singlePagePrintRoot .med-stats {
+        grid-template-columns: repeat(3, minmax(66px, 1fr));
+        gap: 3px;
+        margin-top: 4px;
+    }
+    #singlePagePrintRoot .stat-box { border-radius: 4px; padding: 2px 4px; }
+    #singlePagePrintRoot .stat-box .stat-label { font-size: .40rem; }
+    #singlePagePrintRoot .stat-box .stat-value { font-size: .56rem; margin-top: 0; }
+    #singlePagePrintRoot .schedule-row { margin-top: 3px; gap: 3px; }
+    #singlePagePrintRoot .sched-pill {
+        font-size: .43rem;
+        padding: 1px 4px;
+    }
+    #singlePagePrintRoot .route-line {
+        margin-top: 3px;
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-size: .50rem;
+    }
+    #singlePagePrintRoot .directory-line {
+        margin-top: 3px;
+        padding-top: 3px;
+        font-size: .46rem;
+        line-height: 1.22;
+    }
+    #singlePagePrintRoot .poultry-list li {
+        border-left-width: 3px;
+        border-radius: 5px;
+        padding: 5px 7px;
+        margin-bottom: 4px;
+        font-size: .58rem;
+        line-height: 1.25;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    #singlePagePrintRoot .rx-footer { padding: 7px 14px 9px; }
+    #singlePagePrintRoot .signature {
+        min-width: 130px;
+        border-top-width: 1px;
+        padding-top: 2px;
+        font-size: .66rem;
+    }
+    #singlePagePrintRoot .print-btn,
+    #singlePagePrintRoot .final-disclaimer { display: none !important; }
+
+    /* Use columns before shrinking when a prescription contains many items. */
+    #singlePagePrintRoot.dosed-print.many-medicines .meds-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px 7px;
+    }
+    #singlePagePrintRoot.dosed-print.very-many-medicines .meds-wrap {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    #singlePagePrintRoot.dosed-print.many-medicines .meds-wrap > h4,
+    #singlePagePrintRoot.dosed-print.many-medicines .meds-wrap > p {
+        grid-column: 1 / -1;
+    }
+    #singlePagePrintRoot.dosed-print.many-medicines .med-row { margin-bottom: 0; }
+    #singlePagePrintRoot.poultry-print.many-medicines .poultry-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 7px;
+    }
+    #singlePagePrintRoot.poultry-print.very-many-medicines .poultry-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    #singlePagePrintRoot.poultry-print.many-medicines .poultry-list li { margin-bottom: 0; }
+
+    @page { size: A4 portrait; margin: 6mm; }
+
     @media print {
-        body { background: #fff; padding: 0; }
-        .masthead, .back-link, .intro-card, .form-card, .print-btn, .final-disclaimer { display: none !important; }
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #fff !important;
+            overflow: hidden !important;
+        }
+
+        /* Normal fallback for Ctrl+P before a prescription is prepared. */
+        .masthead, .back-link, .intro-card, .form-card, .print-btn, .final-disclaimer {
+            display: none !important;
+        }
         .rx-sheet { box-shadow: none; border: 1px solid #ccc; }
+
+        /* The custom button prints only this fixed one-page canvas. */
+        body.single-page-print-active > *:not(#singlePagePrintRoot) {
+            display: none !important;
+        }
+        body.single-page-print-active #singlePagePrintRoot {
+            display: block !important;
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: 198mm !important;
+            height: 285mm !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            visibility: visible !important;
+        }
+        body.single-page-print-active #singlePagePrintRoot .rx-sheet {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            margin: 0 !important;
+            transform-origin: top left !important;
+            break-inside: avoid !important;
+            page-break-inside: avoid !important;
+        }
     }
 </style>
 </head>
@@ -931,6 +1103,179 @@
         return '<li><span class="med-num">' + (idx + 1) + '</span>' + esc(text) + tag + '</li>';
     }
 
+    /* ---------------------------------------------------------------
+       8. Fit the complete prescription onto one A4 page
+       ------------------------------------------------------------- */
+    var PRINT_ROOT_ID = "singlePagePrintRoot";
+    var PRINT_WIDTH_MM = 198;   // A4 width minus 6 mm margins on both sides
+    var PRINT_HEIGHT_MM = 285;  // A4 height minus 6 mm margins on top/bottom
+    var printInProgress = false;
+
+    function getPixelsPerMillimetre() {
+        var probe = document.createElement("div");
+        probe.style.cssText = "position:fixed;left:-10000px;top:0;width:100mm;height:1px;visibility:hidden;padding:0;border:0;";
+        document.body.appendChild(probe);
+        var value = probe.getBoundingClientRect().width / 100;
+        probe.remove();
+        return value || (96 / 25.4);
+    }
+
+    function clearSinglePagePrintRoot() {
+        var oldRoot = document.getElementById(PRINT_ROOT_ID);
+        if (oldRoot) oldRoot.remove();
+        document.body.classList.remove("single-page-print-active");
+    }
+
+    function removeSinglePagePrintRoot() {
+        clearSinglePagePrintRoot();
+        printInProgress = false;
+    }
+
+    function measurePrintClone(clone, targetWidth, targetHeight, scale) {
+        var sourceWidth = targetWidth / scale;
+        clone.style.width = sourceWidth + "px";
+        clone.style.maxWidth = "none";
+        clone.style.height = "auto";
+        clone.style.transform = "none";
+
+        // Force layout after changing width, then measure the unscaled sheet.
+        void clone.offsetHeight;
+        var naturalWidth = Math.max(clone.scrollWidth, clone.offsetWidth);
+        var naturalHeight = Math.max(clone.scrollHeight, clone.offsetHeight);
+        var visualWidth = naturalWidth * scale;
+        var visualHeight = naturalHeight * scale;
+
+        return {
+            sourceWidth: sourceWidth,
+            naturalWidth: naturalWidth,
+            naturalHeight: naturalHeight,
+            fits: visualWidth <= targetWidth + 0.5 && visualHeight <= targetHeight + 0.5
+        };
+    }
+
+    function findLargestFittingScale(clone, targetWidth, targetHeight) {
+        var fullSize = measurePrintClone(clone, targetWidth, targetHeight, 1);
+        if (fullSize.fits) return 1;
+
+        // Find a lower scale that definitely fits.
+        var high = 1;
+        var low = 0.5;
+        var lowMeasurement = measurePrintClone(clone, targetWidth, targetHeight, low);
+        while (!lowMeasurement.fits && low > 0.01) {
+            high = low;
+            low = low / 2;
+            lowMeasurement = measurePrintClone(clone, targetWidth, targetHeight, low);
+        }
+
+        // Extremely large prescriptions still fit: continue shrinking if needed.
+        while (!lowMeasurement.fits && low > 0.001) {
+            high = low;
+            low = low / 2;
+            lowMeasurement = measurePrintClone(clone, targetWidth, targetHeight, low);
+        }
+
+        if (!lowMeasurement.fits) {
+            var widthRatio = targetWidth / (lowMeasurement.naturalWidth * low);
+            var heightRatio = targetHeight / (lowMeasurement.naturalHeight * low);
+            low = Math.max(0.0005, low * Math.min(widthRatio, heightRatio) * 0.98);
+            lowMeasurement = measurePrintClone(clone, targetWidth, targetHeight, low);
+        }
+
+        // Binary-search for the largest readable scale that remains one page.
+        for (var i = 0; i < 16; i++) {
+            var mid = (low + high) / 2;
+            if (measurePrintClone(clone, targetWidth, targetHeight, mid).fits) {
+                low = mid;
+            } else {
+                high = mid;
+            }
+        }
+        return Math.max(0.0005, low * 0.995); // tiny safety margin for print rounding
+    }
+
+    function buildSinglePagePrintRoot() {
+        var sourceSheet = rxOutput.querySelector(".rx-sheet");
+        if (!sourceSheet) return null;
+
+        clearSinglePagePrintRoot();
+
+        var pxPerMm = getPixelsPerMillimetre();
+        var targetWidth = PRINT_WIDTH_MM * pxPerMm;
+        var targetHeight = PRINT_HEIGHT_MM * pxPerMm;
+
+        var root = document.createElement("div");
+        root.id = PRINT_ROOT_ID;
+        root.setAttribute("aria-hidden", "true");
+        root.style.cssText = [
+            "display:block",
+            "position:fixed",
+            "left:-100000px",
+            "top:0",
+            "width:" + targetWidth + "px",
+            "height:" + targetHeight + "px",
+            "margin:0",
+            "padding:0",
+            "overflow:hidden",
+            "visibility:hidden"
+        ].join(";");
+
+        var clone = sourceSheet.cloneNode(true);
+        clone.classList.add("single-page-print-sheet");
+        Array.prototype.forEach.call(clone.querySelectorAll(".print-btn, .final-disclaimer"), function (el) {
+            el.remove();
+        });
+
+        var medCount = clone.querySelectorAll(".med-row").length;
+        var poultryCount = clone.querySelectorAll(".poultry-list li").length;
+        var itemCount = medCount || poultryCount;
+        if (medCount) root.classList.add("dosed-print");
+        if (poultryCount) root.classList.add("poultry-print");
+        if (itemCount >= 8) root.classList.add("many-medicines");
+        if (itemCount >= 18) root.classList.add("very-many-medicines");
+
+        root.appendChild(clone);
+        document.body.appendChild(root);
+        document.body.classList.add("single-page-print-active");
+
+        var scale = findLargestFittingScale(clone, targetWidth, targetHeight);
+        var finalMeasurement = measurePrintClone(clone, targetWidth, targetHeight, scale);
+        clone.style.width = finalMeasurement.sourceWidth + "px";
+        clone.style.transform = "scale(" + scale + ")";
+        clone.style.transformOrigin = "top left";
+        root.dataset.printScale = scale.toFixed(4);
+        root.dataset.itemCount = String(itemCount);
+
+        return root;
+    }
+
+    window.printPrescriptionSinglePage = function () {
+        if (printInProgress) return;
+        printInProgress = true;
+
+        var openPrintDialog = function () {
+            var root = buildSinglePagePrintRoot();
+            if (!root) {
+                printInProgress = false;
+                return;
+            }
+
+            // Two frames let the browser finish layout before opening print preview.
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    window.print();
+                });
+            });
+        };
+
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(openPrintDialog, openPrintDialog);
+        } else {
+            openPrintDialog();
+        }
+    };
+
+    window.addEventListener("afterprint", removeSinglePagePrintRoot);
+
     function generatePrescription() {
         formError.style.display = "none";
         var sel = currentSelection();
@@ -1003,7 +1348,7 @@
 
         html += '<div class="final-disclaimer">This prescription was generated automatically by rescaling a standard reference protocol. Verify drug availability, exact dosing and contraindications with a licensed veterinarian before administering — especially for pregnant, neonatal, critical or notifiable-disease cases.</div>';
 
-        html += '<div class="rx-footer"><button class="print-btn" onclick="window.print()">🖨 Print / Save as PDF</button><div class="signature">Dr. Md. Ashif Iqbal</div></div>';
+        html += '<div class="rx-footer"><button class="print-btn" type="button" title="Automatically fits the complete prescription on one A4 page" onclick="printPrescriptionSinglePage()">🖨 Print / Save as PDF</button><div class="signature">Dr. Md. Ashif Iqbal</div></div>';
         html += '</div>';
 
         rxOutput.innerHTML = html;

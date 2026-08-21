@@ -1,472 +1,280 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b6652">
+    <meta name="color-scheme" content="light">
     <title>Veterinary Diary</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Hind+Siliguri:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --ink: #182620;
-            --pine: #1f3b2e;
-            --pine-deep: #122019;
-            --brass: #b8894b;
-            --brass-soft: #e3c496;
-            --parchment: #faf7ec;
-            --parchment-dim: #f1ead6;
-            --border-color: #e2dac0;
-            --muted: #786f5c;
-            --safe-color: #2f7a4f;
-            --safe-bg: #e2f0e5;
-            --unsafe-color: #b3261e;
-            --unsafe-bg: #fbe7e5;
-            --caution-color: #a8721c;
-            --caution-bg: #faf0da;
-            --shadow: 0 10px 30px -12px rgba(20, 32, 25, .25);
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            font-family: 'Hind Siliguri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background:
-                radial-gradient(1200px 500px at 50% -120px, rgba(184, 137, 75, .12), transparent 60%),
-                var(--parchment);
-            color: var(--ink);
-            margin: 0;
-            padding: 28px 20px 60px;
-        }
-		.container {
-  /* Size and Spacing */
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: clamp(1rem, 5vw, 2.5rem);
-  
-  /* Visual Decoration */
-  background: #ffffff;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 
-              0 1px 3px rgba(0, 0, 0, 0.05);
-  
-  /* Typography and Layout */
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Subtle hover effect for larger screens */
-.container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
-
-/*        .container {
-            max-width: auto;
-            margin: 10px auto;
-        }
-
-*/		
-
-        /* মাস্টহেড / লেটারহেড */
-        .masthead {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            justify-content: center;
-            background: linear-gradient(160deg, var(--pine), var(--pine-deep));
-            border-radius: 18px;
-            padding: 28px 30px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .masthead::after {
-            content: "";
-            position: absolute;
-            left: 24px; right: 24px; bottom: 14px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--brass), transparent);
-            opacity: .6;
-        }
-
-        .seal { flex-shrink: 0; filter: drop-shadow(0 2px 3px rgba(0,0,0,.35)); }
-
-        .masthead-text { text-align: left; }
-
-        h1 {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-weight: 600;
-            font-size: clamp(1.6rem, 3vw, 2.3rem);
-            color: #fbf6ea;
-            margin: 0 0 4px;
-            letter-spacing: .2px;
-        }
-
-        .masthead h4 {
-            margin: 0;
-            font-weight: 400;
-            font-size: .78rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--brass-soft);
-        }
-
-        .masthead h3 {
-            margin: 2px 0 0;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: .95rem;
-            font-weight: 500;
-            color: #ece3d0;
-        }
-
-        p.subtitle { color: var(--muted); margin-top: 0; }
-
-        /* ট্যাব নেভিগেশন বার */
-        .nav-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 0 0 16px;
-            padding: 0;
-            list-style: none;
-            justify-content: center;
-        }
-
-        .nav-tabs a {
-            text-decoration: none;
-            padding: 11px 20px;
-            background-color: var(--parchment-dim);
-            color: var(--ink);
-            font-weight: 600;
-            font-size: .92rem;
-            border-radius: 10px 10px 4px 4px;
-            border: 1px solid var(--border-color);
-            border-bottom: 3px solid var(--brass);
-            box-shadow: 0 1px 2px rgba(20, 32, 25, .05);
-            transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-        }
-
-        .nav-tabs a:hover {
-            background-color: #ffffff;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px -8px rgba(20, 32, 25, .35);
-        }
-
-        .nav-tabs a.active {
-            background-color: var(--pine);
-            color: #fbf6ea;
-            border-color: var(--pine);
-            border-bottom: 3px solid var(--brass);
-        }
-
-        .nav-tabs a:focus-visible {
-            outline: 2px solid var(--pine);
-            outline-offset: 2px;
-        }
-
-        .nav-group + .nav-group { margin-top: 4px; }
-
-        .nav-group-divider {
-            border: none;
-            border-top: 1px dashed var(--border-color);
-            max-width: auto;
-            margin: 4px auto 22px;
-            opacity: .8;
-        }
-
-        /* কন্ট্রোল ও সার্চ ইনপুট */
-        .controls {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-            background: #ffffff;
-            padding: 18px 20px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 8px rgba(20, 32, 25, .04);
-        }
-
-        .control-group {
-            flex: 1;
-            min-width: 200px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .control-group label {
-            font-size: .82rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: .6px;
-            color: var(--muted);
-        }
-
-        .input-field {
-            padding: 11px 14px;
-            border: 1px solid var(--border-color);
-            border-radius: 9px;
-            font-size: 15px;
-            font-family: inherit;
-            outline: none;
-            background: var(--parchment);
-            transition: border-color .15s, box-shadow .15s;
-        }
-
-        .input-field:focus {
-            border-color: var(--pine);
-            box-shadow: 0 0 0 3px rgba(31, 59, 46, .12);
-            background: #ffffff;
-        }
-
-        .counter {
-            align-self: center;
-            font-family: 'IBM Plex Mono', monospace;
-            font-weight: 600;
-            color: var(--pine);
-            background-color: var(--parchment-dim);
-            border: 1.5px dashed var(--brass);
-            padding: 10px 18px;
-            border-radius: 999px;
-            white-space: nowrap;
-            transform: rotate(-1.5deg);
-        }
-
-        /* কার্ড গ্রিড লেআউট */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px 20px 18px 22px;
-            box-shadow: 0 6px 18px -10px rgba(20, 32, 25, .18);
-            border: 1px solid var(--border-color);
-            border-left: 5px solid var(--brass);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-            transition: transform .18s ease, box-shadow .18s ease;
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0; right: 0;
-            border-width: 0 22px 22px 0;
-            border-style: solid;
-            border-color: transparent var(--parchment-dim) transparent transparent;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 14px 28px -14px rgba(20, 32, 25, .28);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            gap: 10px;
-        }
-
-        .drug-name {
-            font-family: 'Fraunces', serif;
-            font-weight: 600;
-            font-size: 1.18rem;
-            color: var(--ink);
-            margin: 0;
-            padding-right: 18px;
-        }
-
-        .badges {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            padding: 4px 11px;
-            border-radius: 999px;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: .68rem;
-            font-weight: 600;
-            letter-spacing: .3px;
-            text-transform: uppercase;
-            border: 1.5px dashed currentColor;
-            white-space: nowrap;
-        }
-
-        .badge-safe { background-color: var(--safe-bg); color: var(--safe-color); }
-        .badge-unsafe { background-color: var(--unsafe-bg); color: var(--unsafe-color); }
-        .badge-caution { background-color: var(--caution-bg); color: var(--caution-color); }
-
-        .company {
-            font-size: .85rem;
-            color: var(--muted);
-            margin-bottom: 12px;
-        }
-
-        .info-row {
-            margin: 6px 0;
-            font-size: .9rem;
-            line-height: 1.5;
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: var(--pine);
-        }
-
-        .dose-box {
-            background-color: var(--parchment-dim);
-            border: 1px dashed var(--brass);
-            border-radius: 10px;
-            padding: 11px 14px;
-            margin: 12px 0;
-        }
-
-        .dose-value {
-            font-family: 'IBM Plex Mono', monospace;
-            font-weight: 700;
-            color: var(--pine);
-            font-size: 1.05rem;
-        }
-
-        .indication {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px dashed var(--border-color);
-            font-size: .87rem;
-            color: #3a4238;
-        }
-
-        .no-results {
-            text-align: center;
-            grid-column: 1 / -1;
-            padding: 50px 20px;
-            color: var(--muted);
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-size: 1.1rem;
-        }
-
-        #loading-status {
-            color: var(--caution-color);
-            text-align: center;
-            font-weight: 600;
-            padding: 12px;
-            background: var(--caution-bg);
-            border: 1px dashed var(--caution-color);
-            border-radius: 10px;
-            display: none;
-        }
-
-        @media (max-width: auto) {
-            .masthead { flex-direction: column; text-align: center; padding: 22px 18px; }
-            .masthead-text { text-align: center; }
-            .control-group { min-width: 100%; }
-            .counter { align-self: stretch; text-align: center; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * { transition: none !important; animation: none !important; }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<container>
+    <main class="app-shell">
+        <header class="app-header">
+            <div class="brand-row">
+                <div class="brand-mark" aria-hidden="true">🐾</div>
+                <div class="brand-copy">
+                    <p class="eyebrow">Clinical companion</p>
+                    <h1 class="app-title">Veterinary Diary</h1>
+                </div>
+            </div>
 
-    
-   <!--    </header> -->
+            <p class="app-subtitle">
+                Fast access to veterinary medicines, diseases, prescriptions, poultry references and practical clinical tools.
+            </p>
 
-        <!-- ট্যাব নেভিগেশন বার -->
-		
+            <div class="header-chips" aria-label="App highlights">
+                <span class="header-chip">⚕️ Medicines</span>
+                <span class="header-chip">📋 Prescriptions</span>
+                <span class="header-chip">🩺 Disease guide</span>
+            </div>
+        </header>
 
-		<nav class="nav-tabs nav-group">
-            <a href="prescription-generator.html">Customized Prescription Maker</a>
-		</nav>
-
-        <hr class="nav-group-divider">
-
-
-
-		<nav class="nav-tabs nav-group">
-            <a href="home.html">Large Animal Medicines</a>
-		</nav>
-
-        <hr class="nav-group-divider">
-		
-		<nav class="nav-tabs nav-group">
-            <a href="medicine-details.html">Medicines Literature</a>
-		</nav>
-
-        <hr class="nav-group-divider">
-	
-		<nav class="nav-tabs nav-group">
-            <a href="pregnancy-safe.html">Pregnancy Safe Medicines</a>
-			
-		</nav>
-
-        		<hr class="nav-group-divider">
-
-        <nav class="nav-tabs nav-group">
-            <a href="details-disease.html">Details Of 100+ Diseases</a>
-		</nav>
-
-        
-        <hr class="nav-group-divider">
-
-		<nav class="nav-tabs nav-group">
-
-			<a href="important_diseases_and_lesions_postmortem.html">Important Lesions for Specific Disease of Poultry</a>
-			
-		</nav>
-
-        <hr class="nav-group-divider">
-		<nav class="nav-tabs nav-group">
-		
-		
-            <a href="post-mortem_examination_of_poultry.html">Post-mortem Examination of Poultry</a>
-			
-		</nav>
-
-        <hr class="nav-group-divider">
-		<nav class="nav-tabs nav-group">
-		
-		
-            <a href="poultry_biosecurity.html"> BioSecurity</a>
-        </nav>
-
-         <hr class="nav-group-divider">
-		<nav class="nav-tabs nav-group">
-		
-		
-            <a href="veterinary-acts.html"> Veterinary Acts</a>
-        </nav>
-
-        
-        <div id="loading-status">
-            সিস্টেম লোড হচ্ছে, দয়া করে অপেক্ষা করুন...
+        <div class="search-panel">
+            <label class="search-box" for="featureSearch">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input
+                    id="featureSearch"
+                    class="search-input"
+                    type="search"
+                    inputmode="search"
+                    autocomplete="off"
+                    placeholder="Search medicines, diseases or tools..."
+                    aria-label="Search app features"
+                >
+            </label>
         </div>
 
-    </div>
-</container>		
+        <div class="dashboard">
+            <section aria-labelledby="quickActionTitle">
+                <div class="section-heading">
+                    <h2 id="quickActionTitle">Quick action</h2>
+                    <span>Most used</span>
+                </div>
 
+                <a class="hero-action searchable-item" href="prescription-generator.html" data-search="prescription generator rx prescription">
+                    <span class="hero-icon" aria-hidden="true">℞</span>
+                    <span class="hero-copy">
+                        <strong>Prescription Generator</strong>
+                        <small>Create a veterinary prescription quickly</small>
+                    </span>
+                    <span class="chevron" aria-hidden="true">›</span>
+                </a>
+            </section>
+
+            <section aria-labelledby="medicineSectionTitle">
+                <div class="section-heading">
+                    <h2 id="medicineSectionTitle">Medicines & references</h2>
+                    <span>Clinical library</span>
+                </div>
+
+                <div class="menu-grid">
+                    <a class="menu-card searchable-item" href="home.html" data-search="large animal medicines cattle cow medicine">
+                        <span class="menu-icon" aria-hidden="true">🐄</span>
+                        <span>
+                            <span class="menu-title">Large Animal Medicines</span>
+                            <span class="menu-meta">Cattle & large-animal drug guide</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="medicine-details.html" data-search="medicines literature medicine details pharmacology reference">
+                        <span class="menu-icon" aria-hidden="true">📚</span>
+                        <span>
+                            <span class="menu-title">Medicines Literature</span>
+                            <span class="menu-meta">Drug details & reference notes</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="small-animals.html" data-search="small pet animal medicines dogs cats medicine">
+                        <span class="menu-icon" aria-hidden="true">🐶</span>
+                        <span>
+                            <span class="menu-title">Pet Animal Medicines</span>
+                            <span class="menu-meta">Medicines for dogs & cats</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="pregnancy-safe.html" data-search="pregnancy safe medicines pregnant safety">
+                        <span class="menu-icon" aria-hidden="true">🛡️</span>
+                        <span>
+                            <span class="menu-title">Pregnancy Safe Medicines</span>
+                            <span class="menu-meta">Safety-focused medicine reference</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="pet-animal.html" data-search="selective medicines pet animal favorites selected">
+                        <span class="menu-icon" aria-hidden="true">💊</span>
+                        <span>
+                            <span class="menu-title">My Selected Pet Medicines</span>
+                            <span class="menu-meta">Curated small-animal medicines</span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <section aria-labelledby="diseaseSectionTitle">
+                <div class="section-heading">
+                    <h2 id="diseaseSectionTitle">Diseases & prescriptions</h2>
+                    <span>By animal</span>
+                </div>
+
+                <div class="menu-grid">
+                    <a class="menu-card searchable-item" href="details-disease.html" data-search="details 100 diseases disease guide general">
+                        <span class="menu-icon" aria-hidden="true">🩺</span>
+                        <span>
+                            <span class="menu-title">100+ Disease Details</span>
+                            <span class="menu-meta">Signs, diagnosis & treatment notes</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="large-diseases.html" data-search="diseases cows cattle bovine">
+                        <span class="menu-icon" aria-hidden="true">🐮</span>
+                        <span>
+                            <span class="menu-title">Diseases of Cows</span>
+                            <span class="menu-meta">Bovine disease reference</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="large-animal-prescriptions.html" data-search="73 prescriptions cattle goat large animal">
+                        <span class="menu-icon" aria-hidden="true">🧾</span>
+                        <span>
+                            <span class="menu-title">73 Cattle & Goat Prescriptions</span>
+                            <span class="menu-meta">Ready clinical prescription reference</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="goat.html" data-search="diseases goats goat caprine">
+                        <span class="menu-icon" aria-hidden="true">🐐</span>
+                        <span>
+                            <span class="menu-title">Diseases of Goats</span>
+                            <span class="menu-meta">Caprine disease reference</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="small-problems-solutions.html" data-search="diseases dogs cats small animal problems solutions">
+                        <span class="menu-icon" aria-hidden="true">🐕</span>
+                        <span>
+                            <span class="menu-title">Diseases of Dogs & Cats</span>
+                            <span class="menu-meta">Small-animal problems & solutions</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="small-animal-prescription.html" data-search="101 prescriptions dogs cats small animal">
+                        <span class="menu-icon" aria-hidden="true">📄</span>
+                        <span>
+                            <span class="menu-title">101 Dog & Cat Prescriptions</span>
+                            <span class="menu-meta">Small-animal prescription reference</span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <section aria-labelledby="poultrySectionTitle">
+                <div class="section-heading">
+                    <h2 id="poultrySectionTitle">Poultry</h2>
+                    <span>Field reference</span>
+                </div>
+
+                <div class="menu-grid">
+                    <a class="menu-card searchable-item" href="poultry-diseases.html" data-search="evidence based diseases poultry chicken">
+                        <span class="menu-icon" aria-hidden="true">🐔</span>
+                        <span>
+                            <span class="menu-title">Evidence-based Poultry Diseases</span>
+                            <span class="menu-meta">Poultry disease guide</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="important_diseases_and_lesions_postmortem.html" data-search="important lesions specific disease poultry postmortem post mortem">
+                        <span class="menu-icon" aria-hidden="true">🔬</span>
+                        <span>
+                            <span class="menu-title">Important Disease Lesions</span>
+                            <span class="menu-meta">Post-mortem lesion reference</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="post-mortem_examination_of_poultry.html" data-search="post mortem examination poultry autopsy necropsy">
+                        <span class="menu-icon" aria-hidden="true">🧪</span>
+                        <span>
+                            <span class="menu-title">Poultry Post-mortem Examination</span>
+                            <span class="menu-meta">Step-by-step examination reference</span>
+                        </span>
+                    </a>
+
+                    <a class="menu-card searchable-item" href="poultry_biosecurity.html" data-search="poultry biosecurity prevention farm hygiene">
+                        <span class="menu-icon" aria-hidden="true">🛡️</span>
+                        <span>
+                            <span class="menu-title">Biosecurity</span>
+                            <span class="menu-meta">Prevention & farm safety guide</span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <section aria-labelledby="resourceSectionTitle">
+                <div class="section-heading">
+                    <h2 id="resourceSectionTitle">Professional resources</h2>
+                    <span>Reference</span>
+                </div>
+
+                <div class="menu-grid">
+                    <a class="menu-card searchable-item" href="veterinary-acts.html" data-search="veterinary acts law legislation regulation professional">
+                        <span class="menu-icon" aria-hidden="true">⚖️</span>
+                        <span>
+                            <span class="menu-title">Veterinary Acts</span>
+                            <span class="menu-meta">Professional acts & regulations</span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <div id="emptyState" class="empty-state" role="status" aria-live="polite">
+                <strong>No matching section found</strong>
+                Try a different keyword such as “goat”, “poultry” or “prescription”.
+            </div>
+
+            <footer class="app-footer">
+                <a class="footer-link searchable-item" href="about.html" data-search="about developer profile">👨‍💻 About Developer</a>
+                <p class="footer-note">Veterinary Diary • Mobile clinical reference</p>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const search = document.getElementById('featureSearch');
+            const items = Array.from(document.querySelectorAll('.searchable-item'));
+            const sections = Array.from(document.querySelectorAll('.dashboard section'));
+            const emptyState = document.getElementById('emptyState');
+
+            function normalize(value) {
+                return value.toLowerCase().trim();
+            }
+
+            function updateSearch() {
+                const query = normalize(search.value);
+                let visibleCount = 0;
+
+                items.forEach((item) => {
+                    const haystack = normalize((item.dataset.search || '') + ' ' + item.textContent);
+                    const matches = !query || haystack.includes(query);
+                    item.hidden = !matches;
+                    if (matches) visibleCount += 1;
+                });
+
+                sections.forEach((section) => {
+                    const visibleItems = section.querySelectorAll('.searchable-item:not([hidden])');
+                    section.hidden = visibleItems.length === 0;
+                });
+
+                emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+
+            search.addEventListener('input', updateSearch, { passive: true });
+            search.addEventListener('search', updateSearch, { passive: true });
+        })();
+    </script>
 </body>
 </html>

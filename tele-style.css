@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #eef2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.form-section, .preview-section {
+  flex: 1;
+  min-width: 340px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.patient-form input, .patient-form select, .medicine-row input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.medicine-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border-left: 4px solid #0056b3;
+}
+
+.med-num {
+  font-weight: bold;
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #003d80;
+}
+
+.share-btn {
+  background-color: #28a745;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.share-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Prescription Pad Styling */
+.pad {
+  background: #ffffff;
+  border: 2px solid #1a365d;
+  padding: 25px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.pad-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #1a365d;
+  padding-bottom: 12px;
+  font-size: 11px;
+  color: #2d3748;
+}
+
+.pad-header h4 {
+  margin: 0 0 4px;
+  color: #1a365d;
+  font-size: 14px;
+}
+
+.header-center {
+  text-align: center;
+  align-self: center;
+  font-weight: bold;
+  font-size: 10px;
+  color: #006622;
+}
+
+.pad-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  border-bottom: 1.5px solid #1a365d;
+  padding: 10px 0;
+  font-size: 12px;
+  background-color: #f7fafc;
+  margin-top: 5px;
+}
+
+.pad-body {
+  display: flex;
+  min-height: 480px;
+  margin-top: 12px;
+}
+
+.pad-sidebar {
+  width: 32%;
+  border-right: 1.5px solid #cbd5e0;
+  padding-right: 12px;
+  font-size: 11px;
+  color: #4a5568;
+}
+
+.section-title {
+  font-weight: bold;
+  color: #1a365d;
+  margin-bottom: 4px;
+}
+
+.pad-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.pad-sidebar li {
+  margin-bottom: 4px;
+}
+
+.pad-main {
+  width: 68%;
+  padding-left: 18px;
+}
+
+.rx-symbol {
+  margin: 0 0 12px 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 28px;
+  color: #1a365d;
+}
+
+.rx-item {
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.rx-item .med-title {
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.rx-item .sig {
+  margin-left: 18px;
+  color: #4a5568;
+}
+
+/* Footer & Digital Signature Styling */
+.pad-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+
+.signature-container {
+  text-align: center;
+  width: 180px;
+}
+
+.signature-img {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -5px;
+}
+
+.signature-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* ব্যাকগ্রাউন্ডের সাথে সিগনেচার সুন্দরভাবে মিলিয়ে দিতে */
+}
+
+.signature-line {
+  border-top: 1.5px solid #1a365d;
+  margin: 4px 0;
+}
+
+.sig-name {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #1a365d;
+}
+
+.sig-title {
+  margin: 1px 0;
+  font-size: 11px;
+  color: #4a5568;
+}
+
+.sig-date {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: #718096;
+}

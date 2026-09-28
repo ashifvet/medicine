@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterinary Prescription Generator - Dr. Md. Ashif Iqbal</title>
+  <link rel="stylesheet" href="tele-style.css">
+  <!-- html2canvas Library for Image Generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Input Form Section -->
+    <div class="form-section">
+      <h2>Prescription Form</h2>
+      
+      <div class="patient-form">
+        <h3>Patient & Owner Information</h3>
+        <input type="text" id="ownerName" placeholder="Owner's Name">
+        <input type="text" id="species" placeholder="Species (e.g., Cattle, Dog, Goat)">
+        
+        <!-- Gender Dropdown -->
+        <select id="gender">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <input type="text" id="age" placeholder="Age (e.g., 2 Years)">
+        <input type="text" id="weight" placeholder="Weight (KG)">
+        <input type="date" id="prescriptionDate" placeholder="Select Date">
+        
+
+      </div>
+
+      <h3>Medicines (Up to 20)</h3>
+      <div id="medicineList">
+        <div class="medicine-row" data-index="1">
+          <span class="med-num">1.</span>
+          <input type="text" class="med-name" placeholder="Name of the drug (e.g. Inj. Topcef)">
+          <input type="text" class="med-dose" placeholder="Dose (e.g. Inject 3g IM daily)">
+          <input type="text" class="med-duration" placeholder="Duration (e.g. for 5 days)">
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button id="addMedBtn" onclick="addMedicine()">+ Add More Medicine</button>
+        <button id="generateBtn" onclick="generatePrescription()">Generate Prescription</button>
+      </div>
+    </div>
+
+    <!-- Preview & Generated Output Section -->
+    <div class="preview-section">
+      <h3>Prescription Pad Preview</h3>
+      
+      <div id="prescriptionPad" class="pad">
+        <!-- Header -->
+        <div class="pad-header">
+          <div class="header-left">
+            <h4>DR. MD. ASHIF IQBAL</h4>
+            <p><strong>DVM, BCS (LIVESTOCK)</strong></p>
+            <p>Veterinary Surgeon, Moheshpur, Jhenaidah</p>
+            <p>BVC Reg No: 8428</p>
+            <p>Phone: 01711-989236</p>
+            <p>E-mail: ashifvet@gmail.com</p>
+          </div>
+          <div class="header-center">
+            <div class="logo-box">
+              <span class="govt-emblem">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span>
+            </div>
+          </div>
+          <div class="header-right">
+            <h4>ডা. মোঃ আসিফ ইকবাল</h4>
+            <p><strong>ডিভিএম, বিসিএস (লাইভস্টক)</strong></p>
+            <p>ভেটেরিনারি সার্জন, মহেশপুর, ঝিনাইদহ</p>
+            <p>বিভিসি রেজিঃ ৮৪২৮</p>
+            <p>ফোন: ০১৭১১-৯৮৯২৩৬</p>
+            <p>E-mail: ashifvet@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Patient Info Grid -->
+        <div class="pad-info-grid">
+          <div><strong>Owner's Name:</strong> <span id="outOwner"></span></div>
+          <div><strong>Species & Gender:</strong> <span id="outSpeciesGender"></span></div>
+          <div><strong>Age:</strong> <span id="outAge"></span></div>
+          <div><strong>Weight (KG):</strong> <span id="outWeight"></span></div>
+          <div><strong>Date:</strong> <span id="outDate"></span></div>
+        </div>
+
+        <!-- Body Layout -->
+        <div class="pad-body">
+          <div class="pad-sidebar">
+            <p class="section-title">Clinical History:</p>
+            <p>Vaccination:</p>
+            <p>Deworming:</p>
+            <p>Surgery (if any):</p>
+            <br>
+            <p class="section-title">Clinical Findings:</p>
+            <ul class="checklist">
+              <li>☐ Temp:</li>
+              <li>☐ Pulse:</li>
+              <li>☐ Respiration:</li>
+              <li>☐ Anorexia</li>
+              <li>☐ Diarrhea</li>
+              <li>☐ Dehydration</li>
+            </ul>
+            <br>
+            <p class="section-title">Tentative Diagnosis:</p>
+          </div>
+
+          <div class="pad-main">
+            <h2 class="rx-symbol">R<sub>x</sub></h2>
+            <div id="rxMedicines" class="rx-list">
+              <!-- Dynamic Medicines Output -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Signature Section -->
+        <div class="pad-footer">
+          <div class="signature-container">
+            <div class="signature-img">
+              <img src="signature.png" alt="Digital Signature" id="digitalSignatureImg">
+            </div>
+            <div class="signature-line"></div>
+            <p class="sig-name"><strong>Dr. Md. Ashif Iqbal</strong></p>
+            <p class="sig-title">Veterinary Surgeon</p>
+            <p class="sig-date">Date: <span id="sigOutDate"></span></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Button for Sharing -->
+      <button id="shareBtn" class="share-btn" onclick="sharePrescriptionImage()" style="display: none;">
+        Share Image (WhatsApp / Bluetooth / Email)
+      </button>
+    </div>
+  </div>
+
+  <script src="tele-script.js"></script>
+</body>
+</html>
